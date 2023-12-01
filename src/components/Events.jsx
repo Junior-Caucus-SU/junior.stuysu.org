@@ -1,10 +1,12 @@
 import React from "react";
+import Navbar from "./NavBar";
 
 
-
-export default function Events(){
+export default function Events() {
     let eventsPage = (
-        <div></div>
+        <div>
+            <Navbar {...{ page: "Events" }} />
+        </div>
     );
     return eventsPage;
 }

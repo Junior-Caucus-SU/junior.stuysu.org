@@ -1,4 +1,7 @@
 # Junior Caucus Website
+
+Welcome to the Junior Caucus Website! This website is bootstrapped off of the [Create React App](https://create-react-app.dev/) and uses Webpack 4 to bundle the code.
+
 Inside that directory, you can run several commands:
   ```powershell
   npm start
@@ -28,6 +31,8 @@ We suggest that you begin by typing:
   
   npm start
   ```
+
+
 
 TO THE REST OF THE CAUCUS \
 Link to Typescript Create React App: [Create React App with Typescript](https://create-react-app.dev/docs/adding-typescript/)
