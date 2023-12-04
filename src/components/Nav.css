@@ -1,76 +1,90 @@
-/* ATTENTION: don't know if I should integrate this into the thing or something */
-body { 
-  font-family: Neue Haas Grotesk Display Pro;
-  background-color: #FAE5E2; /* Updated background color */
-  color: #333;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.item-button {
+  width: 7.375rem;
+  height: 3.5rem;
 }
 
-/* quick fix but I'm lazy :( */
-a {
-  text-decoration: none;
-}
-
-.navbar {
+.button-text {
   width: 100%;
-  text-align: left;
-  padding: 20px;
-}
-.navbar-header {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 20px; /* Adjust the gap between logo and text as needed */
-}
-.navbar img {
-  width: 120px; /* Adjust as needed */
-}
-.navbar h1 {
-  font-size: 48px; /* Adjust as needed */
-  margin: 0;
-  line-height: 1.2;
-}
-.menu {
-  margin-top: 20px;
-  display: inline-block; /* Align the menu center */
-}
-.menu-item {
-  display: inline-block;
-  margin: 0 10px;
-  padding: 5px 15px;
-  border-radius: 50%;
+  text-align: center;
   color: #082144;
-  border: 1px solid #333;
-  position: relative;
-  transition: transform 0.3s; /* Smooth transition for hover */
+  font-size: 13px;
+  font-family: Neue Haas Grotesk Display Pro;
+  font-weight: 500;
+  word-wrap: break-word;
 }
-.menu-item:hover {
-  /* Optional: Add a hover effect if needed */
-  transform: scale(1.1);
-}
-.current-page {
-  border: 1px solid #333;
-}
-.current-page:before,
-.current-page:after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
+
+.nav-button {
   width: 100%;
   height: 100%;
-  border-radius: 50%;
-  border: 1px solid #333;
-  transform: translate(-50%, -50%);
-  z-index: -1;
+  position: relative;
 }
-.current-page:before {
-  transform: translate(-50%, calc(-50% - 2px));
+
+.line {
+    display:flex;
 }
-.current-page:after {
-  transform: translate(-50%, calc(-50% + 2px));
+
+.first {
+  width: 118px;
+  height: 40px;
+  left: 0px;
+  top: 8px;
+  position: absolute;
+  border-radius: 9999px;
+  border: 0.5px #082144 solid;
+}
+
+.second {
+  width: 118px;
+  height: 40px;
+  left: 0px;
+  top: 11px;
+  position: absolute;
+  border-radius: 9999px;
+  border: 0.5px #082144 solid;
+}
+
+.third {
+  width: 118px;
+  height: 40px;
+  left: 0px;
+  top: 5px;
+  position: absolute;
+  border-radius: 9999px;
+  border: 0.5px #082144 solid;
+}
+
+.button-text {
+  width: 118px;
+  left: 0px;
+  top: 17px;
+  position: absolute;
+  text-align: center;
+  color: #082144;
+  font-size: 13px;
+  font-family: Neue Haas Grotesk Display Pro;
+  font-weight: 500;
+  word-wrap: break-word;
+}
+
+.button-not-selected {
+  width: 100%;
+  height: 100%;
+  border-radius: 9999px;
+  border: 0.5px #082144 solid;
+}
+
+nav {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+  color: #fff; /* Set the text color for links */
+  text-decoration: none; /* Remove underlines from links */
+  margin-right: 15px; 
 }

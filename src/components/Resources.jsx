@@ -1,11 +1,8 @@
 import React from "react";
-import NavBar from "./NavBar";
 
-export default function Resources() {
+export default function Resources(){
     let resourcesPage = (
-        <div>
-            <NavBar {...{ page:"Resources" }} />
-        </div>
+        <div></div>
     );
     return resourcesPage;
 }

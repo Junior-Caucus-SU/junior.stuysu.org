@@ -14,6 +14,7 @@ export default function App() {
                 <Route path="/people" element={<People />} />
                 <Route path="/resources" element={<Resources />} />
                 <Route path="/events" element={<Events />} />
+
             </Routes>
         </BrowserRouter>
     )
