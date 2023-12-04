@@ -6,7 +6,7 @@ function NavBar(props) {
     return (<div class="navbar">
         <div class="navbar-header">
             <img src={StuyLogo} alt="Logo" />
-                <h1>Junior<br />Caucus 2023</h1>
+                <h1>Junior</h1> <h1>Caucus 2023</h1>
         </div>
         <nav className="menu">
             <a href="/" className={props.page==="Home"?"menu-item current-page" : "menu-item"} >Home</a>
