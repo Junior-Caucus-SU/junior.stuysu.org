@@ -1,9 +1,9 @@
 import React from "react";
-import Nav from "./Nav";
+import NavBar from "./NavBar";
 
 export default function Home(){
     let homePage = (<div>
-        <Nav {...{page:"home"}}/>
+        <NavBar {...{page:"Home"}}/>
     </div>);
     return homePage;
 }
