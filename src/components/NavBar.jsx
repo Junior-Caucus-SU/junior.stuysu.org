@@ -1,20 +1,32 @@
 import React from 'react';
 import './Nav.css';
-import StuyLogo from "../Group 64.svg";
- 
+import JuniorLogo from "../JuniorCaucusLogo.svg";
+
 function NavBar(props) {
-    return (<div class="navbar">
-        <div class="navbar-header">
-            <img src={StuyLogo} alt="Logo" />
-                <h1>Junior<br />Caucus 2023</h1>
+    return (<div className="nav-container">
+        <div className="logo">
+            <a href="/">
+                <img src={JuniorLogo} alt="Logo" className='juinor-logo menu-item' />
+            </a>
         </div>
-        <nav className="menu">
-            <a href="/" className={props.page==="Home"?"menu-item current-page" : "menu-item"} >Home</a>
-            <a href="/people" className={props.page==="People"?"menu-item current-page": "menu-item"} >People</a>
-            <a href="/events" className={props.page==="Events"?"menu-item current-page": "menu-item"} >Events</a>
-            <a href="/resources" className={props.page==="Resources"?"menu-item current-page": "menu-item"}>Resources</a>
-        </nav>
+
+        <div className="menu">
+            <a href="/" className={currPageGet(props.page, "Home")}>{getText(props.page, "Home")}</a>
+            <a href="/people" className={currPageGet(props.page, "People")}>{getText(props.page, "People")}</a>
+            <a href="/events" className={currPageGet(props.page,"Events")}  >{getText(props.page, "Events")}</a>
+            <a href="/resources" className={currPageGet(props.page, "Resources")} >{getText(props.page, "Resources")}</a>
+        </div>
+
     </div>)
+}
+
+function currPageGet(page,currPage) {
+    return currPage === page ? "menu-item current-page" : "menu-item";
+}
+
+
+function getText(page,currPage) {
+    return currPage === page ? (<><span className="decorative">[</span> {currPage} <span className="decorative">]</span></>):<>{currPage}</>;
 }
 
 export default NavBar;

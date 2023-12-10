@@ -1,76 +1,59 @@
 /* ATTENTION: don't know if I should integrate this into the thing or something */
-body { 
-  font-family: Neue Haas Grotesk Display Pro;
-  background-color: #FAE5E2; /* Updated background color */
-  color: #333;
-  margin: 0;
-  padding: 0;
+.nav-container {
   display: flex;
-  justify-content: center;
+  width: 90vw;
+  height: 5vh;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-}
-
-/* quick fix but I'm lazy :( */
-a {
-  text-decoration: none;
-}
-
-.navbar {
-  width: 100%;
-  text-align: left;
   padding: 20px;
+  margin: auto;
 }
-.navbar-header {
+
+.decorative {
+  font-family: Scotch Display Comp;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+}
+
+.menu-item {
+  /* text */
+  font-family: Mixta Sharp;
+  font-size: 1rem;
+  font-style: normal;
+  text-decoration: none;
+  color: var(--Main-Blue, #0c2b56);
+  font-weight: 500;
+  line-height: normal;
+  list-style: none;
+  margin-right: 20px;
+  width:auto;
+}
+
+.menu-item:hover {
+  transform: scale(1.05);
+}
+
+.current-page {
+}
+
+.logo {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  gap: 20px; /* Adjust the gap between logo and text as needed */
 }
-.navbar img {
-  width: 120px; /* Adjust as needed */
-}
-.navbar h1 {
-  font-size: 48px; /* Adjust as needed */
-  margin: 0;
-  line-height: 1.2;
-}
-.menu {
-  margin-top: 20px;
-  display: inline-block; /* Align the menu center */
-}
-.menu-item {
-  display: inline-block;
-  margin: 0 10px;
-  padding: 5px 15px;
-  border-radius: 50%;
-  color: #082144;
-  border: 1px solid #333;
-  position: relative;
-  transition: transform 0.3s; /* Smooth transition for hover */
-}
-.menu-item:hover {
-  /* Optional: Add a hover effect if needed */
-  transform: scale(1.1);
-}
-.current-page {
-  border: 1px solid #333;
-}
-.current-page:before,
-.current-page:after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  border: 1px solid #333;
-  transform: translate(-50%, -50%);
-  z-index: -1;
-}
-.current-page:before {
-  transform: translate(-50%, calc(-50% - 2px));
-}
-.current-page:after {
-  transform: translate(-50%, calc(-50% + 2px));
+
+.juinor-logo {
+  /* width: 10rem; */
+  height: 2.5rem;
+  /* flex-shrink: 0; */
+  flex: 1;
+  display: flex;
+  align-items: center;
 }
