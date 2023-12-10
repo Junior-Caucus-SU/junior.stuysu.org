@@ -1,5 +1,5 @@
 import React from "react";
-import NavBar from "./NavBar";
+import NavBar from "./NonPage/NavBar";
 
 export default function Home() {
     let homePage = (<>

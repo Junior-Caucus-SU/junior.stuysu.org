@@ -1,6 +1,6 @@
 import React from 'react';
 import './Nav.css';
-import JuniorLogo from "../JuniorCaucusLogo.svg";
+import JuniorLogo from "../../Images/JuniorCaucusLogo.svg";
 import Banner from './Banner';
 
 function NavBar(props) {

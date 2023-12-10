@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "./NavBar";
+import Navbar from "./NonPage/NavBar";
 
 export default function People(){
     let peoplePage = (
