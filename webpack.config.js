@@ -32,5 +32,9 @@ module.exports = {
             filename: "./src/componets/Nav.css",
             chunkFilename: "Nav.css"
         }),
+        new MiniCssExtractPlugin({
+            filename: "./src/componets/Banner.css",
+            chunkFilename: "Banner.css"
+        }),
     ]
 };
