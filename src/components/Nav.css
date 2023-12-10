@@ -11,7 +11,7 @@
 }
 
 .decorative {
-  font-family: Scotch Display Comp;
+  font-family: "scotch-display-comp-dingbats";
   font-size: 1rem;
   font-style: normal;
   font-weight: 400;
@@ -25,7 +25,7 @@
 
 .menu-item {
   /* text */
-  font-family: Mixta Sharp;
+  font-family: "mixta-sharp";
   font-size: 1rem;
   font-style: normal;
   text-decoration: none;
