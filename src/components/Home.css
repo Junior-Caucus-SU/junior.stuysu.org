@@ -3,7 +3,7 @@
   background-repeat: repeat-y;
   background-size: cover;
   background-blend-mode: luminosity;
-mix-blend-mode: plus-darker;
+  mix-blend-mode: plus-darker;
 }
 
 .homepage-schedule {
