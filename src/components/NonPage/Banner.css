@@ -21,6 +21,6 @@
 
 .banner-texture {
   width: 100vw;
-  height: auto; /* Adjust as needed */
+  height: auto;
   display: block;
 }

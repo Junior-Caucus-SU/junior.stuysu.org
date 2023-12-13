@@ -1,6 +1,6 @@
 import React from "react";
 import "./Banner.css";
-import Texture from "../../Images/LowerBannerTexture.png"; // Ensure this path is correct
+import Texture from "../../Images/LowerBannerTexture.png";
 
 export default function Banner(props) {
     return (
