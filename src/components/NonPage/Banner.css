@@ -3,31 +3,24 @@
   height: 5vh;
   width: 100vw;
   text-align: center;
-  /* justify-content: center; */
-  display:table;
+  display: table;
 }
 
 .banner-text {
-  /* margin: auto; */
-  /* width: 50%; */
-  /* height:50%; */
-
-  /* padding: 10px; */
-  /* text-align: center;
-  /* Paragprah */
   display: table-cell;
   color: var(--Pink, #fae5e2);
   font-family: "neue-haas-grotesk-text";
   font-size: 0.75rem;
-  font-style: normal;
-  font-weight: 400;
-
-  /* display: inline-block; */
   vertical-align: middle;
-
   line-height: 100%; 
 }
 
 .banner-links {
     color: var(--Pink, #fae5e2);
+}
+
+.banner-texture {
+  width: 100vw;
+  height: auto; /* Adjust as needed */
+  display: block;
 }
