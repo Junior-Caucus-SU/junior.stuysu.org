@@ -7,7 +7,7 @@ import "./Home.css";
 
 export default function Home() {
     let homePage = (
-        <div className="homepage-div" style={{ backgroundImage: `url(${Background})` }}>
+        <div className="homepage-div">
             <NavBar {...{ page: "Home" }} />
             <div className="homepage-schedule">
                 <Schedule/>
