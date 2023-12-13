@@ -9,7 +9,7 @@ function NavBar(props) {
         <div className="nav-container">
             <div className="logo">
                 <a href="/">
-                    <img src={JuniorLogo} alt="Logo" className='juinor-logo menu-item' />
+                    <img src={JuniorLogo} alt="Logo" className='junior-logo menu-item' />
                 </a>
             </div>
 

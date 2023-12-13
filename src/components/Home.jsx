@@ -2,7 +2,6 @@ import React from "react";
 import NavBar from "./NonPage/NavBar";
 import Schedule from "./NonPage/Schedule";
 import BorderSvg from "../Images/BorderImg.svg";
-import Background from "../Images/BackgroundHome.svg";
 import "./Home.css";
 
 export default function Home() {
