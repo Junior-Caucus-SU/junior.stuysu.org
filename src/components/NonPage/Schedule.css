@@ -1,0 +1,53 @@
+.schedule-banner {
+    display: flex;
+    padding: 5vw;
+    flex-direction: column;
+    align-items: flex-start;
+    background-size: cover; /* 100% 100% */
+    color: #004085;
+  }
+  
+  .top-row {
+    font-size: 1rem;
+    font-weight: bold; /* 700 */
+    margin: 0.5rem 0; /* 8px 0 */
+  }
+  
+  .bottom-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .time-circle {
+    border-radius: 50%;
+    border: 3px solid #004085;
+    width: 100px; 
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+  }
+  
+  .date {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .time-period {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .time {
+    font-size: 3rem;
+    font-weight: lighter;
+  }
+  
+  .period {
+    font-size: 5rem;
+    font-weight: bold;
+  }
+  
