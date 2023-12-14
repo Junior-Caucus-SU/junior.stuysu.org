@@ -1,11 +1,4 @@
 .homepage-div {
-  background-image: url("../Images/BackgroundHome.png");
-  background-repeat: repeat-y;
-  background-size: cover;
-  background-blend-mode: luminosity;
-  mix-blend-mode: plus-darker;
-  z-index: 1000000;
-  height: 200vh;
 }
 
 .homepage-schedule {
@@ -21,6 +14,10 @@
   width: 100vw;
   height: 80vh;
   z-index: -100;
+  stroke: transparent;
+  stroke-width: 0px;
+  margin-top:-10px;
+  border-top: -10px solid transparent;
 }
 
 .schedule-border {
@@ -28,4 +25,20 @@
   fill: var(--Pink, #fae5e2);
   filter: drop-shadow(0px 53px 38.8px rgba(0, 0, 0, 0.12));
   z-index: 10000;
+}
+
+.schedule-specifics {}
+
+.image-overlay {
+  background-image: url("../Images/BackgroundHome.png");
+  background-repeat: repeat-y;
+  background-size: cover;
+  background-blend-mode: luminosity;
+  mix-blend-mode: plus-darker;
+  z-index: -1;
+  height: 200vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 }

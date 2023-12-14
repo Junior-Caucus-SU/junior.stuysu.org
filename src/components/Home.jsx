@@ -16,7 +16,7 @@ export default function Home() {
                     <img src={BorderSvg} alt="Border" className="border-svg" />
                 </div>
             </div>
-            {/* <div className="image-overlay"> </div> */}
+            <div className="image-overlay"> </div>
         </>
     );
     return homePage;
