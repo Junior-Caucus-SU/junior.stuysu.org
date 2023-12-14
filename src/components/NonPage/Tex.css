@@ -1,0 +1,13 @@
+.image-overlay {
+    background-image: url("../../Images/Background.png");
+    background-repeat: repeat-y;
+    background-size: cover;
+    background-blend-mode: luminosity;
+    mix-blend-mode: plus-darker;
+    z-index: -1;
+    height: 200vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}

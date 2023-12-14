@@ -1,8 +1,10 @@
 import React from "react";
 import NavBar from "./NonPage/NavBar";
 import Schedule from "./NonPage/Schedule";
-import BorderSvg from "../Images/BorderImg.svg";
+import BorderPng from "../Images/BorderImg.png";//png so that there isn't a border for the imager
+import Texture from "./NonPage/Texture";
 import "./Home.css";
+
 
 export default function Home() {
     let homePage = (
@@ -10,13 +12,15 @@ export default function Home() {
             <div className="homepage-div">
                 <NavBar {...{ page: "Home" }} />
                 <div className="homepage-schedule">
+                    {/* The Schedule Part */}
                     <Schedule />
                 </div>
                 <div className="schedule-specifics">
-                    <img src={BorderSvg} alt="Border" className="border-svg" />
+                    {/* The Below Part; with the blue img; should I make it fill div???; prob not */}
+                    <img src={BorderPng} alt="Border" className="border-png" /> 
                 </div>
             </div>
-            <div className="image-overlay"> </div>
+            <Texture />
         </>
     );
     return homePage;
