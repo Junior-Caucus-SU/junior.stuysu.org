@@ -4,7 +4,7 @@ import JuniorLogo from "../../Images/JuniorCaucusLogo.svg";
 import Banner from './Banner';
 
 function NavBar(props) {
-    return (<>
+    return (<div className='head-nav'>
         <Banner />
         <div className="nav-container">
             <div className="logo">
@@ -21,7 +21,7 @@ function NavBar(props) {
             </div>
 
         </div>
-    </>)
+    </ div>)
 }
 
 function currPageGet(page, currPage) {

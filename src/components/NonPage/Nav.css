@@ -1,4 +1,7 @@
-/* ATTENTION: don't know if I should integrate this into the thing or something */
+.head-nav {
+  z-index:100;
+}
+
 .nav-container {
   display: flex;
   width: 90vw;
