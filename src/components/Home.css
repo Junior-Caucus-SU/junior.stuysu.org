@@ -4,17 +4,21 @@
   background-size: cover;
   background-blend-mode: luminosity;
   mix-blend-mode: plus-darker;
+  z-index: 1000000;
+  height: 200vh;
 }
 
-.homepage-schedule {
-  height: 70vh;
-  width: 100vw;
-}
 
-.homepage-specifics {
+.schedule-specifics {
   width: 100vw;
   height: 100vh;
+  background-image: url("../Images/BorderImg.svg");
+  background-size: cover;
+  background-repeat: no-repeat; 
+  z-index: -100;
 }
+
+
 
 .schedule-border {
   width: 100vw;
