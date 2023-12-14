@@ -9,10 +9,13 @@ export default function Home() {
         <div className="homepage-div">
             <NavBar {...{ page: "Home" }} />
             <div className="homepage-schedule">
-                <Schedule/>
+                <Schedule />
             </div>
-            <div className="schedule-specifics">
-                <img src={BorderSvg} className="schedule-border" alt="schedule border" />
+            <div className="schedule-detail-box">
+                <div className="schedule-specifics">
+                    <img src={BorderSvg} className="schedule-border" alt="schedule border" />
+                </div>
+                <div className="schedule-fill"></div>
             </div>
         </div>
     );
