@@ -1,0 +1,121 @@
+.footer-banner {
+    height: 339px;
+    position: relative;
+    width: 100%;
+}
+
+.footer-image {
+    height: 132px;
+    width: inherit;
+    left: 0px;
+    top: 96px;
+    position: absolute;
+    opacity: 0.10;
+}
+
+.footer-content {
+    top: 30.50px;
+    width: inherit;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+    display: inline-flex;
+
+}
+
+.icons-container {
+    justify-content: center; 
+    align-items: center; 
+    gap: 5px;
+    display: inline-flex;
+}
+
+.icons {
+    width: 18px;
+    height: 14px;
+    position: relative;
+}
+
+.instagram {
+    width: 14px;
+    height: 18px; 
+    left: 0px;
+    top: 0px; 
+    position: absolute;
+    background: #0C2B56;
+}
+
+.facebook {
+    width: 7px;
+    height: 18px; 
+    left: 3.50px; 
+    top: 0.50px; 
+    position: absolute; 
+    background: #0C2B56;
+}
+
+.credits {
+    justify-content: center; 
+    align-items: center; 
+    gap: 15px; 
+    display: inline-flex;
+}
+
+.positions {
+    width: 250px; 
+    opacity: 0.75; 
+    text-align: right; 
+    color: #0C2B56; 
+    font-size: 14px; 
+    font-family: 'neue-haas-grotesk-text'; 
+    font-weight: 400; 
+    line-height: 18px; 
+    word-wrap: break-word;
+}
+
+.names {
+    width: 250px; 
+    color: #0C2B56; 
+    font-size: 14px; 
+    font-family: 'neue-haas-grotesk-text'; 
+    font-weight: 400; 
+    line-height: 18px; 
+    word-wrap: break-word;
+}
+
+.leadership {
+    text-align: center; 
+    color: #0C2B56; 
+    font-size: 14px; 
+    font-family: 'neue-haas-grotesk-text'; 
+    font-weight: 400; 
+    line-height: 12px; 
+    word-wrap: break-word;
+}
+
+.school {
+    width: 180px;
+    height: 20px;
+    position: relative;
+}
+
+.school-text {
+    top: 1px; 
+    color: #0C2B56; 
+    font-size: 14px; 
+    font-family: 'neue-haas-grotesk-text'; 
+    font-weight: 400; 
+    text-decoration: underline; 
+    line-height: 18px; 
+    position: relative;
+    left: 24px;
+}
+
+.school-icon {
+    width: 20px; 
+    height: 20px; 
+    top: 0px; 
+    position: absolute;
+}

@@ -3,6 +3,7 @@ import NavBar from "./NonPage/NavBar";
 import Schedule from "./NonPage/Schedule";
 import BorderPng from "../Images/BorderImg.png";//png so that there isn't a border for the imager
 import Texture from "./NonPage/Texture";
+import Footer from "./NonPage/Footer";
 import "./Home.css";
 
 
@@ -21,6 +22,7 @@ export default function Home() {
                 </div>
             </div>
             <Texture />
+            <Footer/>
         </>
     );
     return homePage;
