@@ -1,5 +1,6 @@
 .footer-banner {
-    height: 339px;
+    height: 50vh;
+    width:100vh;
     position: relative;
     width: 100%;
 }
