@@ -28,8 +28,8 @@ export default function Home() {
                 </div>
                 <div className="end-scroll">
                 </div>
-                <Footer />
             </div>
+            <Footer />
             <Texture />
         </>
     );
