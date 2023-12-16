@@ -19,6 +19,14 @@ export default function Home() {
                     {/* The Below Part; with the blue img; should I make it fill div???; prob not */}
                     <img src={BorderPng} alt="Border" className="border-png" /> 
                 </div>
+                <div className="mission-statement">
+                    {/* don't know if i should implement this with the the text or the fade effect */}
+                </div>
+                <div className ="parallax">
+
+                </div>
+                <div className="end-scroll"> 
+                </div>
             </div>
             <Texture />
         </>
