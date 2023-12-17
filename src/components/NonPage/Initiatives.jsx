@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import './Initiatives.css';
 import Papa from 'papaparse';
 
