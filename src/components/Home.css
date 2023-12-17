@@ -1,20 +1,16 @@
 .homepage-schedule {
-  background-color: #fae5e2;
-  height:90vh;
-  -webkit-mask-image: url('../Images/BorderImg.svg');
-  mask-image: url('../Images/BorderImg.svg');
-  mask-mode: alpha;
-  mask-repeat: no-repeat;
-  mask-position:top;
-  mask-size: 100vw 80vh;
+  height:70vh;
 }
+
 .schedule-specifics {
-  position: relative;
-  z-index: -1;
-  top: -20vh;
   width: 100vw;
   height: 80vh;
   background-color: #0C2B56;
+}
+
+.border1 {
+  width: 100%;
+  position: absolute;
 }
 
 .schedule-border {
@@ -27,7 +23,7 @@
 .bridge {
   position: absolute;
   width: 80vh;
-  bottom: 0.1vh;
+  bottom: 2.5vh;
   right: 8vw;
   z-index: 2;
 }
