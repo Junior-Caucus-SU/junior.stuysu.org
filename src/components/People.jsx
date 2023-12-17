@@ -23,7 +23,7 @@ export default function People() {
         console.log(translate);
 
         // if it is the presidents-box (which is rotated 90 degrees counterclockwise)
-        if (index === 0) {
+        if (index === 0 || index === 2) {
             box.style.transform = `rotate(90deg)`;
             box.style.transformOrigin = `bottom left`;
             box.style.transform = `rotate(90deg) translateX(-${translate}px)`;
@@ -80,6 +80,64 @@ export default function People() {
         </div>
         <div className="chiefs-box box" ref={el => boxRef.current[1] = el}>
           <div className="chiefs-box-text box-text">Chiefs of Staff</div>
+        </div>
+      </div>
+
+      <div className="directors people-section">
+        <div className="directors-box box" ref={el => boxRef.current[2] = el}>
+          <div className="directors-box-text box-text">Directors</div>
+        </div>
+        <div className="directors-container subgroup-container">
+
+          <div className="events">
+            <div className="d_type">Events</div>
+            <div className="president person-container">
+                <div className="image-placeholder"></div>
+                <div className="name">Person</div>
+                <div className="description">Description here...</div>
+            </div>
+          </div>
+          
+          <div className="director person-container">
+            <div className="image-placeholder"></div>
+            <div className="name">Person</div>
+            <div className="description">Description here...</div>
+          </div>
+          <div className="director person-container">
+            <div className="image-placeholder"></div>
+            <div className="name">Person</div>
+            <div className="description">Description here...</div>
+          </div>
+          <div className="director person-container">
+            <div className="image-placeholder"></div>
+            <div className="name">Person</div>
+            <div className="description">Description here...</div>
+          </div>
+          <div className="director person-container">
+            <div className="image-placeholder"></div>
+            <div className="name">Person</div>
+            <div className="description">Description here...</div>
+          </div>
+          <div className="director person-container">
+            <div className="image-placeholder"></div>
+            <div className="name">Person</div>
+            <div className="description">Description here...</div>
+          </div>
+          <div className="director person-container">
+            <div className="image-placeholder"></div>
+            <div className="name">Person</div>
+            <div className="description">Description here...</div>
+          </div>
+          <div className="director person-container">
+            <div className="image-placeholder"></div>
+            <div className="name">Person</div>
+            <div className="description">Description here...</div>
+          </div>
+          <div className="director person-container">
+            <div className="image-placeholder"></div>
+            <div className="name">Person</div>
+            <div className="description">Description here...</div>
+          </div>
         </div>
       </div>
       <Footer/>

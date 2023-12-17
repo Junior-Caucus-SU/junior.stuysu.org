@@ -1,7 +1,7 @@
 .meet-team-container {
     text-align: center;
     margin-top: 20px;
-    height: 80vh;
+    height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11,6 +11,7 @@
     display: inline-block;
     font-size: 4rem;
     font-weight: bold;
+    font-size: 6.9rem;
     margin: 0 10px;
   }
 
@@ -105,4 +106,12 @@
     width: 200px;
     height: 200px;
     margin-bottom: 10px;
+  }
+
+  .directors-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
   }
