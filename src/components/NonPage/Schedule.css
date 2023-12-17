@@ -13,10 +13,6 @@
   background-color: #004085;
 }
 
-.schedule-specifics {
-  position: absolute;
-}
-
 .weekly-schedule {
   display: flex;
   width: 12rem;

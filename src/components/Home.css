@@ -5,17 +5,12 @@
 .schedule-specifics {
   width: 100vw;
   height: 80vh;
-  z-index: -100;
+  background-color: #0C2B56;
 }
 
-.border-png {
-  width: 100vw;
-  height: 80vh;
-  z-index: -100;
-  stroke: transparent;
-  stroke-width: 0px;
-  margin-top:-10px;
-  border-top: -10px solid transparent;
+.border1 {
+  width: 107%;
+  position: absolute;
 }
 
 .schedule-border {

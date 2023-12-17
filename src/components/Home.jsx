@@ -1,7 +1,7 @@
 import React from "react";
 import NavBar from "./NonPage/NavBar";
 import Schedule from "./NonPage/Schedule";
-import BorderPng from "../Images/BorderImg.png";//png so that there isn't a border for the imager
+import Border from "../Images/BorderImg.svg";
 import Texture from "./NonPage/Texture";
 import Footer from "./NonPage/Footer";
 import "./Home.css";
@@ -17,8 +17,7 @@ export default function Home() {
                     <Schedule />
                 </div>
                 <div className="schedule-specifics">
-                    {/* The Below Part; with the blue img; should I make it fill div???; prob not */}
-                    <img src={BorderPng} alt="Border" className="border-png" />
+                    <img src={Border} alt="Border" className="border1" />
                 </div>
                 <div className="mission-statement">
                     {/* don't know if i should implement this with the the text or the fade effect */}
