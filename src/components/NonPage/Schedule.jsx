@@ -116,6 +116,10 @@ export default function ScheduleBanner() {
   };
 
   const timer = calculateTimer();
+
+  const circumference = 2 * Math.PI * 50;
+  const progress = timer.minutesPassed / (timer.minutesPassed + timer.minutesLeft);
+  const strokeDashoffset = circumference * (1 - progress);
   
   return (
     <div className="schedule-banner">
@@ -124,6 +128,18 @@ export default function ScheduleBanner() {
       </div>
       <div className="bottom-row">
         <div className="time-circle">
+        <svg className="progress-ring" width="140" height="140">
+            <circle
+              cx="69"
+              cy="70"
+              r="61"
+              stroke="#004085"
+              strokeWidth="7"
+              fill="transparent"
+              strokeDasharray={circumference}
+              strokeDashoffset={strokeDashoffset}
+            />
+          </svg>
           <span className="timer">{`${timer.minutesPassed}/${timer.minutesLeft}`}</span>
         </div>
         <div className="time-period">

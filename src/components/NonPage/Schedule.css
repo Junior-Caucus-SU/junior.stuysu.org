@@ -68,8 +68,9 @@
 }
 
 .time-circle {
+  position: relative;
   border-radius: 50%;
-  border: 7px solid #004085;
+  border: 7px solid #0040856c;
   width: 115px;
   height: 115px;
   display: flex;
@@ -78,7 +79,13 @@
   margin-right: 1rem;
 }
 
+.progress-ring {
+  position: absolute;
+  transform-origin: center;
+}
+
 .timer {
+  position: relative;
   font-family: "neue-haas-grotesk-display", sans-serif;
   font-size: 3rem;
   font-style: normal;
