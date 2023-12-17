@@ -10,17 +10,52 @@
     margin: 0 10px;
   }
   
-  .team-members {
+  /* Presidents section */
+  .presidents {
     display: flex;
-    justify-content: space-around;
-    padding: 20px;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-left: 0;
+    padding-left: 0;
   }
   
-  .member {
-    color: black;
-    width: 200px;
-    margin: 10px;
-    text-align: center;
+  .presidents-box-text {
+    transform: rotate(180deg);
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    margin: 0;
+  }
+  
+  .presidents-box {
+    bottom: 100%;
+    left: 0;
+    background-color: #0C2B56;
+    color: #FAE5E2;
+    font-size: 128px;
+    transform: rotate(90deg);
+    transform-origin: bottom left;
+    white-space: nowrap;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .presidents-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 20px;
+  }
+  
+  .president {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    padding: 20px;
   }
   
   .image-placeholder {
@@ -38,3 +73,14 @@
     font-size: 1rem;
   }
   
+  .president .image-placeholder {
+    background-color: #0C2B56;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FAE5E2;
+    font-size: 1.5rem;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 10px;
+  }
