@@ -52,7 +52,7 @@ export default function ScheduleBanner() {
   const [schedule, setSchedule] = useState({ period: '', type: '' });
   const [scheduleData, setScheduleData] = useState([]);
 
-  const fetch = useCallback(async () => {
+  const fetchSchedule = useCallback(async () => {
     try {
       const response = await fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vQgnBwKnNEpIx54LqizLN6mOZyPc1eASMLqWHF3fzFp-mOY4_tNBBCF9hhkmMKNQoYody_apuRHN9hu/pub?output=csv');
       const text = await response.text();
@@ -64,8 +64,8 @@ export default function ScheduleBanner() {
   }, []);
 
   useEffect(() => {
-    fetch();
-  }, [fetch]);
+    fetchSchedule();
+  }, [fetchSchedule]);
 
   useEffect(() => {
     const interval = setInterval(() => {
