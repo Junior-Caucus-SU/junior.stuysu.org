@@ -4,7 +4,6 @@
   flex-direction: column;
   align-items: flex-start;
   background-size: cover;
-  /* 100% 100% */
   color: #004085;
 }
 
@@ -18,25 +17,64 @@
   position: absolute;
 }
 
+.weekly-schedule {
+  display: flex;
+  width: 12rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.3rem;
+  font-family: "neue-haas-grotesk-text", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.date-circle {
+  width: 65px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0.8px solid #004085;
+}
+
+.day-abbreviation {
+  text-align: center;
+  font-size: 16px;
+}
+
+.day-schedule {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 .top-row {
   font-size: 1.3rem;
   font-weight: 450;
   margin: 0.5rem 0;
   font-family: "neue-haas-grotesk-display", sans-serif;
-  padding-bottom: 3vh;
+  margin-bottom: 5vh;
+}
+
+.schedule-type {
+  padding-left: 10px;
 }
 
 .bottom-row {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 5vh;
 }
 
 .time-circle {
   border-radius: 50%;
-  border: 3px solid #004085;
-  width: 100px;
-  height: 100px;
+  border: 7px solid #004085;
+  width: 115px;
+  height: 115px;
   display: flex;
   align-items: center;
   justify-content: center;
