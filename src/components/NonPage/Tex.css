@@ -3,13 +3,14 @@
     background-repeat: repeat-y;
     background-size: cover;
     background-blend-mode: luminosity;
-    mix-blend-mode: plus-darker;
-    z-index: 10000;
+    mix-blend-mode: soft-light;
+    filter: blur(2px);
     pointer-events: none;
     height: 200vh;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    opacity:0.5;
+    z-index: 1;
+    opacity: 75%;
 }

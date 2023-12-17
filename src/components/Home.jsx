@@ -11,6 +11,7 @@ import "./Home.css";
 export default function Home() {
     let homePage = (
         <>
+            <Texture />
             <div className="homepage-div">
                 <NavBar {...{ page: "Home" }} />
                 <div className="homepage-schedule">
@@ -31,7 +32,6 @@ export default function Home() {
                 </div>
             </div>
             <Footer />
-            <Texture />
         </>
     );
     return homePage;
