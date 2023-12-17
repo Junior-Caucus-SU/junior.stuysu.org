@@ -9,17 +9,26 @@
     font-weight: bold;
     margin: 0 10px;
   }
+
+  .meet {
+    margin-right: 30vw;
+  }
+
+  .the-team {
+    margin-left: 30vw;
+  }
   
-  /* Presidents section */
-  .presidents {
+  .people-section {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
+    justify-content: space-between;
     margin-left: 0;
     padding-left: 0;
+    border: 1px solid black;
   }
   
-  .presidents-box-text {
+  .box-text {
     transform: rotate(180deg);
     padding-left: 0px;
     padding-right: 0px;
@@ -27,29 +36,45 @@
     padding-top: 0px;
     margin: 0;
   }
+
+  .chiefs-box-text {
+    transform: rotate(0deg);
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    margin: 0;
+  }
   
-  .presidents-box {
+  .box {
     bottom: 100%;
     left: 0;
     background-color: #0C2B56;
     color: #FAE5E2;
-    font-size: 128px;
-    transform: rotate(90deg);
-    transform-origin: bottom left;
+    font-size: 96px;
+    /*transform: rotate(90deg);*/
+    /*transform-origin: bottom left;*/
     white-space: nowrap;
     margin: 0;
     padding: 0;
+    align-self: flex-start;
+    justify-self: flex-start;
+  }
+
+  .chiefs-box {
+    /*transform-origin: bottom right;*/
+    /*transform: rotate(-90deg);*/
   }
   
-  .presidents-container {
+  .subgroup-container {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
-    margin-top: 20px;
+    margin-top: 0px;
   }
   
-  .president {
+  .person-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -73,7 +98,7 @@
     font-size: 1rem;
   }
   
-  .president .image-placeholder {
+  .person-container .image-placeholder {
     background-color: #0C2B56;
     display: flex;
     justify-content: center;
