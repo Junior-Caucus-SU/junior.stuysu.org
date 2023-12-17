@@ -75,10 +75,10 @@
   
 .title .text-wrapper {
     color: var(--main-blue);
-    font-family: var(--title-font-family);
-    font-size: var(--title-font-size);
-    font-style: var(--title-font-style);
-    font-weight: var(--title-font-weight);
+    font-family: "mixta-sharp", serif;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 550;
     height: 48px;
     left: 0;
     letter-spacing: var(--title-letter-spacing);
@@ -93,7 +93,7 @@
     gap: 20px;
     position: relative;
     flex-wrap: wrap;
-    width: 75%;
+    width: 100%;
     row-gap:100px;
     column-gap:20px;
   }
@@ -102,36 +102,36 @@
     position: relative;
     display: block;
     flex-grow: 1;
-    max-width: 25%;
+    max-width: 30%;
   }
   
   .frame .event-text {
     color: var(--main-blue);
-    font-family: var(--text-font-family);
-    font-size: var(--text-font-size);
-    font-style: var(--text-font-style);
-    font-weight: var(--text-font-weight);
-    letter-spacing: var(--text-letter-spacing);
-    line-height: var(--text-line-height);
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 450;
+    line-height: normal;
+    letter-spacing: 1px;
     top: 16px;
   }
   
   .frame .event-date {
     color: var(--main-blue);
-    font-family: var(--caption-font-family);
-    font-size: var(--caption-font-size);
-    font-style: var(--caption-font-style);
-    font-weight: var(--caption-font-weight);
+    font-family: "neue-haas-grotesk-text", sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 12px */
     height: 12px;
     left: 0;
     letter-spacing: var(--caption-letter-spacing);
-    line-height: var(--caption-line-height);
   }
 
   .frame .event-title {
     color: var(--main-blue);
-    font-family: var(--subtitle-font-family);
-    font-size: var(--subtitle-font-size);
-    font-style: var(--subtitle-font-style);
-    font-weight: var(--subtitle-font-weight);
+    font-family: "neue-haas-grotesk-text", sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
   }
