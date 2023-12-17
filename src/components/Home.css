@@ -19,3 +19,11 @@
   filter: drop-shadow(0px 53px 38.8px rgba(0, 0, 0, 0.12));
   z-index: 10000;
 }
+
+.bridge {
+  position: absolute;
+  width: 80vh;
+  bottom: 2.5vh;
+  right: 8vw;
+  z-index: 2;
+}

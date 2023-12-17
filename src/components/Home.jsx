@@ -2,6 +2,7 @@ import React from "react";
 import NavBar from "./NonPage/NavBar";
 import Schedule from "./NonPage/Schedule";
 import Border from "../Images/BorderImg.svg";
+import TribecaBridge from "../Images/StuyBridgeDrawing.png";
 import Texture from "./NonPage/Texture";
 import Footer from "./NonPage/Footer";
 import "./Home.css";
@@ -15,6 +16,7 @@ export default function Home() {
                 <div className="homepage-schedule">
                     {/* The Schedule Part */}
                     <Schedule />
+                    <img src={TribecaBridge} alt="Tribeca bridge" className="bridge" />
                 </div>
                 <div className="schedule-specifics">
                     <img src={Border} alt="Border" className="border1" />
