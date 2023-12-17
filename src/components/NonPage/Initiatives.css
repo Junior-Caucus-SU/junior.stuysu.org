@@ -94,13 +94,15 @@
     position: relative;
     flex-wrap: wrap;
     width: 75%;
+    row-gap:100px;
+    column-gap:20px;
   }
   
   .frame .event {
     position: relative;
-    display: flex;
+    display: block;
     flex-grow: 1;
-    width: 25%;
+    max-width: 25%;
   }
   
   .frame .event-text {
@@ -112,7 +114,6 @@
     letter-spacing: var(--text-letter-spacing);
     line-height: var(--text-line-height);
     top: 16px;
-    width: 100%;
   }
   
   .frame .event-date {
@@ -125,14 +126,12 @@
     left: 0;
     letter-spacing: var(--caption-letter-spacing);
     line-height: var(--caption-line-height);
-    top: 0;
-    width: 25px;
   }
-  
-  .frame .group-2 {
-    height: 70px;
-    margin-right: -4px;
-    position: relative;
-    width: 260px;
+
+  .frame .event-title {
+    color: var(--main-blue);
+    font-family: var(--subtitle-font-family);
+    font-size: var(--subtitle-font-size);
+    font-style: var(--subtitle-font-style);
+    font-weight: var(--subtitle-font-weight);
   }
-  

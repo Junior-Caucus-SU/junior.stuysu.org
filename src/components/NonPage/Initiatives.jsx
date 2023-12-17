@@ -35,9 +35,10 @@ export default function AllIntiatives() {
             {initiativesData.map((initiative, index) => (
                 <div className="event">
                     <div className="event-date">{initiative.Date}</div>
-                    <p className="event-text">
+                    <div className="event-title">{initiative.Title}</div>
+                    <div className="event-text">
                         {initiative.Text}
-                    </p>
+                    </div>
                 </div>
             ))}
             </div>
