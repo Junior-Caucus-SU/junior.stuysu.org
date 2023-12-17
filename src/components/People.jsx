@@ -5,28 +5,33 @@ import Footer from "./NonPage/Footer";
 import "./People.css";
 
 export default function People() {
-  // Create a ref for the box elements
+  // ref for the box elements
   const boxRef = useRef([]);
 
   useEffect(() => {
-    // After the component has mounted
+    // After the component has mounted 
     boxRef.current.forEach((box, index) => {
       if (box) {
-        const width = box.getBoundingClientRect().width;
-        console.log(width);
-        // Check if it is the presidents-box (which is rotated 90 degrees counterclockwise)
+        // get the width of the box without bounding client rect
+        const width = box.offsetWidth;
+        // get the length of the box without bounding client rect
+        const length = box.offsetHeight;
+
+        // pick the smaller of the two to choose how much to translate
+        const translate = Math.min(width, length);
+
+        console.log(translate);
+
+        // if it is the presidents-box (which is rotated 90 degrees counterclockwise)
         if (index === 0) {
+            box.style.transform = `rotate(90deg)`;
             box.style.transformOrigin = `bottom left`;
-          box.style.transform = `rotate(90deg) translateX(-${width}px)`;
-          // Set the transform origin to the bottom left corner
-            
-        }
-        // Check if it is the chiefs-box (which is rotated -90 degrees clockwise)
+            box.style.transform = `rotate(90deg) translateX(-${translate}px)`;
+        } 
+        // if it is the chiefs-box (which is rotated -90 degrees clockwise)
         else if (index === 1) {
+            box.style.transform = `rotate(-90deg) translateX(${translate}px)`;
             box.style.transformOrigin = `bottom right`;
-          box.style.transform = `rotate(-90deg) translateX(${width}px)`;
-          // Set the transform origin to the bottom right corner
-            
         }
       }
     });
