@@ -3,6 +3,8 @@
 }
 
 .schedule-specifics {
+  position: relative;
+  top: -1vh;
   width: 100vw;
   height: 80vh;
   background-color: #0C2B56;
@@ -10,20 +12,14 @@
 
 .border1 {
   width: 100%;
-  position: absolute;
-}
-
-.schedule-border {
-  width: 100vw;
-  fill: var(--Pink, #fae5e2);
-  filter: drop-shadow(0px 53px 38.8px rgba(0, 0, 0, 0.12));
-  z-index: 10000;
 }
 
 .bridge {
+  filter: drop-shadow(0 6mm 4mm #0C2B56);
+  mix-blend-mode: color-burn;
   position: absolute;
-  width: 80vh;
-  bottom: 2.5vh;
-  right: 8vw;
-  z-index: 2;
+  width: 40vw;
+  bottom: -2vw;
+  right: 13vw;
+  z-index: -1;
 }

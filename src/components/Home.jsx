@@ -18,8 +18,8 @@ export default function Home() {
                     <Schedule />
                     <img src={TribecaBridge} alt="Tribeca bridge" className="bridge" />
                 </div>
+                <img src={Border} alt="Border" className="border1" />
                 <div className="schedule-specifics">
-                    <img src={Border} alt="Border" className="border1" />
                 </div>
                 <div className="mission-statement">
                     {/* don't know if i should implement this with the the text or the fade effect */}
