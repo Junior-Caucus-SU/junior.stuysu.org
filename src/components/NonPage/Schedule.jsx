@@ -95,6 +95,28 @@ export default function ScheduleBanner() {
   const timeString = currentDateTime.toLocaleTimeString('en-US', dateFormat.timeHMS);
   const dateString = currentDateTime.toLocaleDateString('en-US', dateFormat.longWK);
 
+  const calculateTimer = () => {
+    const currentSchedule = scheduleData.find(row => {
+      const startTime = new Date(`${row.Date} ${row['Start Time']}`);
+      const endTime = new Date(`${row.Date} ${row['End Time']}`);
+      return startTime <= currentDateTime && currentDateTime <= endTime;
+    });
+
+    if (currentSchedule) {
+      const startTime = new Date(`${currentSchedule.Date} ${currentSchedule['Start Time']}`);
+      const endTime = new Date(`${currentSchedule.Date} ${currentSchedule['End Time']}`);
+      const totalMinutes = (endTime - startTime) / 60000; // Total period duration in minutes
+      const minutesPassed = (currentDateTime - startTime) / 60000; // Minutes passed since period start
+      const minutesLeft = totalMinutes - minutesPassed; // Minutes left until period end
+
+      return { minutesPassed: Math.floor(minutesPassed), minutesLeft: Math.floor(minutesLeft) };
+    }
+
+    return { minutesPassed: 0, minutesLeft: 0 };
+  };
+
+  const timer = calculateTimer();
+  
   return (
     <div className="schedule-banner">
       <div className="top-row">
@@ -102,7 +124,7 @@ export default function ScheduleBanner() {
       </div>
       <div className="bottom-row">
         <div className="time-circle">
-          <span className="date">{"test"}</span>
+          <span className="timer">{`${timer.minutesPassed}/${timer.minutesLeft}`}</span>
         </div>
         <div className="time-period">
           <span className="time">{timeString}</span>
