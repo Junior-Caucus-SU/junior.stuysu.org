@@ -13,6 +13,12 @@
     font-weight: bold;
     font-size: 6.9rem;
     margin: 0 10px;
+    color: #051E4F;
+    font-size: 208px;
+    font-family: Mixta Sharp;
+    font-weight: 300;
+    line-height: 164.32px;
+    word-wrap: break-word;
   }
 
   .meet {
@@ -30,7 +36,6 @@
     justify-content: space-between;
     margin-left: 0;
     padding-left: 0;
-    border: 1px solid black;
   }
   
   .box-text {
@@ -41,6 +46,12 @@
     padding-top: 0px;
     margin: 0;
     line-height: normal;
+    color: #FBE4DF;
+    font-size: 128px;
+    font-family: Neue Haas Grotesk Display Pro;
+    font-weight: 350;
+    line-height: 108.80px;
+    word-wrap: break-word;
   }
 
   .chiefs-box-text {
@@ -59,7 +70,6 @@
     font-size: 96px;
     white-space: nowrap;
     margin: 0;
-    padding: 0;
     align-self: flex-start;
     justify-self: flex-start;
   }
@@ -118,4 +128,15 @@
 
   img {
     max-width: 30vw;
+  }
+
+  .d_type {
+    font-size: 3rem;
+    margin-bottom: 5px;
+    color: #051E4F;
+  }
+
+  .d_type_box {
+    display: flex;
+    flex-direction: row;
   }
