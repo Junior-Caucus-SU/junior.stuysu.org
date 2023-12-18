@@ -3,6 +3,16 @@ import Navbar from "./NonPage/NavBar";
 import Texture from "./NonPage/Texture";
 import Footer from "./NonPage/Footer";
 import "./People.css";
+import Ayla_Irshad from '../Images/people/Ayla_Irshad.jpg';
+import Chenming_Fang from '../Images/people/Chenming_Fang.jpeg';
+import Chloe_Wong from '../Images/people/Chloe_Wong.jpeg';
+import Elias_Xu from '../Images/people/Elias_Xu.jpg';
+import Emily_Li from '../Images/people/Emily_Li.jpeg';
+import Ethan_Sie from '../Images/people/Ethan_Sie.jpg';
+import Grace_Rhee from '../Images/people/Grace_Rhee.jpeg';
+import Josephine_Gunawan from '../Images/people/Josephine_Gunawan.jpeg';
+import Maegan_Diep from '../Images/people/Maegan_Diep.jpeg';
+import Stacie_Au from '../Images/people/Stacie_Au.jpeg';
 
 export default function People() {
   // ref for the box elements
@@ -58,7 +68,7 @@ export default function People() {
             <div className="description">Description here...</div>
           </div>
           <div className="president person-container">
-            <div className="image-placeholder"></div>
+            <img src={Grace_Rhee} alt="Grace Rhee" />
             <div className="name">Grace</div>
             <div className="description">Description here...</div>
           </div>
@@ -73,7 +83,7 @@ export default function People() {
             <div className="description">Description here...</div>
           </div>
           <div className="chiefs person-container">
-            <div className="image-placeholder"></div>
+            <img src={Ethan_Sie} alt="" />
             <div className="name">Ethan Sie</div>
             <div className="description">Description here...</div>
           </div>
@@ -92,50 +102,50 @@ export default function People() {
           <div className="events">
             <div className="d_type">Events</div>
             <div className="president person-container">
-                <div className="image-placeholder"></div>
-                <div className="name">Person</div>
+                <img src={Emily_Li} alt="" />
+                <div className="name">Emily Li</div>
                 <div className="description">Description here...</div>
             </div>
           </div>
           
           <div className="director person-container">
-            <div className="image-placeholder"></div>
-            <div className="name">Person</div>
+            <img src={Chenming_Fang} alt="" />
+            <div className="name">Chenming Fang</div>
+            <div className="description">Description here...</div>
+          </div>
+          <div className="director person-container">
+            <img src={Josephine_Gunawan} alt="" />
+            <div className="name">Josephine Gunawan</div>
+            <div className="description">Description here...</div>
+          </div>
+          <div className="director person-container">
+            <img src={Elias_Xu} alt="" />
+            <div className="name">Elias Xu</div>
             <div className="description">Description here...</div>
           </div>
           <div className="director person-container">
             <div className="image-placeholder"></div>
-            <div className="name">Person</div>
+            <div className="name">Will Zhang</div>
             <div className="description">Description here...</div>
           </div>
           <div className="director person-container">
-            <div className="image-placeholder"></div>
-            <div className="name">Person</div>
+            <img src={Stacie_Au} alt="" />
+            <div className="name">Stacie Au</div>
             <div className="description">Description here...</div>
           </div>
           <div className="director person-container">
-            <div className="image-placeholder"></div>
-            <div className="name">Person</div>
+            <img src={Ayla_Irshad} alt="" />
+            <div className="name">Ayla Irshad</div>
             <div className="description">Description here...</div>
           </div>
           <div className="director person-container">
-            <div className="image-placeholder"></div>
-            <div className="name">Person</div>
+            <img src={Chloe_Wong} alt="" />
+            <div className="name">Chloe Wang</div>
             <div className="description">Description here...</div>
           </div>
           <div className="director person-container">
-            <div className="image-placeholder"></div>
-            <div className="name">Person</div>
-            <div className="description">Description here...</div>
-          </div>
-          <div className="director person-container">
-            <div className="image-placeholder"></div>
-            <div className="name">Person</div>
-            <div className="description">Description here...</div>
-          </div>
-          <div className="director person-container">
-            <div className="image-placeholder"></div>
-            <div className="name">Person</div>
+            <img src={Maegan_Diep} alt="" />
+            <div className="name">Maegan Diep</div>
             <div className="description">Description here...</div>
           </div>
         </div>
