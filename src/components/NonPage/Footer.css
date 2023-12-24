@@ -57,11 +57,17 @@
     background: #0C2B56;
 }
 
+
 .credits {
     justify-content: center; 
     align-items: center; 
     gap: 15px; 
     display: inline-flex;
+}
+
+.name-link{
+    text-decoration: none;
+    color: #0C2B56;
 }
 
 .positions {
@@ -74,6 +80,15 @@
     font-weight: 400; 
     line-height: 18px; 
     word-wrap: break-word;
+}
+
+.logo-ref {
+    text-decoration: none;
+    color: (5,30,79);
+}
+
+.logo:hover {
+    transform: scale(1.25);
 }
 
 .names {
@@ -96,6 +111,13 @@
     word-wrap: break-word;
 }
 
+.school-logo-link {
+    text-decoration: none;
+}
+.school-logo-link:hover {
+    transform: scale(1.05);
+}
+
 .school {
     width: 180px;
     height: 20px;
@@ -108,7 +130,7 @@
     font-size: 14px; 
     font-family: 'neue-haas-grotesk-text'; 
     font-weight: 400; 
-    text-decoration: underline; 
+    text-decoration: none; 
     line-height: 18px; 
     position: relative;
     left: 24px;

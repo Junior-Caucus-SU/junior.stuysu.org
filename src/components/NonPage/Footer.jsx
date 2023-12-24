@@ -12,37 +12,44 @@ export default function Footer() {
             <div className="footer-content">
                 <div className="icons-container">
                     <div className="icons">
-                        <img src={Instagram} alt="Instagram" />
+                        <a href="https://www.instagram.com/stuyjuniorcaucus/?hl=en" className="logo-ref">
+                            <img className="instagram-logo logo" src={Instagram} alt="Instagram" />
+                        </a>
                     </div>
                     <div className="icons">
-                        <img src={Facebook} alt="Facebook" />
+                        <a href="https://www.facebook.com/StuyJuniorCaucus" className="logo-ref">
+                            <img className="facebook-logo logo" src={Facebook} alt="Facebook" />
+                        </a>
                     </div>
                 </div>
                 <div className="credits">
                     <div className="positions">
-                        Design Lead<br/>
-                        Development Lead<br/>
-                        Development Team<br/>
-                        Illustration & Animation<br/>
-                        Photography<br/>
+                        Design Lead<br />
+                        Development Lead<br />
+                        Development Team<br />
+                        Illustration & Animation<br />
+                        Photography<br />
                         Special Thanks
                     </div>
                     <div className="names">
-                        Will Zhang<br/>
-                        Elias Xu<br/>
-                        Otzar Jaffe, Connor Yau, Tony Chen<br/>
-                        Chloe Wong<br/>
-                        Someone Here<br/>
+                        <a href ="https://github.com/willpill" className="name-link will-zhang">Will Zhang</a><br />
+                        <a href ="https://github.com/Elias2660" className="name-link elias-xu">Elias Xu</a><br />
+                        <a href ="https://github.com/yellowstonepark" className="name-link otzar-jaffe">Otzar Jaffe</a>, <a href ="https://github.com/connor132435" className ="name-link connor-yau">Connor Yau</a>, <a href = "https://github.com/muff1n0" className ="name-link tony-chen">Tony Chen</a><br />
+                        Chloe Wong<br />
+                        Someone Here<br />
                         David Chen
                     </div>
                 </div>
                 <div className="leadership">
                     The Junior Caucus is led by Josephine Yoo and Grace Rhee.
                 </div>
-                <div className="school">
-                    <img className="school-icon" src={Stuyvesant} alt="Stuyvesant" />
-                    <div className="school-text">Stuyvesant High School</div>
-                </div>
+                <a href="https://stuy.enschool.org/" className="school-logo-link">
+                    <div className="school">
+                        <img className="school-icon" src={Stuyvesant} alt="Stuyvesant" />
+                        <div className="school-text">Stuyvesant High School</div>
+                    </div>
+                </a>
+
             </div>
         </div>
     )

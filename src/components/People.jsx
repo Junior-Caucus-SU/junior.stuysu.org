@@ -48,7 +48,7 @@ export default function People() {
   }, []);  
   
   let peoplePage = (
-    <div>
+    <div className="people-page-super">
       <Navbar page="People"/>
       <Texture/>
       <div className="meet-team-container">
@@ -111,12 +111,12 @@ export default function People() {
           <div className="d_type_box">
             <div className="d_type">Internals</div>
             <div className="director person-container">
-                <img src={Chenming_Fang} alt="" />
+                <img src={Chenming_Fang} alt="" className = "director-img"/>
                 <div className="name">Chenming Fang</div>
                 <div className="description">Description here...</div>
             </div>
             <div className="director person-container">
-                <img src={Josephine_Gunawan} alt="" />
+                <img src={Josephine_Gunawan} alt="" className = "director-img"/>
                 <div className="name">Josephine Gunawan</div>
                 <div className="description">Description here...</div>
             </div>
@@ -125,7 +125,7 @@ export default function People() {
           <div className="d_type_box">
             <div className="d_type">I/T</div>
             <div className="director person-container">
-                <img src={Elias_Xu} alt="" />
+                <img src={Elias_Xu} alt="" className = "director-img"/>
                 <div className="name">Elias Xu</div>
                 <div className="description">Description here...</div>
             </div>
@@ -139,12 +139,12 @@ export default function People() {
           <div className="d_type_box">
             <div className="d_type">Finance</div>
             <div className="director person-container">
-                <img src={Stacie_Au} alt="" />
+                <img src={Stacie_Au} alt="" className = "director-img"/>
                 <div className="name">Stacie Au</div>
                 <div className="description">Description here...</div>
             </div>
             <div className="director person-container">
-                <img src={Ayla_Irshad} alt="" />
+                <img src={Ayla_Irshad} alt="" className = "director-img"/>
                 <div className="name">Ayla Irshad</div>
                 <div className="description">Description here...</div>
             </div>
@@ -153,7 +153,7 @@ export default function People() {
           <div className="d_type_box">
             <div className="d_type">Graphics</div>
             <div className="director person-container">
-                <img src={Chloe_Wong} alt="" />
+                <img src={Chloe_Wong} alt="" className = "director-img"/>
                 <div className="name">Chloe Wang</div>
                 <div className="description">Description here...</div>
             </div>
@@ -162,7 +162,7 @@ export default function People() {
           <div className="d_type_box">
             <div className="d_type">Social Media</div>
             <div className="director person-container">
-                <img src={Maegan_Diep} alt="" />
+                <img src={Maegan_Diep} alt="" className = "director-img"/>
                 <div className="name">Maegan Diep</div>
                 <div className="description">Description here...</div>
             </div>
