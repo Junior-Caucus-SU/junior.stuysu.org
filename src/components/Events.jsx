@@ -7,8 +7,8 @@ export default function Events() {
     let eventsPage = (
         <div className="events-page">
             <Navbar {...{ page: "Events" }} />
-            <div className="all-initiatives-flexbox">    
-                <Initiatives     />
+            <div className="all-initiatives-flexbox">   
+                <Initiatives/>
             </div>
             <Texture />
         </div>

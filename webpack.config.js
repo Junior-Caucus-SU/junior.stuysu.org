@@ -1,6 +1,9 @@
 import path from 'path';
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import HtmlWebPackPlugin from "html-webpack-plugin";
+import webpack from "webpack";
+import dotenv from "dotenv";
+dotenv.config({ path: './.env' });
 
 module.exports = {
     entry: './src/index.js',
@@ -20,6 +23,9 @@ module.exports = {
         contentBase: './dist',
     },
     plugins: [
+        new webpack.DefinePlugin({
+            "process.env": JSON.stringify(process.env),
+        }),
         new HtmlWebPackPlugin({
             template: "./src/index.html",
             filename: "./index.html"
@@ -36,5 +42,6 @@ module.exports = {
             filename: "./src/componets/Banner.css",
             chunkFilename: "Banner.css"
         }),
+
     ]
 };
