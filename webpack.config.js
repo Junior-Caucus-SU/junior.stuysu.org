@@ -23,9 +23,6 @@ module.exports = {
         contentBase: './dist',
     },
     plugins: [
-        new webpack.DefinePlugin({
-            "process.env": JSON.stringify(process.env),
-        }),
         new HtmlWebPackPlugin({
             template: "./src/index.html",
             filename: "./index.html"

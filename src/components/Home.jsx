@@ -15,7 +15,6 @@ export default function Home() {
             <div className="homepage-div">
                 <NavBar {...{ page: "Home" }} />
                 <div className="homepage-schedule">
-                    {/* The Schedule Part */}
                     <Schedule />
                     <img src={TribecaBridge} alt="Tribeca bridge" className="bridge" />
                 </div>

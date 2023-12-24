@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "./NonPage/NavBar";
 import Texture from "./NonPage/Texture";
 import Initiatives from "./NonPage/Initiatives";
+import Footer from "./NonPage/Footer"
 
 export default function Events() {
     let eventsPage = (
@@ -10,6 +11,7 @@ export default function Events() {
             <div className="all-initiatives-flexbox">   
                 <Initiatives/>
             </div>
+            <Footer />
             <Texture />
         </div>
     );
