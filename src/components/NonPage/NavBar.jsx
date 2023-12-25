@@ -9,7 +9,7 @@ function NavBar(props) {
         <div className="nav-container">
             <div className="logo">
                 <a href="/">
-                    <img src={JuniorLogo} alt="Logo" className='junior-logo menu-item' />
+                    <img src={JuniorLogo} alt="Logo" className='junior-logo nav-menu-item' />
                 </a>
             </div>
 
@@ -25,7 +25,7 @@ function NavBar(props) {
 }
 
 function currPageGet(page, currPage) {
-    return currPage === page ? "menu-item current-page" : "menu-item";
+    return currPage === page ? "nav-menu-item current-page" : "nav-menu-item";
 }
 
 

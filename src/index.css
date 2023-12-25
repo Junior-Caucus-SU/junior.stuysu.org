@@ -9,6 +9,60 @@
     vertical-align: baseline;
     background: transparent;
 }
+/* 
+:root {
+    --caption-font-family: "NeueHaas Grotesk Text Pro-55Roman", Helvetica;
+    --caption-font-size: 12px;
+    --caption-font-style: normal;
+    --caption-font-weight: 400;
+    --caption-letter-spacing: 0px;
+    --caption-line-height: 100%;
+    --display-font-family: "MixtaSharp-Light", Helvetica;
+    --display-font-size: 128px;
+    --display-font-style: normal;
+    --display-font-weight: 300;
+    --display-letter-spacing: 0px;
+    --display-line-height: 85.00000238418579%;
+    --extralarge-display-font-family: "MixtaSharp-UltraLight", Helvetica;
+    --extralarge-display-font-size: 208px;
+    --extralarge-display-font-style: normal;
+    --extralarge-display-font-weight: 300;
+    --extralarge-display-letter-spacing: 0px;
+    --extralarge-display-line-height: 79.00000214576721%;
+    --link-font-family: "NeueHaas Grotesk Text Pro-55Roman", Helvetica;
+    --link-font-size: 12px;
+    --link-font-style: normal;
+    --link-font-weight: 400;
+    --link-letter-spacing: 0px;
+    --link-line-height: 150%;
+    --main-blue: rgba(12, 43, 86, 1);
+    --number-font-family: "NeueHaas Grotesk Display Pro-45Light", Helvetica;
+    --number-font-size: 36px;
+    --number-font-style: normal;
+    --number-font-weight: 300;
+    --number-letter-spacing: 0px;
+    --number-line-height: normal;
+    --pink: rgba(250, 229, 226, 1);
+    --standard: 0px 53px 38.79999923706055px 0px rgba(0, 0, 0, 0.12);
+    --subtitle-font-family: "MixtaSharp-Medium", Helvetica;
+    --subtitle-font-size: 16px;
+    --subtitle-font-style: normal;
+    --subtitle-font-weight: 500;
+    --subtitle-letter-spacing: 0px;
+    --subtitle-line-height: normal;
+    --text-font-family: "NeueHaas Grotesk Display Pro-55Roman", Helvetica;
+    --text-font-size: 16px;
+    --text-font-style: normal;
+    --text-font-weight: 400;
+    --text-letter-spacing: 0px;
+    --text-line-height: normal;
+    --title-font-family: "MixtaSharp-Light", Helvetica;
+    --title-font-size: 48px;
+    --title-font-style: normal;
+    --title-font-weight: 300;
+    --title-letter-spacing: 0px;
+    --title-line-height: 100%;
+  } */
 
 
 body {

@@ -87,10 +87,6 @@
     color: (5,30,79);
 }
 
-.logo:hover {
-    transform: scale(1.25);
-}
-
 .names {
     width: 250px; 
     color: #0C2B56; 

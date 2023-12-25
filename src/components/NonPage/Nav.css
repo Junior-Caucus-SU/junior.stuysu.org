@@ -28,7 +28,7 @@
   justify-content: space-between;
 }
 
-.menu-item {
+.nav-menu-item {
   /* text */
   font-family: "mixta-sharp";
   font-size: 1rem;
@@ -42,7 +42,7 @@
   width:auto;
 }
 
-.menu-item:hover {
+.nav-menu-item:hover {
   transform: scale(1.05);
 }
 
@@ -53,10 +53,6 @@
 }
 
 .junior-logo {
-  /* width: 10rem; */
-  height: 2.5rem;
-  /* flex-shrink: 0; */
   flex: 1;
   display: flex;
-  align-items: center;
 }

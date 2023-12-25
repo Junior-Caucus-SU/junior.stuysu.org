@@ -1,0 +1,36 @@
+
+
+.events-body{
+  padding-left: 5vw;
+}
+
+
+.events-header {
+  color: var(--Main-Blue, #051E4F);
+  /* Title */
+  font-family: Mixta Sharp;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 350;
+  line-height: 100%; /* 3rem */
+}
+
+.vector {
+  height: 25%;
+  width: 90vw;
+}
+
+
+.all-initiatives-header {
+  height: 10vh;
+}
+
+.title {
+  color: var(--Main-Blue, #051E4F);
+/* Title */
+font-family: Mixta Sharp;
+font-size: 3rem;
+font-style: normal;
+font-weight: 350;
+line-height: 100%; /* 3rem */
+}

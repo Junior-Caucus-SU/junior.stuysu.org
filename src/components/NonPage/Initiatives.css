@@ -1,137 +1,77 @@
-:root {
-    --caption-font-family: "NeueHaas Grotesk Text Pro-55Roman", Helvetica;
-    --caption-font-size: 12px;
-    --caption-font-style: normal;
-    --caption-font-weight: 400;
-    --caption-letter-spacing: 0px;
-    --caption-line-height: 100%;
-    --display-font-family: "MixtaSharp-Light", Helvetica;
-    --display-font-size: 128px;
-    --display-font-style: normal;
-    --display-font-weight: 300;
-    --display-letter-spacing: 0px;
-    --display-line-height: 85.00000238418579%;
-    --extralarge-display-font-family: "MixtaSharp-UltraLight", Helvetica;
-    --extralarge-display-font-size: 208px;
-    --extralarge-display-font-style: normal;
-    --extralarge-display-font-weight: 300;
-    --extralarge-display-letter-spacing: 0px;
-    --extralarge-display-line-height: 79.00000214576721%;
-    --link-font-family: "NeueHaas Grotesk Text Pro-55Roman", Helvetica;
-    --link-font-size: 12px;
-    --link-font-style: normal;
-    --link-font-weight: 400;
-    --link-letter-spacing: 0px;
-    --link-line-height: 150%;
-    --main-blue: rgba(12, 43, 86, 1);
-    --number-font-family: "NeueHaas Grotesk Display Pro-45Light", Helvetica;
-    --number-font-size: 36px;
-    --number-font-style: normal;
-    --number-font-weight: 300;
-    --number-letter-spacing: 0px;
-    --number-line-height: normal;
-    --pink: rgba(250, 229, 226, 1);
-    --standard: 0px 53px 38.79999923706055px 0px rgba(0, 0, 0, 0.12);
-    --subtitle-font-family: "MixtaSharp-Medium", Helvetica;
-    --subtitle-font-size: 16px;
-    --subtitle-font-style: normal;
-    --subtitle-font-weight: 500;
-    --subtitle-letter-spacing: 0px;
-    --subtitle-line-height: normal;
-    --text-font-family: "NeueHaas Grotesk Display Pro-55Roman", Helvetica;
-    --text-font-size: 16px;
-    --text-font-style: normal;
-    --text-font-weight: 400;
-    --text-letter-spacing: 0px;
-    --text-line-height: normal;
-    --title-font-family: "MixtaSharp-Light", Helvetica;
-    --title-font-size: 48px;
-    --title-font-style: normal;
-    --title-font-weight: 300;
-    --title-letter-spacing: 0px;
-    --title-line-height: 100%;
-  }
-
-.all-initiatives {
-    padding-left: 5vw;
-    width: 90vw;
-}
-.line {
-    height: 1px;
-    width: 947px;
-}
-  
 .line .vector {
-    height: 3px;
-    left: 0;
-    top: 0;
-    width: 950px;
-}
-
-.title {
-    height: 48px;
-    width: 667px;
-}
-  
-.title .text-wrapper {
-    color: var(--main-blue);
-    font-family: "mixta-sharp", serif;
-    font-size: 48px;
-    font-style: normal;
-    font-weight: 550;
-    height: 48px;
-    left: 0;
-    letter-spacing: var(--title-letter-spacing);
-    line-height: var(--title-line-height);
-    top: 0;
-    width: 667px;
+  height: 3px;
+  left: 0;
+  top: 0;
+  width: 950px;
 }
 
 .frame {
-    align-items: flex-start;
-    display: flex;
-    gap: 20px;
-    position: relative;
-    flex-wrap: wrap;
-    width: 100%;
-    row-gap:100px;
-    column-gap:20px;
-  }
-  
-  .frame .event {
-    position: relative;
-    display: block;
-    flex-grow: 1;
-    max-width: 30%;
-  }
-  
-  .frame .event-text {
-    color: var(--main-blue);
-    font-family: "neue-haas-grotesk-display", sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 450;
-    line-height: normal;
-    letter-spacing: 1px;
-    top: 16px;
-  }
-  
-  .frame .event-date {
-    color: var(--main-blue);
-    font-family: "neue-haas-grotesk-text", sans-serif;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 100%; /* 12px */
-    height: 12px;
-    left: 0;
-    letter-spacing: var(--caption-letter-spacing);
-  }
+  align-items: flex-start;
+  display: flex;
+  width: 90vw;
+  gap: 20px;
+  position: relative;
+  flex-wrap: wrap;
+  row-gap: 100px;
+  column-gap: 20px;
+}
 
-  .frame .event-title {
-    color: var(--main-blue);
-    font-family: "neue-haas-grotesk-text", sans-serif;
-    font-size: 22px;
-    font-style: normal;
-    font-weight: 400;
-  }
+.frame .event {
+  position: relative;
+  display: block;
+  flex-grow: 1;
+  max-width: 30%;
+}
+
+.frame .event-text {
+  color: var(--main-blue);
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: normal;
+  letter-spacing: 1px;
+  top: 16px;
+}
+
+.frame .event-date {
+  color: var(--main-blue);
+  font-family: "neue-haas-grotesk-text", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 12px */
+  height: 12px;
+  left: 0;
+  letter-spacing: var(--caption-letter-spacing);
+}
+
+.frame .event-title {
+  color: var(--main-blue);
+  font-family: "neue-haas-grotesk-text", sans-serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* font formatting */
+.event {
+  color: var(--Main-Blue, #051e4f);
+  font-style: normal;
+}
+
+.event-title {
+  font-family: Neue Haas Grotesk Display Pro;
+  font-size: 1rem;
+  font-weight: 450;
+  line-height: normal;
+}
+
+.event-date {
+  color: var(--Main-Blue, #051e4f);
+  /* Caption */
+  font-family: Neue Haas Grotesk Text Pro;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 100%; /* 0.75rem */
+}

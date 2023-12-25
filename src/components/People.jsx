@@ -48,9 +48,10 @@ export default function People() {
   }, []);  
   
   let peoplePage = (
-    <div className="people-page-super">
+    <div className="people-page">
       <Navbar page="People"/>
       <Texture/>
+      <div className="people-page-body">
       <div className="meet-team-container">
         <div className="meet">Meet</div>
         <br />
@@ -168,6 +169,7 @@ export default function People() {
             </div>
           </div>
         </div>
+      </div>
       </div>
       <Footer/>
     </div>

@@ -1,13 +1,33 @@
 .homepage-schedule {
-  height:70vh;
+  height: 70vh;
 }
 
 .schedule-specifics {
   position: relative;
   top: -1vh;
   width: 100vw;
-  height: 80vh;
-  background-color: #0C2B56;
+  height: 50vh;
+  background-color: #0c2b56;
+}
+
+.mission-box {
+  height: 90vh;
+  width: 100vw;
+  /* background:  lightgray 50% / cover no-repeat;
+  mix-blend-mode: soft-light; */
+  /* filter: blur(2px); */
+}
+
+.mission-statement {
+  color: var(--Main-Blue, #051e4f);
+  /* Title */
+  font-size: 4rem;
+  /* font-style: light; */
+  font-weight: 250;
+  line-height: 100%; /* 3rem */
+  padding-top: 2em;
+  padding-left: 0.5em;
+  padding-right:5em;
 }
 
 .border1 {
@@ -15,11 +35,19 @@
 }
 
 .bridge {
-  filter: drop-shadow(0 6mm 4mm #0C2B56);
+  filter: drop-shadow(0 6mm 4mm #0c2b56);
   mix-blend-mode: color-burn;
   position: absolute;
   width: 40vw;
   bottom: -2vw;
   right: 13vw;
   z-index: -1;
+}
+
+.polaroids-sky {
+  width:100vw;
+}
+
+.end-scroll {
+  width:100vw;
 }

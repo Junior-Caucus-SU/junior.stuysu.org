@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Papa from 'papaparse';
-import AnnouncementLine from '../../Images/announcementsLine.svg';
 import './Initiatives.css';
 
 export default function AllIntiatives(props) {
@@ -24,22 +23,14 @@ export default function AllIntiatives(props) {
 
     return (
         <div className="all-initiatives">
-            <div className="all-initiatives-header">
-                <div className="title">
-                    <div className="text-wrapper">All Initiatives</div>
-                </div>
-                <div className="line">
-                    <img className="vector" alt="line" src={AnnouncementLine} />
-                </div>
-            </div>
             <div className="frame">
             {initiativesData.map((initiative, index) => (
                 <div className="event">
-                    <div className="event-date">{initiative.Date}</div>
-                    <div className="event-title">{initiative.Title}</div>
-                    <div className="event-text">
+                    <p className="event-date">{initiative.Date}</p>
+                    <h4 className="event-title">{initiative.Title}</h4>
+                    <p className="event-text">
                         {initiative.Text}
-                        </div>
+                        </p>
                     </div>
                 ))}
             </div>
