@@ -1,7 +1,5 @@
 import React, {useEffect, useState} from "react";
-import Papa from "papaparse";
 import "./DateCrawler.css";
-
 
 export default function DateCrawler() {
     //fetch sheet data
@@ -25,11 +23,10 @@ export default function DateCrawler() {
         };
         fetchSheetsData();
     }, []);
-
+    console.log(dayType);
     return (
         <div className="schedule-date-crawler">
 
         </div>
     );
-
 }

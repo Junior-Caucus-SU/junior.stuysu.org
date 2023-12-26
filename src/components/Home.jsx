@@ -42,7 +42,7 @@ export default function Home() {
                 </div>
                 <div className="mission-box">
                     <h1 className="mission-statement">
-                    Welcome to the Yoo-Rhee caucus. We are committed to delivering on our promises through wellorganized initiatives, includincabinet restructuring, enhancin college readiness, and meaningfu themed events.
+                    Welcome to the Yoo-Rhee caucus. We are committed to delivering on our promises through well organized initiatives, including cabinet restructuring, enhancing college readiness, and meaningfu themed events.
                     </h1>
                 </div>
                 <div className="parallax">

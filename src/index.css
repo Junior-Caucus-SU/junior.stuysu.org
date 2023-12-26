@@ -9,6 +9,12 @@
     vertical-align: baseline;
     background: transparent;
 }
+
+body {
+    font-family: "Mixta-Sharp";
+}
+
+
 /* 
 :root {
     --caption-font-family: "NeueHaas Grotesk Text Pro-55Roman", Helvetica;
