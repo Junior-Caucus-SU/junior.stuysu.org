@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./DateCrawler.css";
-import crawlEllipse from "../../Images/EllipseCrawl.svg";
+import CrawlerEllipse from "./crawlerEllipse";
 
 export default function DateCrawler() {
     //fetch sheet data
@@ -27,12 +27,9 @@ export default function DateCrawler() {
     console.log(dayType);
     return (<div>
         {dayType.map((day,  i) => (
-
-            <div className={day[0].toLowerCase()} key={i}>
-                {console.log(day)}
-                {console.log(i)}
-                <img src={crawlEllipse} alt="ellipse" className={day[0]+"-ellipse crawl-ellipse"}/>
-                <p> {day[1]} </p>
+            <div className={day[0].toLowerCase() + " day-box"} key={i}>
+                <CrawlerEllipse itemText={day} id={i} />
+                <p className = "day-text"> {day[1]} </p>
             </div>
     )) }
       </div>);

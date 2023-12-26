@@ -1,8 +1,25 @@
 .schedule-date-crawler {
-    background-color:aqua;
-    width:30vw;
-    height:30vh;
-    flex-direction: column;
-    justify-content: center;
-    flex-shrink: 0;
+  background-color: aqua;
+  width: 30vw;
+  height: 30vh;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.day-box {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+}
+
+.day-text {
+  align-self: center;
+  color: var(--Main-Blue, #051e4f);
+  /* Caption */
+  font-family: Neue Haas Grotesk Text Pro;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
 }

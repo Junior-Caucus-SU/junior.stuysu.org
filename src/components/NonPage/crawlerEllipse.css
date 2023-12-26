@@ -1,0 +1,31 @@
+.ellipse-crawler {
+  /* background-color:black; */
+  position: relative;
+  display: inline-block;
+}
+
+.ellipse {
+  display: block;
+  height: 3em;
+  color: var(--Main-Blue, #051e4f);
+  width: 4.5em;
+  max-width: 100%; /* Ensure the image doesn't exceed the width of the container */
+  height: auto;
+  align-items: middle;
+  position: relative;
+}
+.dateText {
+  z-index: 10;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+  color: var(--Main-Blue, #051e4f);
+  text-align: center;
+  /* Caption */
+  font-family: Neue Haas Grotesk Text Pro;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 0.75rem */
+}
