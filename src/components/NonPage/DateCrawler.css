@@ -1,0 +1,8 @@
+.schedule-date-crawler {
+    background-color:aqua;
+    width:30vw;
+    height:30vh;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+}

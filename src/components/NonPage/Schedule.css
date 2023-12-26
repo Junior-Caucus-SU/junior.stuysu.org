@@ -1,6 +1,7 @@
 .schedule-banner {
   display: flex;
-  padding: 5vw;
+  padding-left: 3vw;
+  padding-top:3vw;
   flex-direction: column;
   align-items: flex-start;
   background-size: cover;

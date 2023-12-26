@@ -25,7 +25,6 @@ function WeeklySchedule({scheduleData}) {
   const dayOfWeek = today.getDay() === 0 ? 7 : today.getDay();
   const firstDayOfWeek = today.getDate() - dayOfWeek + 1;
   const lastDayOfWeek = firstDayOfWeek + 4;
-
   const curWeekSchedule = useMemo(() => {
     const startOfWeek = new Date(today.getFullYear(), today.getMonth(), firstDayOfWeek);
     const endOfWeek = new Date(today.getFullYear(), today.getMonth(), lastDayOfWeek + 1);
@@ -120,6 +119,7 @@ export default function ScheduleBanner() {
   const circumference = 2 * Math.PI * 50;
   const progress = timer.minutesPassed / (timer.minutesPassed + timer.minutesLeft);
   const strokeDashoffset = circumference * (1 - progress);
+  // console.log(progress);  PROGRESS BUG
   
   return (
     <div className="schedule-banner">

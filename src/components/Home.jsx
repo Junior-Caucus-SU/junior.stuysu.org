@@ -9,6 +9,7 @@ import PolaroidsSky from "../Images/PolaroidsSky.png";
 import Sun from "../Images/sun.svg";
 import Moon from "../Images/moon.svg";
 import SpecificsLine from "../Images/SpecificsLineArt.svg";
+import DateCrawler from "./NonPage/DateCrawler";
 import "./Home.css";
 
 
@@ -18,9 +19,14 @@ export default function Home() {
             <Texture />
             <div className="homepage-div">
                 <NavBar {...{ page: "Home" }} />
-                <div className="homepage-schedule">
-                    <Schedule />
-                    <img src={TribecaBridge} alt="Tribeca bridge" className="bridge" />
+                <div className="homepage-schedule-container">
+                    <div className="schedule-banner-container">
+                        <Schedule className="schedule-banner"/>
+                    </div>
+                    <img src={TribecaBridge} alt="Tribeca bridge" className="tribeca-bridge" />
+                    <div className="date-crawler-pos">
+                        <DateCrawler className="schedule-date-crawler"/>
+                    </div>
                 </div>
                 <img src={Border} alt="Border" className="border1" />
                 <div className="schedule-specifics">
