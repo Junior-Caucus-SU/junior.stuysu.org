@@ -21,7 +21,7 @@ function ScheduleDay({ daySchedule }) {
 }
 
 function WeeklySchedule({scheduleData}) {
-  const today = new Date();
+  const today = new Date(); //warning
   const dayOfWeek = today.getDay() === 0 ? 7 : today.getDay();
   const firstDayOfWeek = today.getDate() - dayOfWeek + 1;
   const lastDayOfWeek = firstDayOfWeek + 4;
