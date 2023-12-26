@@ -1,5 +1,4 @@
 .schedule-date-crawler {
-  background-color: aqua;
   width: 30vw;
   height: 30vh;
   flex-direction: column;
@@ -20,6 +19,17 @@
   font-family: Neue Haas Grotesk Text Pro;
   font-size: 1rem;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 100%;
+  
+}
+
+.type-text {
+  line-height: 150%; /* 1.125rem */
+  text-decoration-line: underline;
+}
+
+.lightened-text {
+  line-height: 150%; /* 1.125rem */
+  text-decoration-line: underline;
 }

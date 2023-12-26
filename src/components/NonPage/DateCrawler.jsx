@@ -24,13 +24,15 @@ export default function DateCrawler() {
         };
         fetchSheetsData();
     }, []);
-    console.log(dayType);
     return (<div>
-        {dayType.map((day,  i) => (
+        {dayType.map((day, i) => (
             <div className={day[0].toLowerCase() + " day-box"} key={i}>
                 <CrawlerEllipse itemText={day} id={i} />
-                <p className = "day-text"> {day[1]} </p>
+                <p className="day-text">
+                    <span className="type-text">{day[1]}</span>
+                    <span className="day-type-text">{" " + day[2]}</span>
+                </p>
             </div>
-    )) }
-      </div>);
+        ))}
+    </div>);
 }
