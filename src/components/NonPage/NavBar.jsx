@@ -7,12 +7,11 @@ function NavBar(props) {
     return (<div className='head-nav'>
         <Banner />
         <div className="nav-container">
-            <div className="logo">
+            <div className="juni-logo-container">
                 <a href="/">
                     <img src={JuniorLogo} alt="Logo" className='junior-logo nav-menu-item' />
                 </a>
             </div>
-
             <div className="menu">
                 <a href="/" className={currPageGet(props.page, "Home")}>{getText(props.page, "Home")}</a>
                 <a href="/people" className={currPageGet(props.page, "People")}>{getText(props.page, "People")}</a>

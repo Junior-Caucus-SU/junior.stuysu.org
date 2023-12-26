@@ -13,12 +13,12 @@ export default function Footer() {
                 <div className="icons-container">
                     <div className="icons">
                         <a href="https://www.instagram.com/stuyjuniorcaucus/?hl=en" className="logo-ref">
-                            <img className="instagram-logo logo" src={Instagram} alt="Instagram" />
+                            <img className="instagram-logo footer-logo-top" src={Instagram} alt="Instagram logo" />
                         </a>
                     </div>
                     <div className="icons">
                         <a href="https://www.facebook.com/StuyJuniorCaucus" className="logo-ref">
-                            <img className="facebook-logo logo" src={Facebook} alt="Facebook" />
+                            <img className="facebook-logo footer-logo-top" src={Facebook} alt="Facebook logo" />
                         </a>
                     </div>
                 </div>
