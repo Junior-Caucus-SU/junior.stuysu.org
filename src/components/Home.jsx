@@ -39,6 +39,9 @@ export default function Home() {
                     <img src={Moon} alt="Fancical Abstract Drawing of a Moon" className="moon-img"/>
                     <img src={Sun} alt="Fancical Abstract Drawing of a Sun" className="sun-img"/>
                     <img src={SpecificsLine} alt="Decorative Line Art" className="specifics-line"/>
+                    <div className="all-schedules">
+                        <a href="https://www.google.com/" className="all-schedules-link">View all schedules</a>
+                    </div>
                 </div>
                 <div className="mission-box">
                     <h1 className="mission-statement">
