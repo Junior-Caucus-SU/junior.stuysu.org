@@ -48,7 +48,7 @@ html, body {
   word-wrap: break-word;
 }
 
-.subgroup-container, .directors-container, .person-container {
+.subgroup-container, .person-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -101,7 +101,7 @@ html, body {
 /* Chiefs Section - Applying similar structure as Presidents */
 .chiefs {
   display: grid;
-  grid-template-columns: fit-content(100%) 1fr 1fr;
+  grid-template-columns: 1fr 1fr 165px;
   margin-bottom: 300px;
 }
 
@@ -110,11 +110,41 @@ html, body {
   transform-origin: bottom right;
   width: fit-content;
   height: fit-content;
-  justify-self: inherit;
+  justify-self: end;
   margin: 10px;
   padding: 10px;
 }
 
 .chiefs-box-text {
   /* No rotation needed as in .box-text */
+}
+
+/* Directors Section */
+.directors {
+  display: grid;
+  grid-template-columns: 165px auto;
+  margin-bottom: 300px;
+}
+
+.directors-box {
+  transform: rotate(90deg);
+  transform-origin: bottom left;
+  width: fit-content;
+  height: fit-content;
+  justify-self: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+.subgroup_containerD_all {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  justify-content: center;
+}
+
+/* 2x1 grid */
+.subgroup-containerD {
+  display: grid;
+  grid-template-columns: 50vw 50vw;
 }
