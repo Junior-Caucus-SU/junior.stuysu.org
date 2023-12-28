@@ -7,7 +7,7 @@ import Home from "./Home";
 
 export default function App() {
     return (
-        < BrowserRouter>
+        <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/people" element={<People />} />
