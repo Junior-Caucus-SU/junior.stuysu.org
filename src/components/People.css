@@ -185,6 +185,11 @@ html, body {
   padding: 30px;
 }
 
+.stacie {
+  justify-self: start;
+  padding: 30px;
+}
+
 .finance_name {
   padding-bottom: 200px;
 }
@@ -194,4 +199,10 @@ html, body {
   width: 100vw;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  margin-bottom: 50px;
+}
+
+.chloe {
+  justify-self: start;
+  padding: 30px;
 }

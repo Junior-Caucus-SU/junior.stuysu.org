@@ -150,7 +150,7 @@ export default function People() {
 
           <div className="subgroup-containerD">
             <div className="d_type_box">
-              <div className="director person-container">
+              <div className="director person-container stacie">
                   <div className="d_type finance_name">Finance</div>
                   <img src={Stacie_Au} alt="" className = "director-img"/>
                   <div className="name">Stacie Au</div>
@@ -165,7 +165,7 @@ export default function People() {
           </div>
 
           <div className="subgroup-containerD">
-            <div className="d_type_box_c"> 
+            <div className="d_type_box_c chloe"> 
               <div className="director person-container">
                   <div className="d_type">Graphics</div>
                   <img src={Chloe_Wong} alt="" className = "director-img"/>
