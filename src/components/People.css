@@ -1,6 +1,7 @@
 html, body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 .meet-team-container {
@@ -149,7 +150,9 @@ html, body {
   justify-self: end;
   margin: 10px;
   margin-right:0;
-  padding: 10px;
+  padding: 5px;
+  padding-left: 15vw;
+  padding-top: 20px;
 }
 
 .chiefs-box-text {
@@ -186,6 +189,8 @@ html, body {
   justify-self: inherit;
   margin: 0;
   padding: 0;
+  padding-right: 15vw;
+  padding-bottom: 20px;
 }
 
 .emily {
