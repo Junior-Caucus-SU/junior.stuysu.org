@@ -43,7 +43,7 @@ export default function People() {
         } 
         // if it is the chiefs-box (which is rotated -90 degrees clockwise)
         else if (index === 1) {
-            box.style.transform = `rotate(-90deg) translateX(${translate}px)`;
+            box.style.transform = `rotate(-90deg) translateX(-${translate}px`;
             box.style.transformOrigin = `bottom right`;
         }
       }

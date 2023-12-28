@@ -1,6 +1,4 @@
-
-
-.meet-team-container {
+  .meet-team-container {
     text-align: center;
     margin-top: 20px;
     height: 70vh;
@@ -34,10 +32,10 @@
   .people-section {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
-    margin-left: 0;
-    padding-left: 0;
+    /* align-items: flex-start; */
+    /* justify-content: space-between; */
+    margin: 0;
+    padding: 0;
   }
   
   .box-text {
@@ -66,6 +64,7 @@
   }
   
   .box {
+    display: flex;
     left: 0;
     background-color: #0C2B56;
     color: #FAE5E2;
@@ -89,14 +88,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-right: 20px;
-    padding: 20px;
-  }
-  
-  .image-placeholder {
-    height: 200px;
-    background-color: #cccccc;
-    margin-bottom: 15px;
   }
   
   .name {
@@ -106,18 +97,6 @@
   
   .description {
     font-size: 1rem;
-  }
-  
-  .person-container .image-placeholder {
-    background-color: #0C2B56;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #FAE5E2;
-    font-size: 1.5rem;
-    width: 200px;
-    height: 200px;
-    margin-bottom: 10px;
   }
 
   .directors-container {
@@ -129,7 +108,7 @@
   }
 
   .people-page-body img {
-    max-width: 30vw;
+    max-width: 25vw;
   }
 
   .d_type {
