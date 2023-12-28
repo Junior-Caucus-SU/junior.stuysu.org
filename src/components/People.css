@@ -36,7 +36,7 @@
 
   .presidents {
     display: grid;
-    grid-template-columns: 33.33vw 33.33vw 33.33vw;
+    grid-template-columns: 165px 1fr 1fr;
     /* change later */
     margin-bottom: 300px;
   }
@@ -48,6 +48,7 @@
     white-space: nowrap;
     /*rotate by 90 degrees*/
     transform: rotate(90deg);
+
     width: 0px;
     height: 0px;
   }
@@ -58,6 +59,7 @@
     justify-self:inherit;
     margin: 0;
     padding: 0;
+    transform-origin: bottom left;
   }
 
   .box-text {
