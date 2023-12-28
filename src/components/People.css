@@ -23,12 +23,32 @@ html, body {
   margin: 0 10px;
 }
 
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
 .meet {
-  margin-right: 30vw;
+  animation: 1s ease-out 0s 1 slideInFromLeft;
+  margin-left: -30vw;
 }
 
 .the-team {
-  margin-left: 30vw;
+  animation: 1s ease-out 0s 1 slideInFromRight;
+  margin-right: -30vw;
 }
 
 .box {
