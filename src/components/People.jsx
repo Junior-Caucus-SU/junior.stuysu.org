@@ -94,7 +94,7 @@ export default function People() {
           <div className="description">Lorem ipsum dolor sit amet consectetur. Velit convallis sit odio orci varius eu elementum. Est sit et hendrerit id eget diam. Maecenas amet sed ac turpis facilisis semper at. Tincidunt egestas vulputate sed lobortis hac augue. Est pharetra aliquet faucibus.</div>
         </div>
         <div className="chiefs-box box">
-          <div className="chiefs-box-text box-text">Chiefs of Staff</div>
+          <div className="chiefs-box-text box-text">Chiefs <i>of</i> Staff</div>
         </div>
       </div>
 

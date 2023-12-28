@@ -148,7 +148,22 @@ html, body {
 }
 
 .chiefs-box-text {
-  /* No rotation needed as in .box-text */
+  transform: rotate(0deg);
+  color: #FBE4DF;
+  font-size: 128px;
+  font-family: Neue Haas Grotesk Display Pro;
+  font-weight: 350;
+  line-height: 108.80px;
+  word-wrap: break-word;
+}
+
+.chiefs-box-text i {
+  color: #FBE4DF;
+  font-size: 128px;
+  font-family: Mixta Pro;
+  font-weight: 350;
+  line-height: 108.80px;
+  word-wrap: break-word;
 }
 
 /* Directors Section */
