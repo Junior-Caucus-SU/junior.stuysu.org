@@ -54,6 +54,12 @@ html, body {
   justify-content: center;
   align-items: center;
   margin-top: 0px;
+  padding: 0;
+  margin: 0;
+}
+
+.person-container {
+  max-width: 50vw;
 }
 
 .name {
@@ -61,9 +67,15 @@ html, body {
   margin-bottom: 5px;
 }
 
-.description, .d_type {
-  font-size: 1rem;
+.d_type {
+  font-size: 3rem;
+}
+
+.description {
+  font-size: 0.9rem;
   color: #051E4F;
+  justify-self: start;
+  text-align: left;
 }
 
 .d_type_box {
@@ -136,10 +148,19 @@ html, body {
   padding: 0;
 }
 
+.emily {
+  display: flex;
+  flex-direction: row;
+}
+
+.emily .nameAndDescription {
+  align-self: end;
+}
+
 .subgroup_containerD_all {
+  width: 100vw;
   display: flex;
   flex-direction: column;
-  width: 100vw;
   justify-content: center;
 }
 

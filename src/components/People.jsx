@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Navbar from "./NonPage/NavBar";
 import Texture from "./NonPage/Texture";
 import Footer from "./NonPage/Footer";
@@ -18,6 +18,31 @@ import Will from '../Images/people/Will.jpeg';
 import John from '../Images/people/John.png';
 
 export default function People() {
+  const adjustDescriptionWidth = () => {
+    const images = document.querySelectorAll('.person-container img');
+    images.forEach(img => {
+      const name = img.nextElementSibling;
+      const description = img.nextElementSibling.nextElementSibling;
+      if (name && name.classList.contains('name')) {
+        name.style.width = `${img.offsetWidth}px`;
+      }
+      if (description && description.classList.contains('description')) {
+        description.style.width = `${img.offsetWidth}px`;
+      }
+    });
+  };
+
+  useEffect(() => {
+    window.addEventListener('load', adjustDescriptionWidth);
+    window.addEventListener('resize', adjustDescriptionWidth);
+
+    // Clean up the event listeners
+    return () => {
+      window.removeEventListener('load', adjustDescriptionWidth);
+      window.removeEventListener('resize', adjustDescriptionWidth);
+    };
+  }, []);
+
   let peoplePage = (
     <div className="people-page">
       <Navbar page="People"/>
@@ -36,12 +61,12 @@ export default function People() {
         <div className="president person-container">
           <img src={Josephine_Yoo} alt="Josephine Yoo" />
           <div className="name">Josephine</div>
-          <div className="description">the president</div>
+          <div className="description">Lorem ipsum dolor sit amet consectetur. Velit convallis sit odio orci varius eu elementum. Est sit et hendrerit id eget diam. Maecenas amet sed ac turpis facilisis semper at. Tincidunt egestas vulputate sed lobortis hac augue. Est pharetra aliquet faucibus.</div>
         </div>
         <div className="president person-container">
           <img src={Grace_Rhee} alt="Grace Rhee" />
           <div className="name">Grace</div>
-          <div className="description">the president</div>
+          <div className="description">Lorem ipsum dolor sit amet consectetur. Velit convallis sit odio orci varius eu elementum. Est sit et hendrerit id eget diam. Maecenas amet sed ac turpis facilisis semper at. Tincidunt egestas vulputate sed lobortis hac augue. Est pharetra aliquet faucibus.</div>
         </div>
       </div>
 
@@ -49,12 +74,12 @@ export default function People() {
         <div className="chief chief1 person-container">
           <img src={John} alt="" />
           <div className="name">John J. Wang</div>
-          <div className="description">Description here...</div>
+          <div className="description">Lorem ipsum dolor sit amet consectetur. Velit convallis sit odio orci varius eu elementum. Est sit et hendrerit id eget diam. Maecenas amet sed ac turpis facilisis semper at. Tincidunt egestas vulputate sed lobortis hac augue. Est pharetra aliquet faucibus.</div>
         </div>
         <div className="chief chief2 person-container">
           <img src={Ethan_Sie} alt="" />
           <div className="name">Ethan Sie</div>
-          <div className="description">Description here...</div>
+          <div className="description">Lorem ipsum dolor sit amet consectetur. Velit convallis sit odio orci varius eu elementum. Est sit et hendrerit id eget diam. Maecenas amet sed ac turpis facilisis semper at. Tincidunt egestas vulputate sed lobortis hac augue. Est pharetra aliquet faucibus.</div>
         </div>
         <div className="chiefs-box box">
           <div className="chiefs-box-text box-text">Chiefs of Staff</div>
@@ -69,10 +94,12 @@ export default function People() {
 
           <div className="d_type_box">
             <div className="d_type">Events</div>
-            <div className="president person-container">
+            <div className="president person-container emily">
                 <img src={Emily_Li} alt="" />
-                <div className="name">Emily Li</div>
-                <div className="description">Description here...</div>
+                <div className="nameAndDescription">
+                  <div className="name">Emily Li</div>
+                  <div className="description">Lorem ipsum dolor sit amet consectetur. Velit convallis sit odio orci varius eu elementum. Est sit et hendrerit id eget diam. Maecenas amet sed ac turpis facilisis semper at. Tincidunt egestas vulputate sed lobortis hac augue. Est pharetra aliquet faucibus.</div>
+                </div>
             </div>
           </div>
           
@@ -81,12 +108,12 @@ export default function People() {
             <div className="director person-container">
                 <img src={Chenming_Fang} alt="" className = "director-img"/>
                 <div className="name">Chenming Fang</div>
-                <div className="description">Description here...</div>
+                <div className="description">Lorem ipsum dolor sit amet consectetur. Velit convallis sit odio orci varius eu elementum. Est sit et hendrerit id eget diam. Maecenas amet sed ac turpis facilisis semper at. Tincidunt egestas vulputate sed lobortis hac augue. Est pharetra aliquet faucibus.</div>
             </div>
             <div className="director person-container">
                 <img src={Josephine_Gunawan} alt="" className = "director-img"/>
                 <div className="name">Josephine Gunawan</div>
-                <div className="description">Description here...</div>
+                <div className="description">Lorem ipsum dolor sit amet consectetur. Velit convallis sit odio orci varius eu elementum. Est sit et hendrerit id eget diam. Maecenas amet sed ac turpis facilisis semper at. Tincidunt egestas vulputate sed lobortis hac augue. Est pharetra aliquet faucibus.</div>
             </div>
           </div>
         </div>
@@ -99,12 +126,12 @@ export default function People() {
               <div className="director person-container">
                   <img src={Elias_Xu} alt="" className = "director-img"/>
                   <div className="name">Elias Xu</div>
-                  <div className="description">Description here...</div>
+                  <div className="description">Lorem ipsum dolor sit amet consectetur. Velit convallis sit odio orci varius eu elementum. Est sit et hendrerit id eget diam. Maecenas amet sed ac turpis facilisis semper at. Tincidunt egestas vulputate sed lobortis hac augue. Est pharetra aliquet faucibus.</div>
               </div>
               <div className="director person-container">
                   <img src={Will} alt="" className = "director-img"/>
                   <div className="name">Will Zhang</div>
-                  <div className="description">Description here...</div>
+                  <div className="description">Lorem ipsum dolor sit amet consectetur. Velit convallis sit odio orci varius eu elementum. Est sit et hendrerit id eget diam. Maecenas amet sed ac turpis facilisis semper at. Tincidunt egestas vulputate sed lobortis hac augue. Est pharetra aliquet faucibus.</div>
               </div>
             </div>
           </div>
@@ -115,12 +142,12 @@ export default function People() {
               <div className="director person-container">
                   <img src={Stacie_Au} alt="" className = "director-img"/>
                   <div className="name">Stacie Au</div>
-                  <div className="description">Description here...</div>
+                  <div className="description">Lorem ipsum dolor sit amet consectetur. Velit convallis sit odio orci varius eu elementum. Est sit et hendrerit id eget diam. Maecenas amet sed ac turpis facilisis semper at. Tincidunt egestas vulputate sed lobortis hac augue. Est pharetra aliquet faucibus.</div>
               </div>
               <div className="director person-container">
                   <img src={Ayla_Irshad} alt="" className = "director-img"/>
                   <div className="name">Ayla Irshad</div>
-                  <div className="description">Description here...</div>
+                  <div className="description">Lorem ipsum dolor sit amet consectetur. Velit convallis sit odio orci varius eu elementum. Est sit et hendrerit id eget diam. Maecenas amet sed ac turpis facilisis semper at. Tincidunt egestas vulputate sed lobortis hac augue. Est pharetra aliquet faucibus.</div>
               </div>
             </div>
           </div>
@@ -131,7 +158,7 @@ export default function People() {
               <div className="director person-container">
                   <img src={Chloe_Wong} alt="" className = "director-img"/>
                   <div className="name">Chloe Wang</div>
-                  <div className="description">Description here...</div>
+                  <div className="description">Lorem ipsum dolor sit amet consectetur. Velit convallis sit odio orci varius eu elementum. Est sit et hendrerit id eget diam. Maecenas amet sed ac turpis facilisis semper at. Tincidunt egestas vulputate sed lobortis hac augue. Est pharetra aliquet faucibus.</div>
               </div>
             </div>
             <div className="d_type_box">
@@ -139,12 +166,12 @@ export default function People() {
               <div className="director person-container">
                   <img src={Maegan_Diep} alt="" className = "director-img"/>
                   <div className="name">Maegan Diep</div>
-                  <div className="description">Description here...</div>
+                  <div className="description">Lorem ipsum dolor sit amet consectetur. Velit convallis sit odio orci varius eu elementum. Est sit et hendrerit id eget diam. Maecenas amet sed ac turpis facilisis semper at. Tincidunt egestas vulputate sed lobortis hac augue. Est pharetra aliquet faucibus.</div>
               </div>
             </div>
           </div>
         </div>
-        
+
       </div>
       <Footer/>
     </div>
