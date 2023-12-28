@@ -1,135 +1,120 @@
-  html, body {
-    margin: 0;
-    padding: 0;
-  }
-  
-  .meet-team-container {
-    text-align: center;
-    margin-top: 20px;
-    height: 70vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  
-  .meet, .the-team {
-    display: inline-block;
-    font-size: 4rem;
-    font-weight: bold;
-    font-size: 6.9rem;
-    margin: 0 10px;
-    color: #051E4F;
-    font-size: 208px;
-    font-family: "Mixta-Sharp";
-    font-weight: 300;
-    line-height: 164.32px;
-    word-wrap: break-word;
-  }
+html, body {
+  margin: 0;
+  padding: 0;
+}
 
-  .meet {
-    margin-right: 30vw;
-  }
+.meet-team-container {
+  text-align: center;
+  margin-top: 20px;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
-  .the-team {
-    margin-left: 30vw;
-  }
+.meet, .the-team {
+  display: inline-block;
+  color: #051E4F;
+  font-family: "Mixta-Sharp";
+  font-weight: 300;
+  line-height: 164.32px;
+  word-wrap: break-word;
+  font-size: 208px; /* Consolidated font-size */
+  margin: 0 10px;
+}
 
-  .presidents {
-    display: grid;
-    grid-template-columns: 165px 1fr 1fr;
-    /* change later */
-    margin-bottom: 300px;
-  }
+.meet {
+  margin-right: 30vw;
+}
 
-  .box {
-    background-color: #0C2B56;
-    color: #FAE5E2;
-    font-size: 96px;
-    white-space: nowrap;
-    /*rotate by 90 degrees*/
-    transform: rotate(90deg);
+.the-team {
+  margin-left: 30vw;
+}
 
-    width: 0px;
-    height: 0px;
-  }
+.box {
+  background-color: #0C2B56;
+  color: #FAE5E2;
+  font-size: 96px;
+  white-space: nowrap;
+}
 
-  .presidents-box {
-    width: fit-content;
-    height: fit-content;
-    justify-self:inherit;
-    margin: 0;
-    padding: 0;
-    transform-origin: bottom left;
-  }
+.box-text {
+  transform: rotate(180deg);
+  color: #FBE4DF;
+  font-size: 128px;
+  font-family: Neue Haas Grotesk Display Pro;
+  font-weight: 350;
+  line-height: 108.80px;
+  word-wrap: break-word;
+}
 
-  .box-text {
-    transform: rotate(180deg);
-    color: #FBE4DF;
-    font-size: 128px;
-    font-family: Neue Haas Grotesk Display Pro;
-    font-weight: 350;
-    line-height: 108.80px;
-    word-wrap: break-word;
-  }
+.subgroup-container, .directors-container, .person-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0px;
+}
 
-  .chiefs-box-text {
-    transform: rotate(0deg);
-  }
-  
-  
+.name {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
 
-  .presidents-box-text {
-    padding-top: 20px;
-    padding-left: 200px;
-  }
+.description, .d_type {
+  font-size: 1rem;
+  color: #051E4F;
+}
 
-  
+.d_type_box {
+  display: flex;
+  flex-direction: row;
+}
 
-  .subgroup-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-top: 0px;
-  }
-  
-  .person-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .name {
-    font-size: 1.5rem;
-    margin-bottom: 5px;
-  }
-  
-  .description {
-    font-size: 1rem;
-  }
+.people-page-body img {
+  max-width: 25vw;
+}
 
-  .directors-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 0px;
-  }
+/* Presidents Section */
+.presidents {
+  display: grid;
+  grid-template-columns: 165px 1fr 1fr;
+  margin-bottom: 300px;
+  height: min-content;
+}
 
-  .people-page-body img {
-    max-width: 25vw;
-  }
+.presidents-box {
+  transform: rotate(90deg);
+  transform-origin: bottom left;
+  width: fit-content;
+  height: fit-content;
+  justify-self: inherit;
+  margin: 0;
+  padding: 0;
+}
 
-  .d_type {
-    font-size: 3rem;
-    margin-bottom: 5px;
-    color: #051E4F;
-  }
+.presidents-box-text {
+  padding-top: 20px;
+  padding-left: 200px;
+}
 
-  .d_type_box {
-    display: flex;
-    flex-direction: row;
-  }
+/* Chiefs Section - Applying similar structure as Presidents */
+.chiefs {
+  display: grid;
+  grid-template-columns: fit-content(100%) 1fr 1fr;
+  margin-bottom: 300px;
+}
 
-  
+.chiefs-box {
+  transform: rotate(-90deg);
+  transform-origin: bottom right;
+  width: fit-content;
+  height: fit-content;
+  justify-self: inherit;
+  margin: 10px;
+  padding: 10px;
+}
+
+.chiefs-box-text {
+  /* No rotation needed as in .box-text */
+}

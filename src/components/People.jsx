@@ -46,17 +46,15 @@ export default function People() {
       </div>
 
       <div className="chiefs people-section">
-        <div className="chiefs-container subgroup-container">
-          <div className="chiefs person-container">
-            <img src={John} alt="" />
-            <div className="name">John J. Wang</div>
-            <div className="description">Description here...</div>
-          </div>
-          <div className="chiefs person-container">
-            <img src={Ethan_Sie} alt="" />
-            <div className="name">Ethan Sie</div>
-            <div className="description">Description here...</div>
-          </div>
+        <div className="chief chief1 person-container">
+          <img src={John} alt="" />
+          <div className="name">John J. Wang</div>
+          <div className="description">Description here...</div>
+        </div>
+        <div className="chief chief2 person-container">
+          <img src={Ethan_Sie} alt="" />
+          <div className="name">Ethan Sie</div>
+          <div className="description">Description here...</div>
         </div>
         <div className="chiefs-box box">
           <div className="chiefs-box-text box-text">Chiefs of Staff</div>
