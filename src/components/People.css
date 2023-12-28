@@ -180,16 +180,6 @@ html, body {
   height: fit-content;
 }
 
-.elias {
-  justify-self: start;
-  padding: 30px;
-}
-
-.stacie {
-  justify-self: start;
-  padding: 30px;
-}
-
 .finance_name {
   padding-bottom: 200px;
 }
@@ -198,11 +188,6 @@ html, body {
 .subgroup-containerD {
   width: 100vw;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 50vw 50vw;
   margin-bottom: 50px;
-}
-
-.chloe {
-  justify-self: start;
-  padding: 30px;
 }
