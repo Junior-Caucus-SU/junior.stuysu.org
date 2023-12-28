@@ -69,12 +69,12 @@ export default function People() {
           <div className="president person-container">
             <img src={Josephine_Yoo} alt="Josephine Yoo" />
             <div className="name">Josephine</div>
-            <div className="description">Description here...</div>
+            <div className="description">the president</div>
           </div>
           <div className="president person-container">
             <img src={Grace_Rhee} alt="Grace Rhee" />
             <div className="name">Grace</div>
-            <div className="description">Description here...</div>
+            <div className="description">the president</div>
           </div>
         </div>
       </div>
