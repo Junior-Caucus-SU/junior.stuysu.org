@@ -151,21 +151,47 @@ html, body {
 .emily {
   display: flex;
   flex-direction: row;
+  margin-bottom: 100px;
+}
+
+.d_type_image {
+  display: flex;
+  flex-direction: column;
 }
 
 .emily .nameAndDescription {
   align-self: end;
+  padding-left: 10px;
+}
+
+.chenming {
+  justify-self: start;
 }
 
 .subgroup_containerD_all {
   width: 100vw;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+}
+
+.d_type_box {
+  display: grid;
+  grid-template-columns: 40vw 40vw;
+  height: fit-content;
+}
+
+.elias {
+  justify-self: start;
+  padding: 30px;
+}
+
+.finance_name {
+  padding-bottom: 200px;
 }
 
 /* 2x1 grid */
 .subgroup-containerD {
+  width: 100vw;
   display: grid;
-  grid-template-columns: 50vw 50vw;
+  grid-template-columns: 1fr 1fr;
 }

@@ -21,13 +21,25 @@ export default function People() {
   const adjustDescriptionWidth = () => {
     const images = document.querySelectorAll('.person-container img');
     images.forEach(img => {
-      const name = img.nextElementSibling;
-      const description = img.nextElementSibling.nextElementSibling;
-      if (name && name.classList.contains('name')) {
-        name.style.width = `${img.offsetWidth}px`;
-      }
-      if (description && description.classList.contains('description')) {
-        description.style.width = `${img.offsetWidth}px`;
+      try {
+        const name = img.nextElementSibling;
+        const description = img.nextElementSibling.nextElementSibling;
+        console.log(name);
+
+        // Get the previous element if there is one
+        const previous = img.previousElementSibling;
+
+        if (previous && previous.classList.contains('d_type')) {
+          previous.style.width = `${img.offsetWidth}px`;
+        }
+        if (name && name.classList.contains('name')) {
+          name.style.width = `${img.offsetWidth}px`;
+        }
+        if (description && description.classList.contains('description')) {
+          description.style.width = `${img.offsetWidth}px`;
+        }
+      } catch (e) {
+        console.log(e);
       }
     });
   };
@@ -58,12 +70,12 @@ export default function People() {
         <div className="presidents-box box">
           <div className="presidents-box-text box-text">Presidents</div>
         </div>
-        <div className="president person-container">
+        <div className="president person-container josephine">
           <img src={Josephine_Yoo} alt="Josephine Yoo" />
           <div className="name">Josephine</div>
           <div className="description">Lorem ipsum dolor sit amet consectetur. Velit convallis sit odio orci varius eu elementum. Est sit et hendrerit id eget diam. Maecenas amet sed ac turpis facilisis semper at. Tincidunt egestas vulputate sed lobortis hac augue. Est pharetra aliquet faucibus.</div>
         </div>
-        <div className="president person-container">
+        <div className="president person-container grace">
           <img src={Grace_Rhee} alt="Grace Rhee" />
           <div className="name">Grace</div>
           <div className="description">Lorem ipsum dolor sit amet consectetur. Velit convallis sit odio orci varius eu elementum. Est sit et hendrerit id eget diam. Maecenas amet sed ac turpis facilisis semper at. Tincidunt egestas vulputate sed lobortis hac augue. Est pharetra aliquet faucibus.</div>
@@ -92,20 +104,20 @@ export default function People() {
         </div>
         <div className="directors-container subgroup-container">
 
-          <div className="d_type_box">
-            <div className="d_type">Events</div>
-            <div className="president person-container emily">
+          <div className="president person-container emily">
+              <div className="d_type_image">
+                <div className="d_type">Events</div>
                 <img src={Emily_Li} alt="" />
-                <div className="nameAndDescription">
-                  <div className="name">Emily Li</div>
-                  <div className="description">Lorem ipsum dolor sit amet consectetur. Velit convallis sit odio orci varius eu elementum. Est sit et hendrerit id eget diam. Maecenas amet sed ac turpis facilisis semper at. Tincidunt egestas vulputate sed lobortis hac augue. Est pharetra aliquet faucibus.</div>
-                </div>
-            </div>
+              </div>
+              <div className="nameAndDescription">
+                <div className="name">Emily Li</div>
+                <div className="description">Lorem ipsum dolor sit amet consectetur. Velit convallis sit odio orci varius eu elementum. Est sit et hendrerit id eget diam. Maecenas amet sed ac turpis facilisis semper at. Tincidunt egestas vulputate sed lobortis hac augue. Est pharetra aliquet faucibus.</div>
+              </div>
           </div>
           
           <div className="d_type_box">
-            <div className="d_type">Internals</div>
-            <div className="director person-container">
+            <div className="director person-container chenming">
+                <div className="d_type">Internals</div>
                 <img src={Chenming_Fang} alt="" className = "director-img"/>
                 <div className="name">Chenming Fang</div>
                 <div className="description">Lorem ipsum dolor sit amet consectetur. Velit convallis sit odio orci varius eu elementum. Est sit et hendrerit id eget diam. Maecenas amet sed ac turpis facilisis semper at. Tincidunt egestas vulputate sed lobortis hac augue. Est pharetra aliquet faucibus.</div>
@@ -119,11 +131,11 @@ export default function People() {
         </div>
       </div>
 
-        <div classNmae="subgroup_containerD_all">
+        <div className="subgroup_containerD_all">
           <div className="subgroup-containerD">
             <div className="d_type_box">
-              <div className="d_type">I/T</div>
-              <div className="director person-container">
+              <div className="director person-container elias">
+                  <div className="d_type">I/T</div>
                   <img src={Elias_Xu} alt="" className = "director-img"/>
                   <div className="name">Elias Xu</div>
                   <div className="description">Lorem ipsum dolor sit amet consectetur. Velit convallis sit odio orci varius eu elementum. Est sit et hendrerit id eget diam. Maecenas amet sed ac turpis facilisis semper at. Tincidunt egestas vulputate sed lobortis hac augue. Est pharetra aliquet faucibus.</div>
@@ -138,8 +150,8 @@ export default function People() {
 
           <div className="subgroup-containerD">
             <div className="d_type_box">
-              <div className="d_type">Finance</div>
               <div className="director person-container">
+                  <div className="d_type finance_name">Finance</div>
                   <img src={Stacie_Au} alt="" className = "director-img"/>
                   <div className="name">Stacie Au</div>
                   <div className="description">Lorem ipsum dolor sit amet consectetur. Velit convallis sit odio orci varius eu elementum. Est sit et hendrerit id eget diam. Maecenas amet sed ac turpis facilisis semper at. Tincidunt egestas vulputate sed lobortis hac augue. Est pharetra aliquet faucibus.</div>
@@ -153,17 +165,17 @@ export default function People() {
           </div>
 
           <div className="subgroup-containerD">
-            <div className="d_type_box">
-              <div className="d_type">Graphics</div>
+            <div className="d_type_box_c"> 
               <div className="director person-container">
+                  <div className="d_type">Graphics</div>
                   <img src={Chloe_Wong} alt="" className = "director-img"/>
                   <div className="name">Chloe Wang</div>
                   <div className="description">Lorem ipsum dolor sit amet consectetur. Velit convallis sit odio orci varius eu elementum. Est sit et hendrerit id eget diam. Maecenas amet sed ac turpis facilisis semper at. Tincidunt egestas vulputate sed lobortis hac augue. Est pharetra aliquet faucibus.</div>
               </div>
             </div>
-            <div className="d_type_box">
-              <div className="d_type">Social Media</div>
+            <div className="d_type_box_c">  
               <div className="director person-container">
+                  <div className="d_type">Social Media</div>
                   <img src={Maegan_Diep} alt="" className = "director-img"/>
                   <div className="name">Maegan Diep</div>
                   <div className="description">Lorem ipsum dolor sit amet consectetur. Velit convallis sit odio orci varius eu elementum. Est sit et hendrerit id eget diam. Maecenas amet sed ac turpis facilisis semper at. Tincidunt egestas vulputate sed lobortis hac augue. Est pharetra aliquet faucibus.</div>
