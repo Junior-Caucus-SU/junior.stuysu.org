@@ -40,7 +40,7 @@ export default function Home() {
                     <img src={Sun} alt="Fancical Abstract Drawing of a Sun" className="sun-img"/>
                     <img src={SpecificsLine} alt="Decorative Line Art" className="specifics-line"/>
                     <div className="all-schedules">
-                        <a href="https://www.google.com/" className="all-schedules-link">View all schedules</a>
+                        <a href="https://www.google.com/search?q=copium&rlz=1C5CHFA_enUS996US996&oq=copium&gs_lcrp=EgZjaHJvbWUqBwgAEAAYjwIyBwgAEAAYjwIyDQgBEC4Y1AIYsQMYgAQyCggCEAAYsQMYgAQyCggDEAAYsQMYgAQyBwgEEAAYgAQyBwgFEAAYgAQyBwgGEAAYgAQyBwgHEAAYgAQyBwgIEAAYgAQyBwgJEAAYgATSAQgxMTcwajBqMagCALACAA&sourceid=chrome&ie=UTF-8#vhid=Ud5YHn3U1zaiIM:&vssid=l" className="all-schedules-link">View all schedules</a>
                     </div>
                 </div>
                 <div className="mission-box">
