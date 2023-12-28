@@ -107,7 +107,7 @@ html, body {
 
 .presidents-box-text {
   padding-top: 20px;
-  padding-left: 200px;
+  padding-left: 15vw;
 }
 
 /* Chiefs Section - Applying similar structure as Presidents */
@@ -117,6 +117,10 @@ html, body {
   margin-bottom: 300px;
 }
 
+.chief1 {
+  margin-top:5vh;
+}
+
 .chiefs-box {
   transform: rotate(-90deg);
   transform-origin: bottom right;
@@ -124,6 +128,7 @@ html, body {
   height: fit-content;
   justify-self: end;
   margin: 10px;
+  margin-right:0;
   padding: 10px;
 }
 
