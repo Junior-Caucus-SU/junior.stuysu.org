@@ -13,6 +13,9 @@ import Grace_Rhee from '../Images/people/Grace_Rhee.jpeg';
 import Josephine_Gunawan from '../Images/people/Josephine_Gunawan.jpeg';
 import Maegan_Diep from '../Images/people/Maegan_Diep.jpeg';
 import Stacie_Au from '../Images/people/Stacie_Au.jpeg';
+import Josephine_Yoo from '../Images/people/Josephine_Yoo.png';
+import Will from '../Images/people/Will.jpeg';
+import John from '../Images/people/John.png';
 
 export default function People() {
   // ref for the box elements
@@ -64,7 +67,7 @@ export default function People() {
         </div>
         <div className="presidents-container subgroup-container">
           <div className="president person-container">
-            <div className="image-placeholder"></div>
+            <img src={Josephine_Yoo} alt="Josephine Yoo" />
             <div className="name">Josephine</div>
             <div className="description">Description here...</div>
           </div>
@@ -79,7 +82,7 @@ export default function People() {
       <div className="chiefs people-section">
         <div className="chiefs-container subgroup-container">
           <div className="chiefs person-container">
-            <div className="image-placeholder"></div>
+            <img src={John} alt="" />
             <div className="name">John J. Wang</div>
             <div className="description">Description here...</div>
           </div>
@@ -131,7 +134,7 @@ export default function People() {
                 <div className="description">Description here...</div>
             </div>
             <div className="director person-container">
-                <div className="image-placeholder"></div>
+                <img src={Will} alt="" className = "director-img"/>
                 <div className="name">Will Zhang</div>
                 <div className="description">Description here...</div>
             </div>
