@@ -1,3 +1,8 @@
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+  
   .meet-team-container {
     text-align: center;
     margin-top: 20px;
@@ -28,24 +33,35 @@
   .the-team {
     margin-left: 30vw;
   }
-  
-  .people-section {
-    display: flex;
-    flex-direction: row;
-    /* align-items: flex-start; */
-    /* justify-content: space-between; */
+
+  .presidents {
+    display: grid;
+    grid-template-columns: 33.33vw 33.33vw 33.33vw;
+    /* change later */
+    margin-bottom: 300px;
+  }
+
+  .box {
+    background-color: #0C2B56;
+    color: #FAE5E2;
+    font-size: 96px;
+    white-space: nowrap;
+    /*rotate by 90 degrees*/
+    transform: rotate(90deg);
+    width: 0px;
+    height: 0px;
+  }
+
+  .presidents-box {
+    width: fit-content;
+    height: fit-content;
+    justify-self:inherit;
     margin: 0;
     padding: 0;
   }
-  
+
   .box-text {
     transform: rotate(180deg);
-    padding-left: 0px;
-    padding-right: 0px;
-    padding-bottom: 0px;
-    padding-top: 0px;
-    margin: 0;
-    line-height: normal;
     color: #FBE4DF;
     font-size: 128px;
     font-family: Neue Haas Grotesk Display Pro;
@@ -56,30 +72,22 @@
 
   .chiefs-box-text {
     transform: rotate(0deg);
-    padding-left: 0px;
-    padding-right: 0px;
-    padding-bottom: 0px;
-    padding-top: 0px;
-    margin: 0;
   }
   
-  .box {
-    display: flex;
-    left: 0;
-    background-color: #0C2B56;
-    color: #FAE5E2;
-    font-size: 96px;
-    white-space: nowrap;
-    margin: 0;
-    align-self: flex-start;
-    justify-self: flex-start;
-  }
   
+
+  .presidents-box-text {
+    padding-top: 20px;
+    padding-left: 200px;
+  }
+
+  
+
   .subgroup-container {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     margin-top: 0px;
   }
   
@@ -121,3 +129,5 @@
     display: flex;
     flex-direction: row;
   }
+
+  

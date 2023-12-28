@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import Navbar from "./NonPage/NavBar";
 import Texture from "./NonPage/Texture";
 import Footer from "./NonPage/Footer";
@@ -18,38 +18,6 @@ import Will from '../Images/people/Will.jpeg';
 import John from '../Images/people/John.png';
 
 export default function People() {
-  // ref for the box elements
-  const boxRef = useRef([]);
-
-  useEffect(() => {
-    // After the component has mounted 
-    boxRef.current.forEach((box, index) => {
-      if (box) {
-        // get the width of the box without bounding client rect
-        const width = box.offsetWidth;
-        // get the length of the box without bounding client rect
-        const length = box.offsetHeight;
-
-        // pick the smaller of the two to choose how much to translate
-        const translate = Math.min(width, length);
-
-        console.log(translate);
-
-        // if it is the presidents-box (which is rotated 90 degrees counterclockwise)
-        if (index === 0 || index === 2) {
-            box.style.transform = `rotate(90deg)`;
-            box.style.transformOrigin = `bottom left`;
-            box.style.transform = `rotate(90deg) translateX(-${translate}px)`;
-        } 
-        // if it is the chiefs-box (which is rotated -90 degrees clockwise)
-        else if (index === 1) {
-            box.style.transform = `rotate(-90deg) translateX(-${translate}px`;
-            box.style.transformOrigin = `bottom right`;
-        }
-      }
-    });
-  }, []);  
-  
   let peoplePage = (
     <div className="people-page">
       <Navbar page="People"/>
@@ -62,20 +30,18 @@ export default function People() {
       </div>
 
       <div className="presidents people-section">
-        <div className="presidents-box box" ref={el => boxRef.current[0] = el}>
+        <div className="presidents-box box">
           <div className="presidents-box-text box-text">Presidents</div>
         </div>
-        <div className="presidents-container subgroup-container">
-          <div className="president person-container">
-            <img src={Josephine_Yoo} alt="Josephine Yoo" />
-            <div className="name">Josephine</div>
-            <div className="description">the president</div>
-          </div>
-          <div className="president person-container">
-            <img src={Grace_Rhee} alt="Grace Rhee" />
-            <div className="name">Grace</div>
-            <div className="description">the president</div>
-          </div>
+        <div className="president person-container">
+          <img src={Josephine_Yoo} alt="Josephine Yoo" />
+          <div className="name">Josephine</div>
+          <div className="description">the president</div>
+        </div>
+        <div className="president person-container">
+          <img src={Grace_Rhee} alt="Grace Rhee" />
+          <div className="name">Grace</div>
+          <div className="description">the president</div>
         </div>
       </div>
 
@@ -92,13 +58,13 @@ export default function People() {
             <div className="description">Description here...</div>
           </div>
         </div>
-        <div className="chiefs-box box" ref={el => boxRef.current[1] = el}>
+        <div className="chiefs-box box">
           <div className="chiefs-box-text box-text">Chiefs of Staff</div>
         </div>
       </div>
 
       <div className="directors people-section">
-        <div className="directors-box box" ref={el => boxRef.current[2] = el}>
+        <div className="directors-box box">
           <div className="directors-box-text box-text">Directors</div>
         </div>
         <div className="directors-container subgroup-container">
