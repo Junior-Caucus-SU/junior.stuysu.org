@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useRef} from "react";
 import Navbar from "./NonPage/NavBar";
 import Texture from "./NonPage/Texture";
 import Footer from "./NonPage/Footer";
@@ -22,8 +22,32 @@ export default function People() {
     const images = document.querySelectorAll('.person-container img');
     images.forEach(img => {
       try {
-        const name = img.nextElementSibling;
-        const description = img.nextElementSibling.nextElementSibling;
+        const name = img.parentElement.querySelector('.name');
+        const description = img.parentElement.querySelector('.description');
+        console.log(name);
+
+        // Get the previous element if there is one
+        const previous = img.previousElementSibling;
+
+        if (previous && previous.classList.contains('d_type')) {
+          previous.style.width = `${img.offsetWidth}px`;
+        }
+        if (name && name.classList.contains('name')) {
+          name.style.width = `${img.offsetWidth}px`;
+        }
+        if (description && description.classList.contains('description')) {
+          description.style.width = `${img.offsetWidth}px`;
+        }
+      } catch (e) {
+        console.log(e);
+      }
+    });
+
+    const president_images = document.querySelectorAll('.person-container .image_box img');
+    president_images.forEach(img => {
+      try {
+        const name = img.parentElement.parentElement.querySelector('.name');
+        const description = img.parentElement.parentElement.querySelector('.description');
         console.log(name);
 
         // Get the previous element if there is one
@@ -55,6 +79,50 @@ export default function People() {
     };
   }, []);
 
+  const calculateZoom = (element) => {
+    if (!element) return 1; // if the element is not defined
+  
+    const viewportHeight = window.innerHeight;
+    const rect = element.getBoundingClientRect();
+    const elementCenter = rect.top + rect.height / 2;
+    const distanceFromCenter = Math.abs(viewportHeight / 2 - elementCenter);
+    const maxDistance = viewportHeight / 3; // max dist from the center
+  
+    // calculate the zoom level - closer to center means more zoom
+    const zoomLevel = 1 + (1 - distanceFromCenter / maxDistance) * 0.1; // controls max zoom
+    return Math.max(zoomLevel, 1); // the scale is not less than 1
+  };
+  
+
+  const pres1Ref = useRef(null);
+  const pres2Ref = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      [pres1Ref, pres2Ref].forEach(ref => {
+        if (ref.current) {
+          // Calculate the width of the screen
+          //let screenWidth = window.innerWidth;
+
+          // Calculate the zoom level
+          let zoom = calculateZoom(ref.current);
+
+          // Transform
+          ref.current.style.transform = `scale(${zoom})`;
+        }
+      });
+    };    
+
+  window.addEventListener('scroll', handleScroll);
+  handleScroll(); // Call it once initially
+
+  return () => {
+    window.removeEventListener('scroll', handleScroll);
+  };
+}, []);
+  
+  
+
   let peoplePage = (
     <div className="people-page">
       <Navbar page="People"/>
@@ -70,13 +138,15 @@ export default function People() {
         <div className="presidents-box box">
           <div className="presidents-box-text box-text">Presidents</div>
         </div>
-        <div className="president person-container josephine">
-          <img src={Josephine_Yoo} alt="Josephine Yoo" />
+        <div className="president person-container pres1"  >
+          <div className="image_box">
+          <img src={Josephine_Yoo} alt="Josephine Yoo" ref={pres1Ref}/></div>
           <div className="name">Josephine</div>
           <div className="description">Lorem ipsum dolor sit amet consectetur. Velit convallis sit odio orci varius eu elementum. Est sit et hendrerit id eget diam. Maecenas amet sed ac turpis facilisis semper at. Tincidunt egestas vulputate sed lobortis hac augue. Est pharetra aliquet faucibus.</div>
         </div>
-        <div className="president person-container grace">
-          <img src={Grace_Rhee} alt="Grace Rhee" />
+        <div className="president person-container pres2"  >
+        <div className="image_box">
+          <img src={Grace_Rhee} alt="Grace Rhee" ref={pres2Ref}/></div>
           <div className="name">Grace</div>
           <div className="description">Lorem ipsum dolor sit amet consectetur. Velit convallis sit odio orci varius eu elementum. Est sit et hendrerit id eget diam. Maecenas amet sed ac turpis facilisis semper at. Tincidunt egestas vulputate sed lobortis hac augue. Est pharetra aliquet faucibus.</div>
         </div>
