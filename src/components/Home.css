@@ -1,12 +1,12 @@
 .homepage-schedule-container {
   height: 70vh;
-  display:grid;
+  display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
 }
 
 .schedule-banner-container {
-  grid-column:span 2;
+  grid-column: span 2;
 }
 
 .schedule-specifics {
@@ -15,69 +15,59 @@
   width: 100vw;
   height: 50vh;
   background-color: #0c2b56;
-  display:grid;
+  display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(8, 1fr);
 }
 
 .specifics-line {
-  position:absolute;
-  right:0;
-  bottom:0;
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
 
-.box-one {
-  grid-column: 1/span 2;
-  grid-row: 1/span 5;
-  background-color: aquamarine;
+.schedule-specifics-box {
+  grid-column: 1 / span 5;
+  grid-row: 1 / span 5;
   margin-left: 3vw;
   margin-right: 5vw;
   z-index: 1;
 }
 
-.box-two {
-  grid-column:3/span 2;
-  margin-left: 8vw;
-  grid-row: 1/span 5;
-  background-color: aquamarine;
-  z-index:1;
-}
-
 .moon-img {
-  grid-column:5;
+  grid-column: 5;
   grid-row: 5;
   margin-left: -2vw;
   z-index: 0;
 }
 
 .sun-img {
-  grid-column:2;
-  grid-row:1;
+  grid-column: 2;
+  grid-row: 1;
   margin-left: 5vw;
   z-index: 0;
 }
 
 .all-schedules {
-  grid-column: 1/span 2;
+  grid-column: 1 / span 2;
   grid-row: 7;
   margin-left: 3vw;
 }
 
 .all-schedules-link {
-  color: var(--Pink, #FBE4DF);
-/* Link */
-font-family: Neue Haas Grotesk Text Pro;
-font-size: 0.75rem;
-font-style: normal;
-font-weight: 400;
-line-height: 150%; /* 1.125rem */
-text-decoration-line: underline;
+  color: var(--Pink, #fbe4df);
+  /* Link */
+  font-family: Neue Haas Grotesk Text Pro;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 1.125rem */
+  text-decoration-line: underline;
 }
 
 .mission-box {
   height: 90vh;
   width: 100vw;
-
 }
 
 .mission-statement {
@@ -87,11 +77,9 @@ text-decoration-line: underline;
   line-height: 100%; /* 3rem */
   padding-top: 7vw;
   padding-left: 6vw;
-  padding-right:36vw;
+  padding-right: 36vw;
   container-name: mission-statement;
 }
-
-
 
 .border1 {
   width: 100vw;
@@ -103,20 +91,48 @@ text-decoration-line: underline;
   width: 40vw;
   bottom: -2vw;
   z-index: -1;
-  grid-column:2 ;
-  grid-row: 2 ;
+  grid-column: 2;
+  grid-row: 2;
 }
 
 .date-crawler-pos {
-  padding-left:5vw;
-  grid-row:2;
+  padding-left: 5vw;
+  grid-row: 2;
   grid-column: 1;
 }
 
 .polaroids-sky {
-  width:100vw;
+  width: 100vw;
 }
 
 .end-scroll {
-  width:100vw;
+  width: 100vw;
+}
+
+.period-crawler-container {
+  color: var(--Pink, #fbe4df);
+  font-style: normal;
+
+  /* ! flexbox styles */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.period-name {
+  /* Text */
+  font-family: Neue Haas Grotesk Display Pro;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.period-time {
+  color: var(--Pink, #fbe4df);
+  /* Caption */
+  font-family: Neue Haas Grotesk Text Pro;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
 }

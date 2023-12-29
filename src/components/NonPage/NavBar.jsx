@@ -29,7 +29,7 @@ function currPageGet(page, currPage) {
 
 
 function getText(page, currPage) {
-    return currPage === page ? (<><span className="decorative">b</span> {currPage} <span className="decorative">a</span></>) : <>{"  " + currPage + "  "}</>;
+    return currPage === page ? (<><span className="decorative">b</span> {currPage} <span className="decorative">a</span></>) : <>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{currPage}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</>;
 }
 
 export default NavBar;

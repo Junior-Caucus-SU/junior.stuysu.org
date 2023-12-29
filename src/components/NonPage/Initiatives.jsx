@@ -20,7 +20,6 @@ export default function AllIntiatives(props) {
         fetchSheetsData();
     }, []);
 
-
     return (
         <div className="all-initiatives">
             <div className="frame">

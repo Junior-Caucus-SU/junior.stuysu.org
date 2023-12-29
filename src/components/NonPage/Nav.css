@@ -23,7 +23,7 @@
 
 .menu {
   list-style: none;
-  display: flex;
+  display: inline-flex;
   width: 40vw;
   justify-content: space-between;
 }
@@ -38,7 +38,6 @@
   font-weight: 500;
   line-height: normal;
   list-style: none;
-  margin-right: 20px;
   width:auto;
 }
 
@@ -55,4 +54,16 @@
 .junior-logo {
   flex: 1;
   display: flex;
+}
+
+.item-menu-text {
+  text-align:center;
+}
+
+.period-name {
+
+}
+
+.period-time {
+  
 }
