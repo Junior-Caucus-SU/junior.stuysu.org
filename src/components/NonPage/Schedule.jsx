@@ -20,7 +20,7 @@ function ScheduleDay({ daySchedule }) {
   );
 }
 
-function WeeklySchedule({scheduleData}) {
+function WeeklySchedule({ scheduleData }) {
   const today = new Date(); //warning
   const dayOfWeek = today.getDay() === 0 ? 7 : today.getDay();
   const firstDayOfWeek = today.getDate() - dayOfWeek + 1;
@@ -120,7 +120,7 @@ export default function ScheduleBanner() {
   const progress = timer.minutesPassed / (timer.minutesPassed + timer.minutesLeft);
   const strokeDashoffset = circumference * (1 - progress);
   // console.log(progress);  PROGRESS BUG
-  
+
   return (
     <div className="schedule-banner">
       <div className="top-row">
@@ -128,7 +128,7 @@ export default function ScheduleBanner() {
       </div>
       <div className="bottom-row">
         <div className="time-circle">
-        <svg className="progress-ring" width="140" height="140">
+          <svg className="progress-ring" width="140" height="140">
             <circle
               cx="69"
               cy="70"

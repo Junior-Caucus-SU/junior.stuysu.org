@@ -1,9 +1,3 @@
-html, body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-}
-
 .meet-team-container {
   text-align: center;
   margin-top: 20px;
@@ -111,6 +105,10 @@ html, body {
 
 .people-page-body img {
   max-width: 25vw;
+}
+
+.people-page-body {
+  overflow-x: hidden;
 }
 
 /* Presidents Section */

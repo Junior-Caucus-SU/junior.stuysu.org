@@ -1,5 +1,4 @@
 .ellipse-crawler {
-  /* background-color:black; */
   position: relative;
   display: inline-block;
 }
@@ -22,6 +21,7 @@
   transform: translate(-50%, -55%);
   color: var(--Main-Blue, #051e4f);
   text-align: center;
+  
   /* Caption */
   font-family: Neue Haas Grotesk Text Pro;
   font-size: 1rem;
