@@ -43,14 +43,18 @@ html, body {
   }
 }
 
+.the-team {
+  margin-right: -10000vw;
+}
+
 .meet {
   animation: 1s ease-out 0s 1 slideInFromLeft;
-  margin-left: -40vw;
+  margin-left: -20vw;
 }
 
 .the-team {
-  animation: 1s ease-out 0s 1 slideInFromRight;
-  margin-right: -10vw;
+  animation: 1s ease-out .0s 1 slideInFromRight;
+  margin-right: -20vw;
 }
 
 .box {
@@ -143,6 +147,11 @@ html, body {
 
 .image_box {
   overflow: hidden;
+}
+
+/* Set the animations to be smoother for the img inside .image_box */
+.image_box img {
+  transition: transform cubic-bezier(.5, .22, 0.22, 1);
 }
 
 /* Chiefs Section - Applying similar structure as Presidents */
