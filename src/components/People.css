@@ -229,14 +229,11 @@ html, body {
   padding-left: 10px;
 }
 
-.chenming {
-  justify-self: start;
-}
-
 .subgroup_containerD_all {
   width: 100vw;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 .d_type_box {
@@ -253,6 +250,6 @@ html, body {
 .subgroup-containerD {
   width: 100vw;
   display: grid;
-  grid-template-columns: 50vw 50vw;
+  grid-template-columns: 40vw 40vw;
   margin-bottom: 50px;
 }

@@ -185,23 +185,26 @@ export default function People() {
               </div>
           </div>
           
-          <div className="d_type_box">
-            <div className="director person-container chenming">
-                <div className="d_type">Internals</div>
-                <img src={Chenming_Fang} alt="" className = "director-img"/>
-                <div className="name">Chenming Fang</div>
-                <div className="description">Lorem ipsum dolor sit amet consectetur. Velit convallis sit odio orci varius eu elementum. Est sit et hendrerit id eget diam. Maecenas amet sed ac turpis facilisis semper at. Tincidunt egestas vulputate sed lobortis hac augue. Est pharetra aliquet faucibus.</div>
-            </div>
-            <div className="director person-container">
-                <img src={Josephine_Gunawan} alt="" className = "director-img"/>
-                <div className="name">Josephine Gunawan</div>
-                <div className="description">Lorem ipsum dolor sit amet consectetur. Velit convallis sit odio orci varius eu elementum. Est sit et hendrerit id eget diam. Maecenas amet sed ac turpis facilisis semper at. Tincidunt egestas vulputate sed lobortis hac augue. Est pharetra aliquet faucibus.</div>
-            </div>
-          </div>
-        </div>
-      </div>
+          
 
         <div className="subgroup_containerD_all">
+        <div className="subgroup-containerD">
+          <div className="d_type_box">
+              <div className="director person-container chenming">
+                  <div className="d_type">Internals</div>
+                  <img src={Chenming_Fang} alt="" className = "director-img"/>
+                  <div className="name">Chenming Fang</div>
+                  <div className="description">Lorem ipsum dolor sit amet consectetur. Velit convallis sit odio orci varius eu elementum. Est sit et hendrerit id eget diam. Maecenas amet sed ac turpis facilisis semper at. Tincidunt egestas vulputate sed lobortis hac augue. Est pharetra aliquet faucibus.</div>
+              </div>
+              <div className="director person-container">
+                  <img src={Josephine_Gunawan} alt="" className = "director-img"/>
+                  <div className="name">Josephine Gunawan</div>
+                  <div className="description">Lorem ipsum dolor sit amet consectetur. Velit convallis sit odio orci varius eu elementum. Est sit et hendrerit id eget diam. Maecenas amet sed ac turpis facilisis semper at. Tincidunt egestas vulputate sed lobortis hac augue. Est pharetra aliquet faucibus.</div>
+              </div>
+            </div>
+          </div>
+          </div>
+
           <div className="subgroup-containerD">
             <div className="d_type_box">
               <div className="director person-container elias">
@@ -253,6 +256,8 @@ export default function People() {
             </div>
           </div>
         </div>
+
+      </div>
 
       </div>
       <Footer/>
