@@ -82,13 +82,16 @@ text-decoration-line: underline;
 
 .mission-statement {
   color: var(--Main-Blue, #051e4f);
-  font-size: 4rem;
+  font-size: 5vw;
   font-weight: 250;
   line-height: 100%; /* 3rem */
-  padding-top: 2em;
-  padding-left: 0.5em;
-  padding-right:5em;
+  padding-top: 7vw;
+  padding-left: 6vw;
+  padding-right:36vw;
+  container-name: mission-statement;
 }
+
+
 
 .border1 {
   width: 100vw;
