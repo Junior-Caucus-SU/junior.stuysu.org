@@ -12,14 +12,14 @@ import Moon from "../Images/moon.svg";
 import SpecificsLine from "../Images/SpecificsLineArt.svg";
 import DateCrawler from "./NonPage/DateCrawler";
 import Papa from "papaparse";
+import Data from "../schedules.json";
 import { useState, useEffect } from "react";
 
 
 export default function Home() {
-    const [minutes, setMinutes] = useState(5);
-    const [currPeriod, setPeriod] = useState(0);
+    // const [minutes, setMinutes] = useState(5); should be passed into other
+    // const [currPeriod, setPeriod] = useState(0);
     const [dayType, setDayType] = useState("Regular");
-    const [dayInfo, setDayInfo] = useState(getDayInfo(dayType));//[DayStart, PeriodLength, PeriodNames
     //fetch the sheets data
     useEffect(() => {
         const fetchSheetsData = async () => {
@@ -30,7 +30,6 @@ export default function Home() {
                 const text = await response.text();
                 const parsedData = Papa.parse(text, { header: true }).data;
                 setDayType(parsedData[0].DayType);
-                setDayInfo(dayType);
             } catch (err) {
                 console.log(err);
             }
@@ -39,70 +38,62 @@ export default function Home() {
     }, []);
     //get period
     useEffect(() => {
-        const interval = setInterval((DayType) => {
-            const dayInfo = getDayInfo(DayType);
-            let diff = (new Date().getTime() - dayInfo.DayStart.getTime()) / 60000; let period = 1, delay = 5;
-            if (diff < 0) {
-                setMinutes(diff);
-                setPeriod(0);
-            }
-            else {
-                for (let i = 0; i <= dayInfo.PeriodLength.length; i++) {
-                    //determine the index (period) that the day falls into
-                    if (diff >= dayInfo.PeriodLength[i] + delay) { // if the time can handle the next period
-                        period++;
-                        diff -= dayInfo.PeriodLength[i] + delay;
-                    }
-                    else {
+        //set an interval
+        const timer = setInterval(() => {
+            const getCurrentPeriod = (dayType) => {
+                const h = 10;
+                const m = 50;
+                const now = new Date();
+                now.setHours(h)
+                now.setMinutes(m);
+                // const now = new Date();
+                const schedule = getDayInfo(dayType);
+                const periods = getTimes(schedule);
+                for (let i = 0; i < periods.length; i++) {
+                    const start = new Date()
+                    start.setHours(parseInt(schedule[i].startTime.split(":")[0]));
+                    start.setMinutes(parseInt(schedule[i].startTime.split(":")[1]));
+                    const diff = now.getTime() - start.getTime();
+                    if (diff > 0) {
+                        // setMinutes(diff / 60000);
+                        // setPeriod(periods[i]);
+                    } else {
                         break;
                     }
                 }
-                console.log(dayInfo.PeriodNames[period]);
-                setMinutes(diff);
-                setPeriod(period);
             }
+            getCurrentPeriod(dayType);
         }, 1000);
-        return () => clearInterval(interval);
+        return () => clearInterval(timer);
     }, []);
-
-    const dateProps = {
-        dayType: dayType,
-        minutes: minutes,
-        currPeriod: currPeriod
-    };
-
-    console.log(dayType);
-    console.log(minutes);
-    console.log(currPeriod);
-
+    const periodTimes = getPeriodTimes(dayType);
     return (<>
         <Texture />
         <div className="homepage-div">
             <NavBar {...{ page: "Home" }} />
             <div className="homepage-schedule-container">
                 <div className="schedule-banner-container">
-                    <Schedule className="schedule-banner" props={dateProps} />
+                    <Schedule className="schedule-banner" />
                 </div>
                 <img src={TribecaBridge} alt="Tribeca bridge" className="tribeca-bridge" />
                 <div className="date-crawler-pos">
-                    <DateCrawler className="schedule-date-crawler" props={dateProps} />
+                    <DateCrawler className="schedule-date-crawler" />
                 </div>
             </div>
             <img src={Border} alt="Border" className="border1" />
             <div className="schedule-specifics" >
                 <div className="schedule-specifics-box">
-                    
-                    {getDayInfo(dayType).PeriodNames.map((period, index) => (
-                        <div className="period-crawler-container">
-                            <div className="period-name">
-                                {period}
-                            </div>
-                            <div className="period-time">
-                                {getPeriodTime(index)}
-                            </div>
-                        </div>
-                    )
-                    )}
+                    {getPeriods(getDayInfo(dayType)).map((period, index) => {
+                        return (
+                            <div className="period-crawler-container" key={index}>
+                                <div className="period-name">
+                                    {period}
+                                </div>
+                                <div className="period-time">
+                                    {periodTimes[index]}
+                                </div>
+                            </div>)
+                    })}
                 </div>
                 <img src={Moon} alt="Fancical Abstract Drawing of a Moon" className="moon-img" />
                 <img src={Sun} alt="Fancical Abstract Drawing of a Sun" className="sun-img" />
@@ -129,43 +120,61 @@ export default function Home() {
 }
 
 
-function getDayInfo(DayType) {
-    const today = new Date();
-    switch (DayType) {
-        case "Conference":
-            return {
-                DayStart: new Date(today.getFullYear(), today.getMonth(), today.getDate(), 8, 0),
-                PeriodLength: [37, 37, 37, 37, 37, 37, 37, 37, 37, 37],
-                PeriodNames: ["Before School", "Period 1", "Period 2", "Period 3", "Period 4", "Period 5", "Period 6", "Period 7", "Period 8", "Period 9", "Period 10", "Afterschool"]
-            };
-        case "Homeroom":
-            return {
-                DayStart: new Date(today.getFullYear(), today.getMonth(), today.getDate(), 8, 0),
-                PeriodLength: [40, 40, 40, 12, 40, 40, 40, 40, 40, 40],
-                PeriodNames: ["Before School", "Period 1", "Period 2", "Period 3", "Homeroom", "Period 4", "Period 5", "Period 6", "Period 7", "Period 8", "Period 9", "Period 10", "Afterschool"]
-            };
-        case "Extended":
-            return {
-                DayStart: new Date(today.getFullYear(), today.getMonth(), today.getDate(), 8, 0),
-                PeriodLength: [40, 40, 40, 22, 39, 39, 39, 39, 39, 39, 40],
-                PeriodNames: ["Before School", "Period 1", "Period 2", "Period 3", "Homeroom", "Period 4", "Period 5", "Period 6", "Period 7", "Period 8", "Period 9", "Period 10", "Afterschool"]
-            };
-        case "Thurs-Fri":
-            return {
-                DayStart: new Date(today.getFullYear(), today.getMonth(), today.getDate(), 8, 30),
-                PeriodLength: [40, 40, 40, 40, 40, 40, 40, 40, 40, 40],
-                PeriodNames: ["Before School", "Period 1", "Period 2", "Period 3", "Period 4", "Period 5", "Period 6", "Period 7", "Period 8", "Period 9", "Period 10", "Afterschool"]
-            };
-        default:
-            return {
-                DayStart: new Date(today.getFullYear(), today.getMonth(), today.getDate(), 8, 0),
-                PeriodLength: [41, 41, 41, 41, 41, 41, 41, 41, 41, 41],
-                PeriodNames: ["Before School", "Period 1", "Period 2", "Period 3", "Period 4", "Period 5", "Period 6", "Period 7", "Period 8", "Period 9", "Period 10", "Afterschool"]
-            }; //no school or holiday
+const getTimes = (schedule) => {
+    let final = [];
+    for (let i = 0; i < schedule.length; i++) {
+        final.push(schedule[i].name);
     }
+    return final;
+}
+
+const getPeriods = (schedule) => {
+    let final = [];
+    for (let i = 0; i < schedule.length; i++) {
+        if (!(schedule[i].name.includes("Before") && i !== 0)) {
+            final.push(schedule[i].name);
+        }
+    }
+    return final;
 }
 
 
-const getPeriodTime = (index) => {
-    return "";
+
+const getDayInfo = (DayType) => {
+    switch (DayType) {
+        case "Conference":
+            return Data.Conference.schedule;
+        case "Homeroom":
+            return Data.Homeroom.schedule;
+        case "Extended":
+            return Data["Extended Homeroom"].schedule;
+        case "Regular":
+            return Data.Regular.schedule;
+        case "TF":
+            return Data["Thurs-Fri"].schedule;
+        default:
+            return Data.Regular.schedule;
+    }
+}
+
+const getPeriodTimes = (DayType) => {
+    const info = getDayInfo(DayType);
+    let final = [];
+    for (let i = 0; i < info.length; i++) {
+        if (!(info[i].name.includes("Before") && i !== 0)) {
+            if (i === 0) {
+                final.push(`Before ${info[i + 1].startTime}`)
+            } else if (i === info.length - 1) {
+                final.push(`After ${info[i].startTime}`)
+            } else{
+                const start = info[i].startTime;
+                const end = new Date();
+                end.setHours(parseInt(start.split(":")[0]));
+                end.setMinutes(parseInt(start.split(":")[1]) + info[i].duration);
+                final.push(`${start} - ${end.getHours()}:${end.getMinutes() < 10 ? "0" + end.getMinutes() : end.getMinutes()}`)
+
+            }
+        }
+    }
+    return final;
 }

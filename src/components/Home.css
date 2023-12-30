@@ -32,19 +32,22 @@
   margin-left: 3vw;
   margin-right: 5vw;
   z-index: 1;
+  /* marginx-top:-5vw; */
+  /* ! flexbox styles */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .moon-img {
-  grid-column: 5;
+  grid-column: 4;
   grid-row: 5;
-  margin-left: -2vw;
   z-index: 0;
 }
 
 .sun-img {
   grid-column: 2;
   grid-row: 1;
-  margin-left: 5vw;
   z-index: 0;
 }
 
@@ -112,17 +115,14 @@
 .period-crawler-container {
   color: var(--Pink, #fbe4df);
   font-style: normal;
-
-  /* ! flexbox styles */
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  padding-bottom: 0.25rem;
+  align-items: right;
 }
 
 .period-name {
   /* Text */
   font-family: Neue Haas Grotesk Display Pro;
-  font-size: 1rem;
+  font-size: 0.75rem;
   font-weight: 400;
   line-height: normal;
 }
@@ -131,8 +131,10 @@
   color: var(--Pink, #fbe4df);
   /* Caption */
   font-family: Neue Haas Grotesk Text Pro;
-  font-size: 0.75rem;
-  font-style: normal;
-  font-weight: 400;
+  font-size: 1.1rem;
+  /* font-style: normal; */
+  font-weight: 200;
+  margin-left:auto;
+  margin-right:0;
   line-height: 100%;
 }
