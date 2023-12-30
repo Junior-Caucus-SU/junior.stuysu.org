@@ -9,4 +9,4 @@ RUN npm install --omit=dev && npm cache clean --force && npm run build
 RUN rm -rf node_modules
 EXPOSE 80
 RUN npm install -g serve
-RUN serve -s build
+CMD [ "serve", "-s", "build" ]
