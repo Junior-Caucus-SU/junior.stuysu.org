@@ -124,17 +124,9 @@
   font-family: Neue Haas Grotesk Display Pro;
   font-size: 0.75rem;
   font-weight: 400;
-  line-height: normal;
 }
 
 .period-time {
-  color: var(--Pink, #fbe4df);
-  /* Caption */
   font-family: Neue Haas Grotesk Text Pro;
   font-size: 1.1rem;
-  /* font-style: normal; */
-  font-weight: 200;
-  margin-left:auto;
-  margin-right:0;
-  line-height: 100%;
 }

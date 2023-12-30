@@ -104,7 +104,9 @@ export default function Home() {
             </div>
             <div className="mission-box">
                 <h1 className="mission-statement">
-                    Welcome to the Yoo-Rhee caucus. We are committed to delivering on our promises through well organized initiatives, including cabinet restructuring, enhancing college readiness, and meaningfu themed events.
+                    Welcome to the Yoo-Rhee caucus. We are committed to delivering on our promises
+                    through well organized initiatives, including cabinet restructuring, enhancing
+                    college readiness, and meaningful themed events.
                 </h1>
             </div>
             <div className="parallax">
@@ -166,7 +168,7 @@ const getPeriodTimes = (DayType) => {
                 final.push(`Before ${info[i + 1].startTime}`)
             } else if (i === info.length - 1) {
                 final.push(`After ${info[i].startTime}`)
-            } else{
+            } else {
                 const start = info[i].startTime;
                 const end = new Date();
                 end.setHours(parseInt(start.split(":")[0]));
