@@ -66,23 +66,45 @@ export default function Home() {
         }, 1000);
         return () => clearInterval(timer);
     }, []);
+
+
+    useEffect(() => {
+        const hiddenElements = document.querySelectorAll(".hidden");
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((element) => {
+                console.log(element);
+                if (element.isIntersecting) {
+                    element.target.classList.add("show");
+                } else {
+                    element.target.classList.remove("show");
+                }
+            })
+        })
+        hiddenElements.forEach((entry) => {
+            observer.observe(entry);
+        })
+    })
     const periodTimes = getPeriodTimes(dayType);
     return (<>
         <Texture />
         <div className="homepage-div">
-            <NavBar {...{ page: "Home" }} />
+            <div>
+                <NavBar {...{ page: "Home" }} />
+            </div>
             <div className="homepage-schedule-container">
-                <div className="schedule-banner-container">
+                <div className="schedule-banner-container hidden">
                     <Schedule className="schedule-banner" />
                 </div>
-                <img src={TribecaBridge} alt="Tribeca bridge" className="tribeca-bridge" />
-                <div className="date-crawler-pos">
-                    <DateCrawler className="schedule-date-crawler" />
+                <div className="hidden bridge-pos">
+                    <img src={TribecaBridge} alt="Tribeca bridge" className="tribeca-bridge" />
+                </div>
+                <div className="date-crawler-pos hidden">
+                    <DateCrawler className="schedule-date-crawler hidden" />
                 </div>
             </div>
             <img src={Border} alt="Border" className="border1" />
             <div className="schedule-specifics" >
-                <div className="schedule-specifics-box">
+                <div className="schedule-specifics-box hidden">
                     {getPeriods(getDayInfo(dayType)).map((period, index) => {
                         return (
                             <div className="period-crawler-container" key={index}>
@@ -95,28 +117,32 @@ export default function Home() {
                             </div>)
                     })}
                 </div>
-                <img src={Moon} alt="Fancical Abstract Drawing of a Moon" className="moon-img" />
-                <img src={Sun} alt="Fancical Abstract Drawing of a Sun" className="sun-img" />
-                <img src={SpecificsLine} alt="Decorative Line Art" className="specifics-line" />
-                <div className="all-schedules">
+                <img src={Moon} alt="Fancical Abstract Drawing of a Moon" className="moon-img hidden" />
+                <img src={Sun} alt="Fancical Abstract Drawing of a Sun" className="sun-img hidden" />
+                <div className="hidden specifics-line">
+                    <img src={SpecificsLine} alt="Decorative Line Art" className="" />
+                </div>
+                <div className="all-schedules hidden">
                     <a href="https://www.google.com/search?q=copium&rlz=1C5CHFA_enUS996US996&oq=copium&gs_lcrp=EgZjaHJvbWUqBwgAEAAYjwIyBwgAEAAYjwIyDQgBEC4Y1AIYsQMYgAQyCggCEAAYsQMYgAQyCggDEAAYsQMYgAQyBwgEEAAYgAQyBwgFEAAYgAQyBwgGEAAYgAQyBwgHEAAYgAQyBwgIEAAYgAQyBwgJEAAYgATSAQgxMTcwajBqMagCALACAA&sourceid=chrome&ie=UTF-8#vhid=Ud5YHn3U1zaiIM:&vssid=l" className="all-schedules-link">View all schedules</a>
                 </div>
             </div>
             <div className="mission-box">
                 <h1 className="mission-statement">
-                    Welcome to the Yoo-Rhee caucus. We are committed to delivering on our promises
-                    through well organized initiatives, including cabinet restructuring, enhancing
-                    college readiness, and meaningful themed events.
+                    <span className="hidden">Welcome to the Yoo-Rhee caucus.</span><span className="hidden"> We are committed to delivering on our promises</span>
+                    <span className="hidden">through well organized initiatives,</span><span className="hidden"> including cabinet restructuring,</span> <span className="hidden">enhancing
+                        college readiness,</span><span className="hidden"> and meaningful themed events.</span>
                 </h1>
             </div>
-            <div className="parallax">
+            <div className="parallax hidden">
 
             </div>
             <div className="end-scroll">
                 <img src={PolaroidsSky} alt="Polaroids Sky" className="polaroids-sky" />
             </div>
         </div>
-        <Footer />
+        <div className="hidden">
+            <Footer />
+        </div>
     </>
     );
 }

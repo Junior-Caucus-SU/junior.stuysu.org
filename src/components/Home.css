@@ -26,6 +26,7 @@
   bottom: 0;
 }
 
+
 .schedule-specifics-box {
   grid-column: 1 / span 5;
   grid-row: 1 / span 5;
@@ -93,9 +94,13 @@
   margin-top: -3vw;
   width: 40vw;
   bottom: -2vw;
-  z-index: -1;
   grid-column: 2;
   grid-row: 2;
+}
+
+.bridge-pos {
+  z-index: -1;
+
 }
 
 .date-crawler-pos {
@@ -129,4 +134,26 @@
 .period-time {
   font-family: Neue Haas Grotesk Text Pro;
   font-size: 1.1rem;
+}
+
+
+.hidden {
+  opacity:0;
+  filter:blur(5px);
+  transform:translateX(-100%);
+  transition: all 1s;
+}
+
+
+
+.show {
+  filter: blur(0);
+  transform:translateX(0);
+  opacity:1;
+}
+
+@media(perfers-reduced-motion){
+  .hidden {
+    transition:none;
+  }
 }
