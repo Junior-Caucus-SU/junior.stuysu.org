@@ -2,8 +2,10 @@ import React, { useState, useEffect } from 'react';
 import Papa from 'papaparse';
 import './Initiatives.css';
 
-export default function AllIntiatives(props) {
+export default function AllInitiatives(props) {
     const [initiativesData, setEventsInfo] = useState([]);
+    const [showMore, setShowMore] = useState([]);
+
     useEffect(() => {
         const fetchSheetsData = async () => {
             try {
@@ -13,6 +15,7 @@ export default function AllIntiatives(props) {
                 const text = await response.text();
                 const parsedData = Papa.parse(text, { header: true }).data;
                 setEventsInfo(parsedData);
+                setShowMore(Array(parsedData.length).fill(false));
             } catch (err) {
                 console.log(err);
             }
@@ -20,20 +23,30 @@ export default function AllIntiatives(props) {
         fetchSheetsData();
     }, []);
 
+    const handleShowMoreToggle = (index) => {
+        setShowMore((prevShowMore) => {
+            const newShowMore = [...prevShowMore];
+            newShowMore[index] = !newShowMore[index];
+            return newShowMore;
+        });
+    };
+
     return (
         <div className="all-initiatives">
             <div className="frame">
-            {initiativesData.map((initiative, index) => (
-                <div className="event">
-                    <p className="event-date">{initiative.Date}</p>
-                    <h4 className="event-title">{initiative.Title}</h4>
-                    <p className="event-text">
-                        {initiative.Text}
+                {initiativesData.map((initiative, index) => (
+                    <div className="event" key={index}>
+                        <p className="event-date">{initiative.Date}</p>
+                        <h4 className="event-title">{initiative.Title}</h4>
+                        <p className="event-text">
+                            {showMore[index] ? initiative.Text : initiative.Text.substring(0, 100)}
                         </p>
+                        <button className="show-more" onClick={() => handleShowMoreToggle(index)}>
+                            {showMore[index] ? "Show Less" : "Show More..."}
+                        </button>
                     </div>
                 ))}
             </div>
         </div>
     );
 }
-
