@@ -11,6 +11,7 @@ import Sun from "../Images/sun.svg";
 import Moon from "../Images/moon.svg";
 import SpecificsLine from "../Images/SpecificsLineArt.svg";
 import DateCrawler from "./NonPage/DateCrawler";
+import HomeParallax from "./NonPage/HomeParallax";
 import Papa from "papaparse";
 import Data from "../schedules.json";
 import { useState, useEffect } from "react";
@@ -134,8 +135,8 @@ export default function Home() {
                         college readiness,</span><span className="hidden"> and meaningful themed events.</span>
                 </h1>
             </div>
-            <div className="parallax hidden">
-
+            <div className="parallax">
+                <HomeParallax />
             </div>
             <div className="end-scroll">
                 <img src={PolaroidsSky} alt="Polaroids Sky" className="polaroids-sky" />

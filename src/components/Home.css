@@ -145,7 +145,6 @@
 }
 
 
-
 .show {
   filter: blur(0);
   transform:translateX(0);
@@ -158,6 +157,10 @@
   transition: all 1s;
 }
 
+.parallax {
+  height: 300vh;
+  overflow-y:hidden;
+}
 
 @media(perfers-reduced-motion){
   .hidden {
