@@ -84,6 +84,7 @@ export default function Home() {
             observer.observe(entry);
         })
     })
+
     const periodTimes = getPeriodTimes(dayType);
     return (<>
         <Texture />
@@ -128,7 +129,7 @@ export default function Home() {
             </div>
             <div className="mission-box">
                 <h1 className="mission-statement">
-                    <span className="hidden">Welcome to the Yoo-Rhee caucus.</span><span className="hidden"> We are committed to delivering on our promises</span>
+                    <span className="hidden">Welcome to the Yoo-Rhee caucus.</span><span className="hidden"> We are committed to delivering on our promises </span> 
                     <span className="hidden">through well organized initiatives,</span><span className="hidden"> including cabinet restructuring,</span> <span className="hidden">enhancing
                         college readiness,</span><span className="hidden"> and meaningful themed events.</span>
                 </h1>

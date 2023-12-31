@@ -8,9 +8,10 @@
   justify-content: center;
 }
 
-.meet, .the-team {
+.meet,
+.the-team {
   display: inline-block;
-  color: #051E4F;
+  color: #051e4f;
   font-family: "Mixta-Sharp";
   font-weight: 300;
   line-height: 164.32px;
@@ -47,28 +48,29 @@
 }
 
 .the-team {
-  animation: 1s ease-out .0s 1 slideInFromRight;
+  animation: 1s ease-out 0s 1 slideInFromRight;
   margin-right: -20vw;
 }
 
 .box {
-  background-color: #0C2B56;
-  color: #FAE5E2;
+  background-color: #0c2b56;
+  color: #fae5e2;
   font-size: 96px;
   white-space: nowrap;
 }
 
 .box-text {
   transform: rotate(180deg);
-  color: #FBE4DF;
+  color: #fbe4df;
   font-size: 128px;
   font-family: Neue Haas Grotesk Display Pro;
   font-weight: 350;
-  line-height: 108.80px;
+  line-height: 108.8px;
   word-wrap: break-word;
 }
 
-.subgroup-container, .person-container {
+.subgroup-container,
+.person-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -93,7 +95,7 @@
 
 .description {
   font-size: 0.9rem;
-  color: #051E4F;
+  color: #051e4f;
   justify-self: start;
   text-align: left;
 }
@@ -149,7 +151,7 @@
 
 /* Set the animations to be smoother for the img inside .image_box */
 .image_box img {
-  transition: transform cubic-bezier(.5, .22, 0.22, 1);
+  transition: transform cubic-bezier(0.5, 0.22, 0.22, 1);
 }
 
 /* Chiefs Section - Applying similar structure as Presidents */
@@ -174,7 +176,7 @@
   height: fit-content;
   justify-self: end;
   margin: 10px;
-  margin-right:0;
+  margin-right: 0;
   padding: 5px;
   padding-left: 15vw;
   padding-top: 20px;
@@ -183,20 +185,20 @@
 
 .chiefs-box-text {
   transform: rotate(0deg);
-  color: #FBE4DF;
+  color: #fbe4df;
   font-size: 128px;
   font-family: Neue Haas Grotesk Display Pro;
   font-weight: 350;
-  line-height: 108.80px;
+  line-height: 108.8px;
   word-wrap: break-word;
 }
 
 .chiefs-box-text i {
-  color: #FBE4DF;
+  color: #fbe4df;
   font-size: 128px;
   font-family: Mixta Pro;
   font-weight: 350;
-  line-height: 108.80px;
+  line-height: 108.8px;
   word-wrap: break-word;
 }
 
@@ -255,4 +257,24 @@
   display: grid;
   grid-template-columns: 40vw 40vw;
   margin-bottom: 50px;
+}
+
+.to-fly-from-left {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.to-fly-from-right {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(+100%);
+  transition: all 1s;
+}
+
+.to-fade-in {
+  opacity: 0;
+  filter: blur(5px);
+  transition: all 1s;
 }
