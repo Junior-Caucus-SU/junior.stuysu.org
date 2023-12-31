@@ -70,18 +70,18 @@
 }
 
 .mission-box {
-  height: 90vh;
+  height: 95vh;
   width: 100vw;
 }
 
 .mission-statement {
   color: var(--Main-Blue, #051e4f);
-  font-size: 5vw;
+  font-size: 3.25em;
   font-weight: 250;
   line-height: 100%; /* 3rem */
-  padding-top: 7vw;
-  padding-left: 6vw;
-  padding-right: 36vw;
+  padding-top: 4vw;
+  padding-left: 2vw;
+  padding-right:25vw;
   container-name: mission-statement;
 }
 
@@ -152,8 +152,16 @@
   opacity:1;
 }
 
+.fade {
+  opacity: 0;
+  filter: blur(5px);
+  transition: all 1s;
+}
+
+
 @media(perfers-reduced-motion){
   .hidden {
     transition:none;
   }
 }
+

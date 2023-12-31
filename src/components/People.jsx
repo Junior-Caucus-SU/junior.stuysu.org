@@ -1,4 +1,4 @@
-import React, {useEffect, useRef} from "react";
+import React, { useEffect, useRef } from "react";
 import Navbar from "./NonPage/NavBar";
 import Texture from "./NonPage/Texture";
 import Footer from "./NonPage/Footer";
@@ -79,20 +79,58 @@ export default function People() {
     };
   }, []);
 
-  const calculateZoom = (element) => {
-    if (!element) return 1; // if the element is not defined
-  
-    const viewportHeight = window.innerHeight;
-    const rect = element.getBoundingClientRect();
-    const elementCenter = rect.top + rect.height / 2;
-    const distanceFromCenter = Math.abs(viewportHeight / 2 - elementCenter);
-    const maxDistance = viewportHeight / 3; // max dist from the center
-  
-    // calculate the zoom level - closer to center means more zoom
-    const zoomLevel = 1 + (1 - distanceFromCenter / maxDistance) * 0.1; // controls max zoom
-    return Math.max(zoomLevel, 1); // the scale is not less than 1
-  };
-  
+  //flying in from right
+  useEffect(() => {
+    const hiddenElements = document.querySelectorAll(".to-fly-from-right");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((element) => {
+        console.log(element);
+        if (element.isIntersecting) {
+          element.target.classList.add("show");
+        } else {
+          element.target.classList.remove("show");
+        }
+      })
+    })
+    hiddenElements.forEach((entry) => {
+      observer.observe(entry);
+    })
+  })
+
+  //flying in from left
+  useEffect(() => {
+    const hiddenElements = document.querySelectorAll(".to-fly-from-left");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((element) => {
+        console.log(element);
+        if (element.isIntersecting) {
+          element.target.classList.add("show");
+        } else {
+          element.target.classList.remove("show");
+        }
+      })
+    })
+    hiddenElements.forEach((entry) => {
+      observer.observe(entry);
+    })
+  })
+
+  useEffect(() => {
+    const hiddenElements = document.querySelectorAll(".to-fade-in");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((element) => {
+        console.log(element);
+        if (element.isIntersecting) {
+          element.target.classList.add("show");
+        } else {
+          element.target.classList.remove("show");
+        }
+      })
+    })
+    hiddenElements.forEach((entry) => {
+      observer.observe(entry);
+    })
+  })
 
   const pres1Ref = useRef(null);
   const pres2Ref = useRef(null);
@@ -111,70 +149,76 @@ export default function People() {
           ref.current.style.transform = `scale(${zoom})`;
         }
       });
-    };    
+    };
 
-  window.addEventListener('scroll', handleScroll);
-  handleScroll(); // Call it once initially
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Call it once initially
 
-  return () => {
-    window.removeEventListener('scroll', handleScroll);
-  };
-}, []);
-  
-  
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+
 
   let peoplePage = (
     <div className="people-page">
-      <Navbar page="People"/>
-      <Texture/>
+      <Navbar page="People" />
+      <Texture />
       <div className="people-page-body">
-      <div className="meet-team-container">
-        <div className="meet">Meet</div>
-        <br />
-        <div className="the-team">The Team</div>
-      </div>
+        <div className="meet-team-container">
+          <div className="meet">Meet</div>
+          <br />
+          <div className="the-team">The Team</div>
+        </div>
 
-      <div className="presidents people-section">
-        <div className="presidents-box box">
-          <div className="presidents-box-text box-text">Presidents</div>
+        <div className="presidents people-section">
+          <div className="to-fade-in">
+            <div className="presidents-box box">
+              <div className="presidents-box-text box-text">Presidents</div>
+            </div>
+          </div>
+          <div className="president person-container pres1 to-fly-from-right"  >
+            <div className="image_box">
+              <img src={Josephine_Yoo} alt="Josephine Yoo" ref={pres1Ref} /></div>
+            <div className="name">Josephine</div>
+            <div className="description to-fade-in">Lorem ipsum dolor sit amet consectetur. Velit convallis sit odio orci varius eu elementum. Est sit et hendrerit id eget diam. Maecenas amet sed ac turpis facilisis semper at. Tincidunt egestas vulputate sed lobortis hac augue. Est pharetra aliquet faucibus.</div>
+          </div>
+          <div className="president person-container pres2 to-fly-from-right"  >
+            <div className="image_box">
+              <img src={Grace_Rhee} alt="Grace Rhee" ref={pres2Ref} /></div>
+            <div className="name">Grace</div>
+            <div className="description">Lorem ipsum dolor sit amet consectetur. Velit convallis sit odio orci varius eu elementum. Est sit et hendrerit id eget diam. Maecenas amet sed ac turpis facilisis semper at. Tincidunt egestas vulputate sed lobortis hac augue. Est pharetra aliquet faucibus.</div>
+          </div>
         </div>
-        <div className="president person-container pres1"  >
-          <div className="image_box">
-          <img src={Josephine_Yoo} alt="Josephine Yoo" ref={pres1Ref}/></div>
-          <div className="name">Josephine</div>
-          <div className="description">Lorem ipsum dolor sit amet consectetur. Velit convallis sit odio orci varius eu elementum. Est sit et hendrerit id eget diam. Maecenas amet sed ac turpis facilisis semper at. Tincidunt egestas vulputate sed lobortis hac augue. Est pharetra aliquet faucibus.</div>
-        </div>
-        <div className="president person-container pres2"  >
-        <div className="image_box">
-          <img src={Grace_Rhee} alt="Grace Rhee" ref={pres2Ref}/></div>
-          <div className="name">Grace</div>
-          <div className="description">Lorem ipsum dolor sit amet consectetur. Velit convallis sit odio orci varius eu elementum. Est sit et hendrerit id eget diam. Maecenas amet sed ac turpis facilisis semper at. Tincidunt egestas vulputate sed lobortis hac augue. Est pharetra aliquet faucibus.</div>
-        </div>
-      </div>
 
-      <div className="chiefs people-section">
-        <div className="chief chief1 person-container">
-          <img src={John} alt="" />
-          <div className="name">John J. Wang</div>
-          <div className="description">Lorem ipsum dolor sit amet consectetur. Velit convallis sit odio orci varius eu elementum. Est sit et hendrerit id eget diam. Maecenas amet sed ac turpis facilisis semper at. Tincidunt egestas vulputate sed lobortis hac augue. Est pharetra aliquet faucibus.</div>
+        <div className="chiefs people-section">
+          <div className="chief chief1 person-container to-fly-from-left">
+            <img src={John} alt="" />
+            <div className="name">John J. Wang</div>
+            <div className="description">Lorem ipsum dolor sit amet consectetur. Velit convallis sit odio orci varius eu elementum. Est sit et hendrerit id eget diam. Maecenas amet sed ac turpis facilisis semper at. Tincidunt egestas vulputate sed lobortis hac augue. Est pharetra aliquet faucibus.</div>
+          </div>
+          <div className="chief chief2 person-container to-fly-from-left">
+            <img src={Ethan_Sie} alt="" />
+            <div className="name">Ethan Sie</div>
+            <div className="description">Lorem ipsum dolor sit amet consectetur. Velit convallis sit odio orci varius eu elementum. Est sit et hendrerit id eget diam. Maecenas amet sed ac turpis facilisis semper at. Tincidunt egestas vulputate sed lobortis hac augue. Est pharetra aliquet faucibus.</div>
+          </div>
+          <div className="chiefs-box box">
+            <div className="to-fade-in">
+              <div className="chiefs-box-text box-text">Chiefs <i>of</i> Staff</div>
+            </div>
+          </div>
         </div>
-        <div className="chief chief2 person-container">
-          <img src={Ethan_Sie} alt="" />
-          <div className="name">Ethan Sie</div>
-          <div className="description">Lorem ipsum dolor sit amet consectetur. Velit convallis sit odio orci varius eu elementum. Est sit et hendrerit id eget diam. Maecenas amet sed ac turpis facilisis semper at. Tincidunt egestas vulputate sed lobortis hac augue. Est pharetra aliquet faucibus.</div>
-        </div>
-        <div className="chiefs-box box">
-          <div className="chiefs-box-text box-text">Chiefs <i>of</i> Staff</div>
-        </div>
-      </div>
 
-      <div className="directors people-section">
-        <div className="directors-box box">
-          <div className="directors-box-text box-text">Directors</div>
-        </div>
-        <div className="directors-container subgroup-container">
+        <div className="directors people-section">
+          <div className="to-fade-in">
+            <div className="directors-box box">
+              <div className="directors-box-text box-text">Directors</div>
+            </div>
+          </div>
+          <div className="directors-container subgroup-container">
 
-          <div className="president person-container emily">
+            <div className="president person-container emily to-fly-from-right">
               <div className="d_type_image">
                 <div className="d_type">Events</div>
                 <img src={Emily_Li} alt="" />
@@ -183,85 +227,103 @@ export default function People() {
                 <div className="name">Emily Li</div>
                 <div className="description">Lorem ipsum dolor sit amet consectetur. Velit convallis sit odio orci varius eu elementum. Est sit et hendrerit id eget diam. Maecenas amet sed ac turpis facilisis semper at. Tincidunt egestas vulputate sed lobortis hac augue. Est pharetra aliquet faucibus.</div>
               </div>
-          </div>
-          
-          
+            </div>
 
-        <div className="subgroup_containerD_all">
-        <div className="subgroup-containerD">
-          <div className="d_type_box">
-              <div className="director person-container chenming">
-                  <div className="d_type">Internals</div>
-                  <img src={Chenming_Fang} alt="" className = "director-img"/>
-                  <div className="name">Chenming Fang</div>
-                  <div className="description">Lorem ipsum dolor sit amet consectetur. Velit convallis sit odio orci varius eu elementum. Est sit et hendrerit id eget diam. Maecenas amet sed ac turpis facilisis semper at. Tincidunt egestas vulputate sed lobortis hac augue. Est pharetra aliquet faucibus.</div>
-              </div>
-              <div className="director person-container">
-                  <img src={Josephine_Gunawan} alt="" className = "director-img"/>
-                  <div className="name">Josephine Gunawan</div>
-                  <div className="description">Lorem ipsum dolor sit amet consectetur. Velit convallis sit odio orci varius eu elementum. Est sit et hendrerit id eget diam. Maecenas amet sed ac turpis facilisis semper at. Tincidunt egestas vulputate sed lobortis hac augue. Est pharetra aliquet faucibus.</div>
+
+
+            <div className="subgroup_containerD_all">
+              <div className="subgroup-containerD">
+                <div className="d_type_box">
+                  <div className="director person-container chenming to-fly-from-left">
+                    <div className="d_type">Internals</div>
+                    <img src={Chenming_Fang} alt="" className="director-img" />
+                    <div className="name">Chenming Fang</div>
+                    <div className="description">Lorem ipsum dolor sit amet consectetur. Velit convallis sit odio orci varius eu elementum. Est sit et hendrerit id eget diam. Maecenas amet sed ac turpis facilisis semper at. Tincidunt egestas vulputate sed lobortis hac augue. Est pharetra aliquet faucibus.</div>
+                  </div>
+                  <div className="director person-container to-fly-from-right">
+                    <img src={Josephine_Gunawan} alt="" className="director-img" />
+                    <div className="name">Josephine Gunawan</div>
+                    <div className="description">Lorem ipsum dolor sit amet consectetur. Velit convallis sit odio orci varius eu elementum. Est sit et hendrerit id eget diam. Maecenas amet sed ac turpis facilisis semper at. Tincidunt egestas vulputate sed lobortis hac augue. Est pharetra aliquet faucibus.</div>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-          </div>
 
-          <div className="subgroup-containerD">
-            <div className="d_type_box">
-              <div className="director person-container elias">
+            <div className="subgroup-containerD">
+              <div className="d_type_box">
+                <div className="director person-container elias to-fly-from-left">
                   <div className="d_type">I/T</div>
-                  <img src={Elias_Xu} alt="" className = "director-img"/>
+                  <img src={Elias_Xu} alt="" className="director-img" />
                   <div className="name">Elias Xu</div>
                   <div className="description">Lorem ipsum dolor sit amet consectetur. Velit convallis sit odio orci varius eu elementum. Est sit et hendrerit id eget diam. Maecenas amet sed ac turpis facilisis semper at. Tincidunt egestas vulputate sed lobortis hac augue. Est pharetra aliquet faucibus.</div>
-              </div>
-              <div className="director person-container">
-                  <img src={Will} alt="" className = "director-img"/>
+                </div>
+                <div className="director person-container to-fly-from-right">
+                  <img src={Will} alt="" className="director-img" />
                   <div className="name">Will Zhang</div>
                   <div className="description">Lorem ipsum dolor sit amet consectetur. Velit convallis sit odio orci varius eu elementum. Est sit et hendrerit id eget diam. Maecenas amet sed ac turpis facilisis semper at. Tincidunt egestas vulputate sed lobortis hac augue. Est pharetra aliquet faucibus.</div>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className="subgroup-containerD">
-            <div className="d_type_box">
-              <div className="director person-container stacie">
+            <div className="subgroup-containerD">
+              <div className="d_type_box">
+                <div className="director person-container stacie to-fly-from-left">
                   <div className="d_type finance_name">Finance</div>
-                  <img src={Stacie_Au} alt="" className = "director-img"/>
+                  <img src={Stacie_Au} alt="" className="director-img" />
                   <div className="name">Stacie Au</div>
                   <div className="description">Lorem ipsum dolor sit amet consectetur. Velit convallis sit odio orci varius eu elementum. Est sit et hendrerit id eget diam. Maecenas amet sed ac turpis facilisis semper at. Tincidunt egestas vulputate sed lobortis hac augue. Est pharetra aliquet faucibus.</div>
-              </div>
-              <div className="director person-container">
-                  <img src={Ayla_Irshad} alt="" className = "director-img"/>
+                </div>
+                <div className="director person-container to-fly-from-left">
+                  <img src={Ayla_Irshad} alt="" className="director-img" />
                   <div className="name">Ayla Irshad</div>
                   <div className="description">Lorem ipsum dolor sit amet consectetur. Velit convallis sit odio orci varius eu elementum. Est sit et hendrerit id eget diam. Maecenas amet sed ac turpis facilisis semper at. Tincidunt egestas vulputate sed lobortis hac augue. Est pharetra aliquet faucibus.</div>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className="subgroup-containerD">
-            <div className="d_type_box_c chloe"> 
-              <div className="director person-container">
+            <div className="subgroup-containerD">
+              <div className="d_type_box_c chloe">
+                <div className="director person-container to-fly-from-right">
                   <div className="d_type">Graphics</div>
-                  <img src={Chloe_Wong} alt="" className = "director-img"/>
+                  <img src={Chloe_Wong} alt="" className="director-img" />
                   <div className="name">Chloe Wang</div>
                   <div className="description">Lorem ipsum dolor sit amet consectetur. Velit convallis sit odio orci varius eu elementum. Est sit et hendrerit id eget diam. Maecenas amet sed ac turpis facilisis semper at. Tincidunt egestas vulputate sed lobortis hac augue. Est pharetra aliquet faucibus.</div>
+                </div>
               </div>
-            </div>
-            <div className="d_type_box_c">  
-              <div className="director person-container">
+              <div className="d_type_box_c">
+                <div className="director person-container to-fly-from-right">
                   <div className="d_type">Social Media</div>
-                  <img src={Maegan_Diep} alt="" className = "director-img"/>
+                  <img src={Maegan_Diep} alt="" className="director-img " />
                   <div className="name">Maegan Diep</div>
                   <div className="description">Lorem ipsum dolor sit amet consectetur. Velit convallis sit odio orci varius eu elementum. Est sit et hendrerit id eget diam. Maecenas amet sed ac turpis facilisis semper at. Tincidunt egestas vulputate sed lobortis hac augue. Est pharetra aliquet faucibus.</div>
+                </div>
               </div>
             </div>
           </div>
+
         </div>
 
-      </div>
 
       </div>
-      <Footer/>
+      <div className="to-fade-in">
+        <Footer />
+
+      </div>
     </div>
   );
   return peoplePage;
 }
+
+const calculateZoom = (element) => {
+  if (!element) return 1; // if the element is not defined
+
+  const viewportHeight = window.innerHeight;
+  const rect = element.getBoundingClientRect();
+  const elementCenter = rect.top + rect.height / 2;
+  const distanceFromCenter = Math.abs(viewportHeight / 2 - elementCenter);
+  const maxDistance = viewportHeight / 3; // max dist from the center
+
+  // calculate the zoom level - closer to center means more zoom
+  const zoomLevel = 1 + (1 - distanceFromCenter / maxDistance) * 0.1; // controls max zoom
+  return Math.max(zoomLevel, 1); // the scale is not less than 1
+};
