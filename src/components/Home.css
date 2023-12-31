@@ -158,7 +158,7 @@
 }
 
 .parallax {
-  height: 300vh;
+  height: 0;
   overflow-y:hidden;
 }
 
