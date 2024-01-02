@@ -29,8 +29,9 @@ export default function Home() {
                 const sheet_name = "Schedule";
                 const response = await fetch(`https://docs.google.com/spreadsheets/d/${ID}/gviz/tq?tqx=out:csv&sheet=${sheet_name}`);
                 const text = await response.text();
+                const today = new Date();
                 const parsedData = Papa.parse(text, { header: true }).data;
-                setDayType(parsedData[0].DayType);
+                setDayType(parsedData[today.getDay()].DayType);
             } catch (err) {
                 console.log(err);
             }
@@ -38,6 +39,7 @@ export default function Home() {
         fetchSheetsData();
     }, []);
     //get period
+
     useEffect(() => {
         //set an interval
         const timer = setInterval(() => {
@@ -168,7 +170,6 @@ const getPeriods = (schedule) => {
 }
 
 const getDayInfo = (DayType) => {
-    console.log(DayType);
     switch (DayType) {
         case "Conference":
             return Data.Conference.schedule;
