@@ -224,6 +224,11 @@
         "name": "Meeting",
         "startTime": "14:50",
         "duration": 40
+      },
+      {
+        "name": "After School",
+        "startTime": "15:35",
+        "duration": 504
       }
     ]
   },
@@ -341,6 +346,11 @@
         "name": "Period 10",
         "startTime": "14:55",
         "duration": 40
+      },
+      {
+        "name": "After School",
+        "startTime": "15:35",
+        "duration": 545
       }
     ]
   },
@@ -458,6 +468,11 @@
         "name": "Period 10",
         "startTime": "14:55",
         "duration": 40
+      },
+      {
+        "name": "After School",
+        "startTime": "15:35",
+        "duration": 545
       }
     ]
   },
@@ -575,6 +590,11 @@
         "name": "Period 10",
         "startTime": "14:20",
         "duration": 30
+      },
+      {
+        "name": "After School",
+        "startTime": "14:50",
+        "duration": 550
       }
     ]
   }
