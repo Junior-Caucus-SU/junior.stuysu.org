@@ -70,7 +70,7 @@
 }
 
 .mission-box {
-  height: 95vh;
+  height: 90vh;
   width: 100vw;
 }
 
@@ -151,16 +151,16 @@
   opacity:1;
 }
 
-.fade {
+/* .fade {
   opacity: 0;
   filter: blur(5px);
   transition: all 1s;
-}
+} */
 
-.parallax {
+/* .parallax {
   height: 0;
   overflow-y:hidden;
-}
+} */
 
 @media(perfers-reduced-motion){
   .hidden {
