@@ -24,6 +24,7 @@ export default function DateCrawler() {
         };
         fetchSheetsData();
     }, []);
+    
     return (<div>
         {dayType.map((day, i) => (
             <div className={day[0].toLowerCase() + " day-box"} key={i}>

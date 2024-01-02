@@ -147,7 +147,7 @@ export default function ScheduleBanner() {
           <span className="period">{isWeekend ? "No School" : `Period ${schedule.period}`}</span>
         </div>
       </div>
-      <WeeklySchedule scheduleData={scheduleData} />
+      {/* <WeeklySchedule scheduleData={scheduleData} /> */}
     </div>
   );
 }
