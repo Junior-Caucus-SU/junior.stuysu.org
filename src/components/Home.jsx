@@ -18,8 +18,8 @@ import { useState, useEffect } from "react";
 
 
 export default function Home() {
-    // const [minutes, setMinutes] = useState(5); should be passed into other
-    // const [currPeriod, setPeriod] = useState(0);
+    const [minutes, setMinutes] = useState(5); 
+    const [currPeriod, setPeriod] = useState(0);
     const [dayType, setDayType] = useState("Regular");
     //fetch the sheets data
     useEffect(() => {
@@ -56,8 +56,8 @@ export default function Home() {
                     start.setMinutes(parseInt(schedule[i].startTime.split(":")[1]));
                     const diff = now.getTime() - start.getTime();
                     if (diff > 0) {
-                        // setMinutes(diff / 60000);
-                        // setPeriod(periods[i]);
+                        setMinutes(diff / 60000);
+                        setPeriod(periods[i]);
                     } else {
                         break;
                     }
@@ -168,6 +168,7 @@ const getPeriods = (schedule) => {
 }
 
 const getDayInfo = (DayType) => {
+    console.log(DayType);
     switch (DayType) {
         case "Conference":
             return Data.Conference.schedule;

@@ -5,7 +5,7 @@ import CarouselImageTwo from "../../Images/CarouselImage2.png";
 
 
 function CurrentItem({direction}) {
-    if (direction == 0) {
+    if (direction === 0) {
         return (
             <div className="current-item" style={{ transform: `translateX(0%)` }}>
                 <img className="images" src={CarouselImageOne} alt=""/>
