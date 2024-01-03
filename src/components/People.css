@@ -105,6 +105,13 @@
   flex-direction: row;
 }
 
+/* add mobile styling to flex column for .d_type_box */
+@media (max-width: 768px) {
+  .d_type_box {
+    flex-direction: column;
+  }
+}
+
 .people-page-body img {
   max-width: 25vw;
 }
@@ -277,4 +284,52 @@
   opacity: 0;
   filter: blur(5px);
   transition: all 1s;
+}
+
+/* on mobile, configure d_type_box and subgroup-containerD to use 100% of the width and instead of rows, do columns */
+@media (max-width: 768px) {
+  .d_type_box {
+    grid-template-columns: 100vw;
+    grid-template-rows: auto auto;
+  }
+
+  .subgroup-containerD {
+    grid-template-columns: 100vw;
+    grid-template-rows: auto auto;
+    margin-bottom: 50px;
+  }
+
+  .subgroup-containerD div {
+    padding-bottom: 20px;
+  }
+
+  /* make director in the center (horizontally) of their column */
+  .director {
+    justify-self: start;
+    /* make them occupy more space on mobile */
+  }
+
+  .director img {
+    max-width: 50vw;
+    height: auto;
+  }
+
+  .person-container {
+    max-width: 80vw;
+  }
+
+  .people-page-body .directors img {
+    max-width: 80vw;
+  }
+
+  .emily {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+
+    align-self: start;
+    padding-left: 0px;
+    
+  }
+  
 }
