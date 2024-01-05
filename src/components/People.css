@@ -63,7 +63,7 @@
   transform: rotate(180deg);
   color: #fbe4df;
   font-size: 128px;
-  font-family: Neue Haas Grotesk Display Pro;
+  font-family: "neue-haas-grotesk-display", sans-serif;
   font-weight: 350;
   line-height: 108.8px;
   word-wrap: break-word;
@@ -194,7 +194,7 @@
   transform: rotate(0deg);
   color: #fbe4df;
   font-size: 128px;
-  font-family: Neue Haas Grotesk Display Pro;
+  font-family: "neue-haas-grotesk-display", sans-serif;
   font-weight: 350;
   line-height: 108.8px;
   word-wrap: break-word;

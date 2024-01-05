@@ -61,7 +61,6 @@
 .all-schedules-link {
   color: var(--Pink, #fbe4df);
   /* Link */
-  font-family: Neue Haas Grotesk Text Pro;
   font-size: 0.75rem;
   font-style: normal;
   font-weight: 400;
@@ -126,13 +125,13 @@
 
 .period-name {
   /* Text */
-  font-family: Neue Haas Grotesk Display Pro;
+  font-family: "neue-haas-grotesk-display", sans-serif;
   font-size: 0.75rem;
   font-weight: 400;
 }
 
 .period-time {
-  font-family: Neue Haas Grotesk Text Pro;
+  font-family: "neue-haas-grotesk-text", sans-serif;
   font-size: 1.1rem;
 }
 
