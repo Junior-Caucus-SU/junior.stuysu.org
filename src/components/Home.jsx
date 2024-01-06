@@ -11,7 +11,7 @@ import Sun from "../Images/sun.svg";
 import Moon from "../Images/moon.svg";
 import SpecificsLine from "../Images/SpecificsLineArt.svg";
 import DateCrawler from "./NonPage/DateCrawler";
-// import HomeParallax from "./NonPage/HomeParallax";
+import HomeParallax from "./NonPage/HomeParallax";
 import Papa from "papaparse";
 import Data from "../schedules.json";
 import { useState, useEffect } from "react";
@@ -164,7 +164,7 @@ export default function Home() {
                 </h1>
             </div>
             <div className="parallax">
-                {/* <HomeParallax /> */}
+                <HomeParallax />
             </div>
             <div className="end-scroll">
                 <img src={PolaroidsSky} alt="Polaroids Sky" className="polaroids-sky" />

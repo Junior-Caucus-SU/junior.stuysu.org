@@ -4,86 +4,57 @@ import ParallaxBackground from '../../Images/parallaxBackgound.png';
 import Battle from '../../Images/battle.png';
 import PhotoCapture from '../../Images/photoCapture.png'
 import React from 'react';
-import { Parallax, ParallaxLayer } from '@react-spring/parallax';
+import { ParallaxProvider, ParallaxBanner, Parallax } from 'react-scroll-parallax';
 
 const images = [
-  { url: Homecoming, size: 0.5, alt:"homecoming image" },
-  { url: GloriousLeaders, size: 2, alt:"polaroid josephine, grace, ryan" },
-  { url: Battle, size: 2.5, alt:"battle" },
-  { url: PhotoCapture, size: 3, alt:"photocapture" },
-  // Add more images with their respective sizes
+  { url: Homecoming, scrollspeed: -10, alt:"homecoming image" },
+  { url: GloriousLeaders, scrollspeed: 5, alt:"polaroid josephine, grace, ryan" },
+  { url: Battle, scrollspeed: 10, alt:"battle" },
+  { url: PhotoCapture, scrollspeed: 15, alt:"photocapture" },
+  // Add more images with their respective strengths
 ];
 
 const offsets = [50, 25, 75, 36];
-
-const backgroundStyle = {
-  backgroundImage: ParallaxBackground,
-  backgroundSize: 'cover',
-  backgroundPosition: 'center',
-  height: '100vh',
-  position: 'fixed',
-  top: 0,
-  left: 0,
-  width: '100%',
-  zIndex: -1,
-};
 
 const ParallaxImages = () => {
 
   return (
     <div>
-        <Parallax pages = {images.length + 1}>
-            <ParallaxLayer
-                offset={0}
-                speed={1}
-                factor={images.length * 0.25}
-                style={{
-                    backgroundImage: `url(${ParallaxBackground})`,
-                    backgroundSize: 'cover',
-                    height: '100vh',
-                }}
+      <ParallaxProvider>
+        <ParallaxBanner
+          className="your-banner-class"
+          layers={[
+            {
+              image: ParallaxBackground,
+              amount: 0.5,
+              slowerScrollRate: true,
+            },
+          ]}
+          style={{
+            height: '300vh',
+          }}
+        >
+          {images.map((image, index) => (
+            <Parallax
+                easing={[1, -0.2    , 0.5, 1.34]} 
+                translateY={[90, -90]} 
+                translateX={[offsets[index],offsets[index]]}
+            >
+                <img
+              key={index}
+              src={image.url}
+              alt={image.alt}
+              style={{
+                position: 'inherit',
+                width: '25%',
+              }}
             />
-            {images.map((image, index) => (
-                <ParallaxLayer offset = {index * 0.25 + 0.1} speed={image.size * 0.5} style={{justifyContent: 'flex-end'}}>
-                    <img
-                        src = {image.url}
-                        alt = {image.alt}
-                        style={{
-                            position:'absolute', 
-                            width: '25%', 
-                            height: 'auto', 
-                            right: `${offsets[index]}%`,
-                        }}
-                    />
-                </ParallaxLayer>
-            ))}
-        </Parallax>
+            </Parallax>
+          ))}
+        </ParallaxBanner>
+      </ParallaxProvider>
     </div>
-  )
-//   return (
-//     <div>
-//       <animated.div style={{ ...backgroundStyle, transform: xy.interpolate(trans) }}></animated.div>
-//       <div
-//         style={{ height: '1000vh', overflowY: 'scroll' }}
-//         onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y, 10) })}
-//       >
-//         {images.map((image, index) => (
-//           <animated.div
-//             key={index}
-//             style={{
-//               transform: xy.interpolate((x, y) => trans(x / image.size, y / image.size)),
-//             }}
-//           >
-//             <img
-//               src={image.url}
-//               alt={image.alt}
-//               style={{ width: '50%', height: 'auto', display: 'block' }}
-//             />
-//           </animated.div>
-//         ))}
-//       </div>
-//     </div>
-//   );
+  );
 };
 
 export default ParallaxImages;
