@@ -21,7 +21,12 @@
   font-style: normal;
   font-weight: 300;
   line-height: 100%;
-  
+}
+
+@media (max-width: 768px) {
+  .day-text {
+    font-size: 0.75rem;
+  }
 }
 
 .type-text {

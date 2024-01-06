@@ -75,13 +75,23 @@
 
 .mission-statement {
   color: var(--Main-Blue, #051e4f);
-  font-size: 3.25em;
+  font-size: 4.25em;
   font-weight: 250;
   line-height: 100%; /* 3rem */
   padding-top: 4vw;
   padding-left: 2vw;
   padding-right:25vw;
   container-name: mission-statement;
+}
+
+@media (max-width: 768px) {
+  .mission-statement {
+    font-size: 3em;
+    padding-top: 4vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+  }
+  
 }
 
 .border1 {
