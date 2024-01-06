@@ -24,8 +24,14 @@
 .menu {
   list-style: none;
   display: inline-flex;
-  width: 60vw;
+  width: 40vw;
   justify-content: space-between;
+}
+
+@media (max-width: 940px) {
+  .menu {
+    width: 60vw;
+  }
 }
 
 .nav-menu-item {
@@ -69,7 +75,15 @@
     display:block;
   }
   .menu {
-    display: none;
+    flex-direction:column;
   }
-  
+  .show-menu {
+    display:flex;
+    position:relative;
+    margin-right: 0;
+    padding-right:0;
+  }
+  .hide-menu {
+    display:none;
+  }
 }
