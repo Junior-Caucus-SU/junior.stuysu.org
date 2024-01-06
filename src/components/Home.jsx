@@ -87,6 +87,23 @@ export default function Home() {
         })
     })
 
+    useEffect(() => {
+        const hiddenElements = document.querySelectorAll(".slow-hidden");
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((element) => {
+                if (element.isIntersecting) {
+                    element.target.classList.add("show");
+                } else {
+                    element.target.classList.remove("show");
+                }
+            })
+        })
+        hiddenElements.forEach((entry) => {
+            observer.observe(entry);
+        })
+    })
+
+
     const periodTimes = getPeriodTimes(dayType);
     return (<>
         <Texture />
@@ -131,9 +148,9 @@ export default function Home() {
             </div>
             <div className="mission-box">
                 <h1 className="mission-statement">
-                    <span className="hidden">Welcome to the Yoo-Rhee caucus.</span><span className="hidden"> We are committed to delivering on our promises </span> 
-                    <span className="hidden">through well organized initiatives,</span><span className="hidden"> including cabinet restructuring,</span> <span className="hidden">enhancing
-                        college readiness,</span><span className="hidden"> and meaningful themed events.</span>
+                    <span className="slow-hidden">Welcome to the Yoo-Rhee caucus.</span><span className="slow-hidden"> We are committed to delivering on our promises </span> 
+                    <span className="slow-hidden">through well organized initiatives,</span><span className="slow-hidden"> including cabinet restructuring,</span> <span className="slow-hidden">enhancing
+                        college readiness,</span><span className="slow-hidden"> and meaningful themed events.</span>
                 </h1>
             </div>
             <div className="parallax">

@@ -24,7 +24,7 @@
 .menu {
   list-style: none;
   display: inline-flex;
-  width: 40vw;
+  width: 60vw;
   justify-content: space-between;
 }
 
@@ -60,3 +60,16 @@
   text-align:center;
 }
 
+.hamburger {
+  display: none;
+}
+
+@media (max-width:625px) {
+  .hamburger {
+    display:block;
+  }
+  .menu {
+    display: none;
+  }
+  
+}

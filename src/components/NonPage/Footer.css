@@ -1,9 +1,10 @@
 .footer-banner {
     aspect-ratio: 3.5/1;
     position:absolute;
-    width:100vh;
-    width: 100%;
+    width: 100vw;
 }
+
+/* @media */
 
 
 .footer-image {
@@ -16,13 +17,13 @@
 }
 
 .footer-content {
-    top: 30.50px;
+    top: 0.75em;
     width: inherit;
     position: absolute;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 45px;
+    gap: 1em;
     display: inline-flex;
 
 }

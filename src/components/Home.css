@@ -84,14 +84,19 @@
   container-name: mission-statement;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1005px) {
   .mission-statement {
-    font-size: 3em;
+    font-size: 3.5em;
     padding-top: 4vw;
     padding-left: 2vw;
-    padding-right: 2vw;
+    padding-right: 10vw;
   }
-  
+}
+
+@media (max-width: 614px) {
+  .mission-statement {
+    font-size:3em;
+  }
 }
 
 .border1 {
@@ -151,6 +156,13 @@
   filter:blur(5px);
   transform:translateX(-100%);
   transition: all 1s;
+}
+
+.slow-hidden {
+  opacity:0;
+  filter:blur(5px);
+  transform:translateX(-100%);
+  transition: all 4s;
 }
 
 

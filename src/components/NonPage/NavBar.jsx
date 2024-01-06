@@ -19,6 +19,10 @@ function NavBar(props) {
                 <a href="/resources" className={currPageGet(props.page, "Resources")} >{getText(props.page, "Resources")}</a>
             </div>
 
+            {/* nav bar, by default hidden*/}
+            <a href="javascript:void(0)" class="nav-menu-item hamburger">
+                <span className="decorative">b</span> Menu <span className="decorative">a</span>
+            </a>
         </div>
     </ div>)
 }
