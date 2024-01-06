@@ -18,7 +18,7 @@ import { useState, useEffect } from "react";
 
 
 export default function Home() {
-    const [minutes, setMinutes] = useState(5); //shoule be used for the schedule page
+    const [minutes, setMinutes] = useState(5); //should be used for the schedule page
     const [currPeriod, setPeriod] = useState(0);
     const [dayType, setDayType] = useState("Regular");
     const [periodDuration, setPeriodDuration] = useState(40);
