@@ -21,6 +21,8 @@ export default function Home() {
     const [minutes, setMinutes] = useState(5); //shoule be used for the schedule page
     const [currPeriod, setPeriod] = useState(0);
     const [dayType, setDayType] = useState("Regular");
+    const [periodDuration, setPeriodDuration] = useState(40);
+    const [minutesLeft, setMinutesLeft] = useState(0);
     //fetch the sheets data
     useEffect(() => {
         const fetchSheetsData = async () => {
@@ -38,18 +40,16 @@ export default function Home() {
         };
         fetchSheetsData();
     }, []);
-    //get period
 
+
+    //get period
     useEffect(() => {
         //set an interval
         const timer = setInterval(() => {
-            const getCurrentPeriod = (dayType) => {
-                const h = 10;
-                const m = 50;
+            const getCurrentPeriod = () => {
                 const now = new Date();
-                now.setHours(h)
-                now.setMinutes(m);
-                // const now = new Date();
+                now.setHours(now.getHours())
+                now.setMinutes(now.getMinutes());
                 const schedule = getDayInfo(dayType);
                 const periods = getTimes(schedule);
                 for (let i = 0; i < periods.length; i++) {
@@ -59,18 +59,20 @@ export default function Home() {
                     const diff = now.getTime() - start.getTime();
                     if (diff > 0) {
                         setMinutes(diff / 60000);
+                        setMinutesLeft(schedule[i].duration - diff / 60000);
                         setPeriod(periods[i]);
+                        setPeriodDuration(schedule[i].duration);
                     } else {
                         break;
                     }
                 }
             }
-            getCurrentPeriod(dayType);
+            getCurrentPeriod();
         }, 1000);
         return () => clearInterval(timer);
-    }, []);
+    }, [dayType]);
 
-
+    // effects for the hidden elements
     useEffect(() => {
         const hiddenElements = document.querySelectorAll(".hidden");
         const observer = new IntersectionObserver((entries) => {
@@ -87,6 +89,7 @@ export default function Home() {
         })
     })
 
+    //effects for the slow hidden elements (such as the mission statement)
     useEffect(() => {
         const hiddenElements = document.querySelectorAll(".slow-hidden");
         const observer = new IntersectionObserver((entries) => {
@@ -103,6 +106,13 @@ export default function Home() {
         })
     })
 
+    const dayInfo = {
+        dayType,
+        minutes,
+        minutesLeft,
+        currPeriod,
+        periodDuration
+    }
 
     const periodTimes = getPeriodTimes(dayType);
     return (<>
@@ -113,7 +123,7 @@ export default function Home() {
             </div>
             <div className="homepage-schedule-container">
                 <div className="schedule-banner-container hidden">
-                    <Schedule className="schedule-banner" />
+                    <Schedule className="schedule-banner" {...dayInfo} />
                 </div>
                 <div className="hidden bridge-pos">
                     <img src={TribecaBridge} alt="Tribeca bridge" className="tribeca-bridge" />
@@ -148,7 +158,7 @@ export default function Home() {
             </div>
             <div className="mission-box">
                 <h1 className="mission-statement">
-                    <span className="slow-hidden">Welcome to the Yoo-Rhee caucus.</span><span className="slow-hidden"> We are committed to delivering on our promises </span> 
+                    <span className="slow-hidden">Welcome to the Yoo-Rhee caucus.</span><span className="slow-hidden"> We are committed to delivering on our promises </span>
                     <span className="slow-hidden">through well organized initiatives,</span><span className="slow-hidden"> including cabinet restructuring,</span> <span className="slow-hidden">enhancing
                         college readiness,</span><span className="slow-hidden"> and meaningful themed events.</span>
                 </h1>

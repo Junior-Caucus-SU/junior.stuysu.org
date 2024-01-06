@@ -5,7 +5,7 @@ import './Initiatives.css';
 export default function AllInitiatives(props) {
     const [initiativesData, setEventsInfo] = useState([]);
     const [showMore, setShowMore] = useState([]);
-
+    console.log(props.dayInfo);
     useEffect(() => {
         const fetchSheetsData = async () => {
             try {

@@ -26,14 +26,14 @@ export default function DateCrawler() {
     }, []);
     
     return (<div>
-        {dayType.map((day, i) => (
-            <div className={day[0].toLowerCase() + " day-box"} key={i}>
+        {dayType.map((day, i) => ( 
+           (i !== 0 && i !== 6) && (<div className={day[0].toLowerCase() + " day-box"} key={i}>
                 <CrawlerEllipse itemText={day} id={i} />
                 <p className="day-text">
                     <span className="type-text">{day[1]}</span>
                     <span className="day-type-text">{" " + day[2]}</span>
                 </p>
-            </div>
+            </div>)
         ))}
     </div>);
 }

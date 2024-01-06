@@ -20,9 +20,9 @@ function NavBar(props) {
             </div>
 
             {/* nav bar, by default hidden*/}
-            <a href="javascript:void(0)" class="nav-menu-item hamburger">
+            <div class="nav-menu-item hamburger">
                 <span className="decorative">b</span> Menu <span className="decorative">a</span>
-            </a>
+            </div>
         </div>
     </ div>)
 }

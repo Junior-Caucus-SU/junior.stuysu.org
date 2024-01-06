@@ -14,7 +14,7 @@
   color: #051e4f;
   font-family: "Mixta-Sharp";
   font-weight: 300;
-  line-height: 164.32px;
+  line-height: 1em;
   word-wrap: break-word;
   font-size: 208px; /* Consolidated font-size */
   margin: 0 10px;
@@ -38,9 +38,6 @@
   }
 }
 
-.the-team {
-  margin-right: -10000vw;
-}
 
 .meet {
   animation: 1s ease-out 0s 1 slideInFromLeft;
@@ -49,7 +46,14 @@
 
 .the-team {
   animation: 1s ease-out 0s 1 slideInFromRight;
-  margin-right: -20vw;
+  margin-right: -15vw;
+}
+
+@media (max-width: 975px) {
+  .the-team {
+    font-size: 150px;
+    margin-right: 5vw;
+  }
 }
 
 .box {
