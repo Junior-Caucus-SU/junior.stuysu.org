@@ -26,13 +26,8 @@ Removes this tool and copies build dependencies, configuration files
 and scripts into the app directory. If you do this, you can’t go back!
 
 We suggest that you begin by typing: 
-  ```powershell
-  cd junior_website
-  
-  npm start
-  ```
+```powershell
+cd junior_website
 
-
-
-TO THE REST OF THE CAUCUS \
-Link to Typescript Create React App: [Create React App with Typescript](https://create-react-app.dev/docs/adding-typescript/)
+npm start
+```
