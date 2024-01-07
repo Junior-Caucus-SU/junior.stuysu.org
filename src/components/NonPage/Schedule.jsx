@@ -47,8 +47,8 @@ export default function ScheduleBanner(props) {
         <div className="time-period">
           <span className="time">{timeString}</span>
           <div className="period-container">
-            <span className="period">{isWeekend ? "No School" : props.currPeriod}</span>
-            <span className="period dupe">{isWeekend ? 'Weekend' : `${props.dayType} Day`}</span>
+            <span className="period interactable">{isWeekend ? "No School" : props.currPeriod}</span>
+            <span className="period dupe interactable">{isWeekend ? 'Weekend' : `${props.dayType} Day`}</span>
           </div>
         </div>
       </div>

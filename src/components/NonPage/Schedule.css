@@ -121,7 +121,7 @@
 }
 
 .period {
-  font-size: 9rem;
+  font-size: 9.3rem;
   font-style: normal;
   font-weight: 400;
   position: absolute;
@@ -133,6 +133,8 @@
 
 .period.dupe {
   transform: translateY(100%);
+  font-family: 'neue-haas-grotesk-display', sans-serif;
+  font-size: 8.5rem;
 }
 
 .period-container:hover .period {
@@ -140,7 +142,7 @@
 }
 
 .period-container:hover .period.dupe {
-  transform: translateY(-50%);
+  transform: translateY(-55%);
 }
 
 @media (max-width: 690px) {

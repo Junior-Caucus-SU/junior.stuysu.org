@@ -3,6 +3,7 @@ import './Cursor.css';
 
 const CustomCursor = () => {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+    const [isInteractableHovered, setIsInteractableHovered] = useState(false);
     const pInner = useRef({ x: 0, y: 0 });
     const pOuter = useRef({ x: 0, y: 0 });
     const cInner = useRef();
@@ -13,6 +14,15 @@ const CustomCursor = () => {
         const updateMousePosition = (e) => {
             setMousePosition({ x: e.pageX, y: e.pageY });
         };
+
+        const addInteractableListeners = () => {
+            const interactables = document.querySelectorAll('a, .interactable');
+            interactables.forEach(el => {
+                el.addEventListener('mouseenter', () => setIsInteractableHovered(true));
+                el.addEventListener('mouseleave', () => setIsInteractableHovered(false));
+            });
+        };
+        addInteractableListeners();
 
         const animate = () => {
             pInner.current = {
@@ -37,13 +47,31 @@ const CustomCursor = () => {
         return () => {
             document.removeEventListener('mousemove', updateMousePosition);
             cancelAnimationFrame(requestRef.current);
+            const interactables = document.querySelectorAll('a, .interactable');
+            interactables.forEach(el => {
+                el.removeEventListener('mouseenter', () => setIsInteractableHovered(true));
+                el.removeEventListener('mouseleave', () => setIsInteractableHovered(false));
+            });
         };
     }, [mousePosition]);
 
+    useEffect(() => {
+        if (isInteractableHovered) {
+            cInner.current.style.width = '30px';
+            cInner.current.style.height = '30px';
+            cOuter.current.style.opacity = '0';
+        } else {
+            cInner.current.style.width = '5px';
+            cInner.current.style.height = '5px';
+            cOuter.current.style.opacity = '1';
+        }
+    }, [isInteractableHovered]);
+
+
     return (
         <>
-            <div ref={cInner} id="cursor-inner"/>
-            <div ref={cOuter} id="cursor-outer"/>
+            <div ref={cInner} id="cursor-inner" />
+            <div ref={cOuter} id="cursor-outer" />
         </>
     );
 };
