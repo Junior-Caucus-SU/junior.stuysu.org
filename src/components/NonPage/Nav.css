@@ -4,13 +4,13 @@
 
 .nav-container {
   display: flex;
-  width: 90vw;
   height: 5vh;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
-  margin: auto;
+  margin-top: 30px;
+  padding-left: 5vw;
+  padding-right: 5vw;
 }
 
 .decorative {

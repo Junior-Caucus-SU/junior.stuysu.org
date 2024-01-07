@@ -32,11 +32,11 @@ export default function ScheduleBanner(props) {
         <div className="time-circle">
           <svg className="progress-ring" width="140" height="140">
             <circle
-              cx="69"
-              cy="70"
+              cx="64"
+              cy="75"
               r="61"
               stroke="#004085"
-              strokeWidth="7"
+              strokeWidth="8"
               fill="transparent"
               strokeDasharray={circumference}
               strokeDashoffset={strokeDashoffset}
