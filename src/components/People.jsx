@@ -225,7 +225,9 @@ export default function People() {
               </div>
               <div className="nameAndDescription">
                 <div className="name">Emily Li</div>
-                <div className="description">Lorem ipsum dolor sit amet consectetur. Velit convallis sit odio orci varius eu elementum. Est sit et hendrerit id eget diam. Maecenas amet sed ac turpis facilisis semper at. Tincidunt egestas vulputate sed lobortis hac augue. Est pharetra aliquet faucibus.</div>
+                <div className="description">
+                  Hello! I’m Emily, director of events for Junior Caucus. I love eating at new restaurants, taking pretty pictures and listening to music. I run on the XC and track and field team. Lastly, I am very excited to help plan this year’s events and J-Prom.
+                </div>
               </div>
             </div>
 
@@ -255,7 +257,9 @@ export default function People() {
                   <div className="d_type">I/T</div>
                   <img src={Elias_Xu} alt="" className="director-img" />
                   <div className="name">Elias Xu</div>
-                  <div className="description">Lorem ipsum dolor sit amet consectetur. Velit convallis sit odio orci varius eu elementum. Est sit et hendrerit id eget diam. Maecenas amet sed ac turpis facilisis semper at. Tincidunt egestas vulputate sed lobortis hac augue. Est pharetra aliquet faucibus.</div>
+                  <div className="description">
+                    Hi! I’m Elias! I’m a beekeeper, book enthusiast, and programmer. Even though I mainly come from a background in Artificial Intelligence and Competitive Programming, I’ve been deemed competent enough to run (with Will Zhang) the I/T department. Cheers!
+                  </div>
                 </div>
                 <div className="director person-container to-fly-from-right">
                   <img src={Will} alt="" className="director-img" />
@@ -295,7 +299,9 @@ export default function People() {
                   <div className="d_type">Social Media</div>
                   <img src={Maegan_Diep} alt="" className="director-img " />
                   <div className="name">Maegan Diep</div>
-                  <div className="description">Lorem ipsum dolor sit amet consectetur. Velit convallis sit odio orci varius eu elementum. Est sit et hendrerit id eget diam. Maecenas amet sed ac turpis facilisis semper at. Tincidunt egestas vulputate sed lobortis hac augue. Est pharetra aliquet faucibus.</div>
+                  <div className="description">
+                    Hi! I'm Maegan, but I also go by Mae. This is my second year as the Social Media Director, and I'm excited to be working on our main project, the Junior Athlete Spotlight, and promoting events/information. Aside from running social media, I also enjoy baking, making art, and traveling! Fun fact: I've been to Dominican Republic four times... (I highly recommend visiting though.)
+                  </div>
                 </div>
               </div>
             </div>
