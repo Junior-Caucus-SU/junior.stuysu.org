@@ -18,20 +18,19 @@
 
 .schedule-specifics {
   padding-left: 5vw;
-  position: relative;
-  top: -1vh;
   width: 100vw;
   height: 60vh;
   background-color: #0c2b56;
   display: grid;
+  margin-top: -20px;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(8, 1fr);
 }
 
 .specifics-line {
   position: absolute;
-  right: 0;
-  bottom: 0;
+  right: 10vw;
+  top: 125vh;
 }
 
 

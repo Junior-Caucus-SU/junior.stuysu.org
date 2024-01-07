@@ -1,6 +1,7 @@
 import "./Home.css";
 import LottieView from 'lottie-react-native';
 import React from "react";
+import CustomCursor from "./NonPage/Cursor";
 import NavBar from "./NonPage/NavBar";
 import Schedule from "./NonPage/Schedule";
 import Border from "../Images/BorderImg.svg";
@@ -128,6 +129,7 @@ export default function Home() {
                 />
             }
             <Texture />
+            <CustomCursor />
         <div className="homepage-div">
             <div>
                 <NavBar {...{ page: "Home" }} />
