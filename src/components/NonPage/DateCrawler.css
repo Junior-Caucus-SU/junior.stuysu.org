@@ -9,7 +9,8 @@
 .day-box {
   display: flex;
   flex-direction: row;
-  gap: 0.5em;
+  gap: 1.3em;
+  margin-bottom: 3px;
 }
 
 .day-text {
