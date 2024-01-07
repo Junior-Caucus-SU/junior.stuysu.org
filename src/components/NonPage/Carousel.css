@@ -1,29 +1,30 @@
 .carousel {
-    overflow: hidden;
-    padding-left: 5vw;
+  overflow: hidden;
+  padding-left: 5vw;
 }
 
 .current-item {
-    white-space: nowrap;
-    width: 91vw;
-    transition: transform 0.5s;
+  white-space: nowrap;
+  width: 91vw;
+  transition: transform 0.5s;
 }
 
 .images {
-    object-fit: cover;
-    width: 90vw;
-    height: 80vh;
-    margin-right: 1vw;
+  object-fit: cover;
+  width: 90vw;
+  height: 80vh;
+  margin-right: 1vw;
+  /* filter: plus-darker; */
 }
 
 .image-text {
-    position: absolute;
-    color: var(--Pink, #FBE4DF);
-    font-family: "Mixta-Sharp";
-    font-size: 128px;
-    font-style: normal;
-    font-weight: 350;
-    line-height: 85%; 
-    top: 40vh;
-    left: 4vw;
+  position: absolute;
+  color: var(--Pink, #fbe4df);
+  font-family: "Mixta-Sharp";
+  font-size: 128px;
+  font-style: normal;
+  font-weight: 350;
+  line-height: 85%;
+  top: 40vh;
+  left: 4vw;
 }

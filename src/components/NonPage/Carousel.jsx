@@ -4,6 +4,16 @@ import CarouselImageOne from "../../Images/CarouselImage1.png";
 import CarouselImageTwo from "../../Images/CarouselImage2.png";
 
 
+const getBackgroundStyle = (image) => {
+  return {
+    background: `linear-gradient(0deg,rgba(0, 0, 0, 0.2) 0%,rgba(0, 0, 0, 0.2) 100%, url(${image}), lightgray 50% / cover no-repeat)`,
+    objectFit: "cover",
+    width: "90vw",
+    height: "80vh",
+    margin: "1vw",
+  }
+}
+
 function CurrentItem({direction}) {
     if (direction === 0) {
         return (
@@ -16,10 +26,9 @@ function CurrentItem({direction}) {
     }
     return (
         <div className="current-item" style={{ transform: `translateX(-100%)` }}>
-            <img className="images" src={CarouselImageOne}/>
+            <div className="images" style={getBackgroundStyle("../../Images/CarouselImage1.png")}/>
             <div className="image-text">Homecoming<br/>Fundraiser</div>
-            <img className="images" src={CarouselImageTwo} />
-        </div>
+            <div className="images" style={getBackgroundStyle("../../Images/CarouselImage2.png")}/>        </div>
     );
 }
 

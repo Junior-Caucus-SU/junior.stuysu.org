@@ -5,6 +5,12 @@
   grid-template-rows: 1fr 1fr;
 }
 
+@media (max-width: 632px) {
+  .homepage-schedule-container{
+    height: 60vh;
+  }
+}
+
 .schedule-banner-container {
   grid-column: span 2;
 }
