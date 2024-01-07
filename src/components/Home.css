@@ -75,6 +75,7 @@
   position: fixed;
   width: 100vw;
   z-index: 20000;
+  filter: blur(5px);
 }
 
 .mission-box {
@@ -113,6 +114,7 @@
 }
 
 .tribeca-bridge {
+  filter: brightness(1.2);
   mix-blend-mode: color-burn;
   margin-top: -3vw;
   width: 40vw;

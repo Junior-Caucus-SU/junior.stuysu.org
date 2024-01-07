@@ -26,7 +26,7 @@ export default function ScheduleBanner(props) {
   return (
     <div className="schedule-banner">
       <div className="top-row">
-        <span>{`${dateString} | ${isWeekend ? 'Weekend' : `${props.dayType} Day`}`}</span>
+        <span>{`${dateString}`}</span>
       </div>
       <div className="bottom-row">
         <div className="time-circle">
@@ -46,7 +46,10 @@ export default function ScheduleBanner(props) {
         </div>
         <div className="time-period">
           <span className="time">{timeString}</span>
-          <span className="period">{isWeekend ? "No School" : props.currPeriod}</span>
+          <div className="period-container">
+            <span className="period">{isWeekend ? "No School" : props.currPeriod}</span>
+            <span className="period dupe">{isWeekend ? 'Weekend' : `${props.dayType} Day`}</span>
+          </div>
         </div>
       </div>
     </div>
