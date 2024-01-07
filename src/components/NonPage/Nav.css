@@ -1,5 +1,5 @@
 .head-nav {
-  z-index:10;
+  z-index:1000000;
 }
 
 .nav-container {

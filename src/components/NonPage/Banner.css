@@ -7,21 +7,15 @@
 }
 
 .banner-text {
-  padding-top:1vh;
-  display: table-cell;
+  font-weight: 400;
+  padding-top:1.7vh;
   color: var(--Pink, #fae5e2);
-  font-family: "neue-haas-grotesk-text";
-  font-size: 0.75rem;
-  vertical-align: middle;
-  line-height: 100%; 
+  font-family: "neue-haas-grotesk-text", sans-serif;
+  font-size: 1rem;
 }
 
 .banner-links {
     color: var(--Pink, #fae5e2);
-    font-family: "neue-haas-grotesk-text";
-    font-size: 0.75rem;
-    line-height: 100%; 
-  
 }
 
 .banner-texture {

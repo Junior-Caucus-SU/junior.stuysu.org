@@ -1,5 +1,5 @@
 .image-overlay {
-    background-image: url("../../Images/Background.png");
+    /* background-image: url("../../Images/Background.png"); */
     background-repeat: repeat-y;
     background-size: cover;
     background-blend-mode: luminosity;

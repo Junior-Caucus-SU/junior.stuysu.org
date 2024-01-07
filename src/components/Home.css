@@ -1,6 +1,7 @@
 .homepage-schedule-container {
   height: 70vh;
   display: grid;
+  padding-left: 5vw;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
 }
@@ -16,10 +17,11 @@
 }
 
 .schedule-specifics {
+  padding-left: 5vw;
   position: relative;
   top: -1vh;
   width: 100vw;
-  height: 50vh;
+  height: 60vh;
   background-color: #0c2b56;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
@@ -36,11 +38,6 @@
 .schedule-specifics-box {
   grid-column: 1 / span 5;
   grid-row: 1 / span 5;
-  margin-left: 3vw;
-  margin-right: 5vw;
-  z-index: 1;
-  /* marginx-top:-5vw; */
-  /* ! flexbox styles */
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -61,20 +58,23 @@
 .all-schedules {
   grid-column: 1 / span 2;
   grid-row: 7;
-  margin-left: 3vw;
 }
 
 .all-schedules-link {
+  position: relative;
+  top: -30%;
   font-family: "neue-haas-grotesk-display", sans-serif;
   color: var(--Pink, #fbe4df);
   font-size: 1rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 150%;
   text-decoration-line: underline;
 }
 
 .mission-box {
+  padding-left: 5vw;
+  padding-right: 10vw;
+  padding-top: 100px;
   height: 90vh;
   width: 100vw;
 }
@@ -83,10 +83,7 @@
   color: var(--Main-Blue, #051e4f);
   font-size: 4.25em;
   font-weight: 250;
-  line-height: 100%; /* 3rem */
-  padding-top: 4vw;
-  padding-left: 2vw;
-  padding-right:25vw;
+  line-height: 100%;
   container-name: mission-statement;
 }
 
@@ -124,7 +121,6 @@
 }
 
 .date-crawler-pos {
-  padding-left: 5vw;
   grid-row: 2;
   grid-column: 1;
 }
@@ -145,15 +141,14 @@
 }
 
 .period-name {
-  /* Text */
-  font-family: "neue-haas-grotesk-display", sans-serif;
-  font-size: 0.75rem;
+  font-family: "neue-haas-grotesk-text", sans-serif;
+  font-size: 0.8rem;
   font-weight: 400;
 }
 
 .period-time {
-  font-family: "neue-haas-grotesk-text", sans-serif;
-  font-size: 1.1rem;
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-size: 1.5rem;
 }
 
 
