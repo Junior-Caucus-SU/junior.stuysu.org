@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import Navbar from "./NonPage/NavBar";
+import CustomCursor from "./NonPage/Cursor";
 import Texture from "./NonPage/Texture";
 import Footer from "./NonPage/Footer";
 import "./People.css";
@@ -163,6 +164,7 @@ export default function People() {
 
   let peoplePage = (
     <div className="people-page">
+      <CustomCursor />
       <Navbar page="People" />
       <Texture />
       <div className="people-page-body">

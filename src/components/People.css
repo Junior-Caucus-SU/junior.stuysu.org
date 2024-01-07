@@ -16,8 +16,7 @@
   font-weight: 300;
   line-height: 1em;
   word-wrap: break-word;
-  font-size: 208px; /* Consolidated font-size */
-  margin: 0 10px;
+  font-size: 300px;
 }
 
 @keyframes slideInFromLeft {
