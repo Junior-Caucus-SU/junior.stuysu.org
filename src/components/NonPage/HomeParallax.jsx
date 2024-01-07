@@ -22,7 +22,7 @@ const ParallaxImages = () => {
     <div>
       <ParallaxProvider>
         <ParallaxBanner
-          className="your-banner-class"
+          className="your-banner-class" // obvious chatGPT
           layers={[
             {
               image: ParallaxBackground,
