@@ -120,13 +120,15 @@ export default function Home() {
     const periodTimes = getPeriodTimes(dayType);
     return (
         <>
-            {loading && 
+            {loading &&
+            <div className="coverAnim">
                 <LottieView
                     source={require('../Images/unravel.json')}
                     autoPlay
                     speed={30}
                     onAnimationFinish={() => setLoading(false)}
                 />
+            </div> 
             }
             <Texture />
             <CustomCursor />
