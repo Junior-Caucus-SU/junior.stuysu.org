@@ -1,5 +1,7 @@
 import "./Home.css";
+import LottieView from 'lottie-react-native';
 import React from "react";
+import CustomCursor from "./NonPage/Cursor";
 import NavBar from "./NonPage/NavBar";
 import Schedule from "./NonPage/Schedule";
 import Border from "../Images/BorderImg.svg";
@@ -18,6 +20,7 @@ import { useState, useEffect } from "react";
 
 
 export default function Home() {
+    const [loading, setLoading] = useState(true); // this is ONLY to control animation
     const [minutes, setMinutes] = useState(5); //should be used for the schedule page
     const [currPeriod, setPeriod] = useState(0);
     const [dayType, setDayType] = useState("Regular");
@@ -115,8 +118,20 @@ export default function Home() {
     }
 
     const periodTimes = getPeriodTimes(dayType);
-    return (<>
-        <Texture />
+    return (
+        <>
+            {loading &&
+            <div className="coverAnim">
+                <LottieView
+                    source={require('../Images/unravel.json')}
+                    autoPlay
+                    speed={30}
+                    onAnimationFinish={() => setLoading(false)}
+                />
+            </div> 
+            }
+            <Texture />
+            <CustomCursor />
         <div className="homepage-div">
             <div>
                 <NavBar {...{ page: "Home" }} />

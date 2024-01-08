@@ -1,40 +1,49 @@
 .homepage-schedule-container {
   height: 70vh;
   display: grid;
+  padding-left: 5vw;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
+}
+
+@media (max-width: 632px) {
+  .homepage-schedule-container{
+    height: 60vh;
+  }
 }
 
 .schedule-banner-container {
   grid-column: span 2;
 }
 
-.schedule-specifics {
-  position: relative;
-  top: -1vh;
+.coverAnim {
+  position: fixed;
   width: 100vw;
-  height: 50vh;
+  height: 100%;
+  z-index: 1000;
+}
+
+.schedule-specifics {
+  padding-left: 5vw;
+  width: 100vw;
+  height: 60vh;
   background-color: #0c2b56;
   display: grid;
+  margin-top: -20px;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(8, 1fr);
 }
 
 .specifics-line {
   position: absolute;
-  right: 0;
-  bottom: 0;
+  right: 10vw;
+  top: 125vh;
 }
 
 
 .schedule-specifics-box {
   grid-column: 1 / span 5;
   grid-row: 1 / span 5;
-  margin-left: 3vw;
-  margin-right: 5vw;
-  z-index: 1;
-  /* marginx-top:-5vw; */
-  /* ! flexbox styles */
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -55,20 +64,29 @@
 .all-schedules {
   grid-column: 1 / span 2;
   grid-row: 7;
-  margin-left: 3vw;
 }
 
 .all-schedules-link {
+  position: relative;
+  top: -30%;
+  font-family: "neue-haas-grotesk-display", sans-serif;
   color: var(--Pink, #fbe4df);
-  /* Link */
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 150%; /* 1.125rem */
   text-decoration-line: underline;
 }
 
+.lf-player-container {
+  position: fixed;
+  width: 100vw;
+  z-index: 20000;
+}
+
 .mission-box {
+  padding-left: 5vw;
+  padding-right: 20vw;
+  padding-top: 100px;
   height: 90vh;
   width: 100vw;
 }
@@ -77,10 +95,7 @@
   color: var(--Main-Blue, #051e4f);
   font-size: 4.25em;
   font-weight: 250;
-  line-height: 100%; /* 3rem */
-  padding-top: 4vw;
-  padding-left: 2vw;
-  padding-right:25vw;
+  line-height: 100%;
   container-name: mission-statement;
 }
 
@@ -104,6 +119,7 @@
 }
 
 .tribeca-bridge {
+  filter: brightness(1.2);
   mix-blend-mode: color-burn;
   margin-top: -3vw;
   width: 40vw;
@@ -118,7 +134,6 @@
 }
 
 .date-crawler-pos {
-  padding-left: 5vw;
   grid-row: 2;
   grid-column: 1;
 }
@@ -139,42 +154,18 @@
 }
 
 .period-name {
-  /* Text */
-  font-family: "neue-haas-grotesk-display", sans-serif;
-  font-size: 0.75rem;
+  font-family: "neue-haas-grotesk-text", sans-serif;
+  font-size: 0.8rem;
   font-weight: 400;
 }
 
 .period-time {
-  font-family: "neue-haas-grotesk-text", sans-serif;
-  font-size: 1.1rem;
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-size: 1.5rem;
 }
-
-
-.hidden {
-  opacity:0;
-  filter:blur(5px);
-  transform:translateX(-100%);
-  transition: all 1s;
-}
-
-.slow-hidden {
-  opacity:0;
-  filter:blur(5px);
-  transform:translateX(-100%);
-  transition: all 3s;
-}
-
 
 .show {
   filter: blur(0);
   transform:translateX(0);
   opacity:1;
 }
-
-@media(perfers-reduced-motion){
-  .hidden {
-    transition:none;
-  }
-}
-

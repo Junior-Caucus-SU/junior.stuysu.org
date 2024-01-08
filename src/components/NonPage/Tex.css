@@ -4,13 +4,12 @@
     background-size: cover;
     background-blend-mode: luminosity;
     mix-blend-mode: soft-light;
-    filter: blur(2px);
     pointer-events: none;
     height: 200vh;
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1;
-    opacity: 25%;
+    top: -15px;
+    left: -20px;
+    width: 105%;
+    z-index: 100000;
+    opacity: 50%;
 }

@@ -1,0 +1,28 @@
+#cursor {
+    pointer-events: none;
+    position: fixed;
+}
+
+#cursor-inner, #cursor-outer {
+    position: absolute;
+    border-radius: 50%;
+    mix-blend-mode: difference;
+    z-index: 1000000000;
+    pointer-events: none;
+}
+
+#cursor-inner {
+    transition: width 0.3s ease, height 0.3s ease;
+    width: 5px;
+    height: 5px;
+    background-color: var(--Pink, #fbe4df);
+    transform: translate(-50%, -50%);
+}
+
+#cursor-outer {
+    width: 30px;
+    height: 30px;
+    border: 0.5px solid var(--Pink, #fbe4df);
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease;
+}

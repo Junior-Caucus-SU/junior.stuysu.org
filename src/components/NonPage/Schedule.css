@@ -1,6 +1,5 @@
 .schedule-banner {
   display: flex;
-  padding-left: 3vw;
   padding-top:3vw;
   flex-direction: column;
   align-items: flex-start;
@@ -53,7 +52,7 @@
   font-weight: 450;
   margin: 0.5rem 0;
   font-family: "neue-haas-grotesk-display", sans-serif;
-  margin-bottom: 5vh;
+  margin-bottom: 30px;
 }
 
 .schedule-type {
@@ -113,11 +112,37 @@
   line-height: 100%;
 }
 
+.period-container {
+  width: 50vw;
+  position: relative;
+  overflow: hidden;
+  height: 9rem;
+  line-height: 1;
+}
+
 .period {
-  font-size: 8rem;
+  font-size: 9.3rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 90%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  white-space: nowrap;
+  transition: all 500ms cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.period.dupe {
+  transform: translateY(100%);
+  font-family: 'neue-haas-grotesk-display', sans-serif;
+  font-size: 8.5rem;
+}
+
+.period-container:hover .period {
+  transform: translateY(calc(-100% - 9rem));
+}
+
+.period-container:hover .period.dupe {
+  transform: translateY(-55%);
 }
 
 @media (max-width: 690px) {
