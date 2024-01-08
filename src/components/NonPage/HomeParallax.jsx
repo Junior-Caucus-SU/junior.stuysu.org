@@ -7,10 +7,10 @@ import React from 'react';
 import { ParallaxProvider, ParallaxBanner, Parallax } from 'react-scroll-parallax';
 
 const images = [
-  { url: Homecoming, scrollspeed: -10, alt:"homecoming image" },
-  { url: GloriousLeaders, scrollspeed: 5, alt:"polaroid josephine, grace, ryan" },
-  { url: Battle, scrollspeed: 10, alt:"battle" },
-  { url: PhotoCapture, scrollspeed: 15, alt:"photocapture" },
+  { url: Homecoming, scrollspeed: -10, alt: "homecoming image" },
+  { url: GloriousLeaders, scrollspeed: 5, alt: "polaroid josephine, grace, ryan" },
+  { url: Battle, scrollspeed: 10, alt: "battle" },
+  { url: PhotoCapture, scrollspeed: 15, alt: "photocapture" },
   // Add more images with their respective strengths
 ];
 
@@ -36,19 +36,19 @@ const ParallaxImages = () => {
         >
           {images.map((image, index) => (
             <Parallax
-                easing={[1, -0.2    , 0.5, 1.34]} 
-                translateY={[90, -90]} 
-                translateX={[offsets[index],offsets[index]]}
+              easing={[1, -0.2, 0.5, 1.34]}
+              translateY={[90, -90]}
+              translateX={[offsets[index], offsets[index]]}
             >
-                <img
-              key={index}
-              src={image.url}
-              alt={image.alt}
-              style={{
-                position: 'inherit',
-                width: '25%',
-              }}
-            />
+              <img
+                key={index}
+                src={image.url}
+                alt={image.alt}
+                style={{
+                  position: 'inherit',
+                  width: '25%',
+                }}
+              />
             </Parallax>
           ))}
         </ParallaxBanner>
