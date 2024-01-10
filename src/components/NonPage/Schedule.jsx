@@ -42,7 +42,15 @@ export default function ScheduleBanner(props) {
               strokeDashoffset={strokeDashoffset}
             />
           </svg>
-          <span className="timer">{isWeekend ? "0/0" : `${Math.round(props.minutes)}/${Math.round(props.minutesLeft)}`}</span>
+          <span className="timer">
+          {isWeekend ? "0/0" : (
+            <React.Fragment>
+              {Math.round(props.minutes)}
+              <br/>
+              {Math.round(props.minutesLeft)}
+            </React.Fragment>
+          )}
+          </span>
         </div>
         <div className="time-period">
           <span className="time">{timeString}</span>
