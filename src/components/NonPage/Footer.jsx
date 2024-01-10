@@ -32,16 +32,19 @@ export default function Footer() {
                         Special Thanks
                     </div>
                     <div className="names">
-                        <a href ="https://github.com/willpill" className="name-link will-zhang">Will Zhang</a><br />
-                        <a href ="https://github.com/Elias2660" className="name-link elias-xu">Elias Xu</a><br />
-                        <a href ="https://github.com/yellowstonepark" className="name-link otzar-jaffe">Otzar Jaffe</a>, <a href ="https://github.com/connor132435" className ="name-link connor-yau">Connor Yau</a>, <a href = "https://github.com/muff1n0" className ="name-link tony-chen">Tony Chen</a><br />
+                        <a href="https://github.com/willpill" className="name-link will-zhang">Will Zhang</a><br />
+                        <a href="https://github.com/Elias2660" className="name-link elias-xu">Elias Xu</a><br />
+                        <a href="https://github.com/yellowstonepark" className="name-link otzar-jaffe">Otzar Jaffe</a>, <a href="https://github.com/connor132435" className="name-link connor-yau">Connor Yau</a>, <a href="https://github.com/muff1n0" className="name-link tony-chen">Tony Chen</a><br />
                         Chloe Wong<br />
                         Someone Here<br />
                         David Chen
                     </div>
                 </div>
+                < div className="leadership">
+                    The Junior Caucus is led by Josephine Yoo and Grace Rhee. </ div>
+
                 <div className="leadership">
-                    The Junior Caucus is led by Josephine Yoo and Grace Rhee.
+                    Chiefs of Staff are John Jay Wang and Ethan Sie
                 </div>
                 <a href="https://stuy.enschool.org/" className="school-logo-link">
                     <div className="school">
@@ -51,6 +54,6 @@ export default function Footer() {
                 </a>
 
             </div>
-        </div>
+        </div >
     )
 }

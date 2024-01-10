@@ -34,15 +34,17 @@ const ParallaxImages = () => {
             height: '88vw',
           }}
         >
-            <ParallaxBannerLayer speed={-20}>
+
+          {/* ! ISSUE with Parallax formatting !!! */}
+            <ParallaxBannerLayer speed={-20}> 
                 <img
                 src={Homecoming}
                 alt="homecoming"
                 style={{
                     width: "60vw",
                     display: "block",
-                    "margin-left": "auto",
-                    "margin-right": "auto"
+                    "marginLeft": "auto",
+                    "marginRight": "auto"
                 }}
                 />
             </ParallaxBannerLayer>

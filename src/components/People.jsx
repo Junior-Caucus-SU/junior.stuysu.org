@@ -5,7 +5,7 @@ import Texture from "./NonPage/Texture";
 import Footer from "./NonPage/Footer";
 import "./People.css";
 import Ayla_Irshad from '../Images/people/Ayla_Irshad.jpg';
-import Chenming_Fang from '../Images/people/Chenming_Fang.jpeg';
+import Chenming_Fang from '../Images/people/Chenming_Fang.jpg';
 import Chloe_Wong from '../Images/people/Chloe_Wong.jpeg';
 import Elias_Xu from '../Images/people/Elias_Xu.jpg';
 import Emily_Li from '../Images/people/Emily_Li.jpeg';
@@ -242,7 +242,9 @@ export default function People() {
                     <div className="d_type">Internals</div>
                     <img src={Chenming_Fang} alt="" className="director-img" />
                     <div className="name">Chenming Fang</div>
-                    <div className="description">Lorem ipsum dolor sit amet consectetur. Velit convallis sit odio orci varius eu elementum. Est sit et hendrerit id eget diam. Maecenas amet sed ac turpis facilisis semper at. Tincidunt egestas vulputate sed lobortis hac augue. Est pharetra aliquet faucibus.</div>
+                    <div className="description">
+                      Hi I'm Chenming, co-director for Internals Department. I like exercising and discovering new music and food. I run long distance for track and cross country. I'm excited to help in creating more useful resources for everyone!
+                    </div>
                   </div>
                   <div className="director person-container to-fly-from-right">
                     <img src={Josephine_Gunawan} alt="" className="director-img" />
