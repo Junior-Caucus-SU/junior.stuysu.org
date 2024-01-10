@@ -14,7 +14,7 @@ import Moon from "../Images/moon.svg";
 import SpecificsLine from "../Images/SpecificsLineArt.svg";
 import DateCrawler from "./NonPage/DateCrawler";
 import HomeParallax from "./NonPage/HomeParallax";
-import Papa from "papaparse";
+import Papa, { parse } from "papaparse";
 import Data from "../schedules.json";
 import { useState, useEffect } from "react";
 
@@ -26,6 +26,7 @@ export default function Home() {
     const [dayType, setDayType] = useState("Regular");
     const [periodDuration, setPeriodDuration] = useState(40);
     const [minutesLeft, setMinutesLeft] = useState(0);
+    const [AorBDay, setAorBDay] = useState("A");
     //fetch the sheets data
     useEffect(() => {
         const fetchSheetsData = async () => {
@@ -37,13 +38,13 @@ export default function Home() {
                 const today = new Date();
                 const parsedData = Papa.parse(text, { header: true }).data;
                 setDayType(parsedData[today.getDay()].DayType);
+                setAorBDay(parsedData[today.getDay()].AorBDay);
             } catch (err) {
                 console.log(err);
             }
         };
         fetchSheetsData();
     }, []);
-
 
     //get period
     useEffect(() => {
@@ -114,7 +115,8 @@ export default function Home() {
         minutes,
         minutesLeft,
         currPeriod,
-        periodDuration
+        periodDuration,
+        AorBDay
     }
 
     const periodTimes = getPeriodTimes(dayType);

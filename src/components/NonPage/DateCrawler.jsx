@@ -30,7 +30,7 @@ export default function DateCrawler() {
            (i !== 0 && i !== 6) && (<div className={day[0].toLowerCase() + " day-box"} key={i}>
                 <CrawlerEllipse itemText={day} id={i} />
                 <p className="day-text">
-                    <span className="type-text">{day[1]}</span>
+                    <span className="type-text">{day[1].trim()}</span>
                     <span className="day-type-text">{" " + day[2]}</span>
                 </p>
             </div>)

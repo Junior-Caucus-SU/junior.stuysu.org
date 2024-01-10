@@ -34,7 +34,7 @@ export default function AllInitiatives(props) {
     return (
         <div className="all-initiatives">
             <div className="frame">
-                {initiativesData.map((initiative, index) => (
+                {initiativesData.reverse().map((initiative, index) => (
                     <div className="event" key={index}>
                         <p className="event-date">{initiative.Date}</p>
                         <h4 className="event-title">{initiative.Title}</h4>
