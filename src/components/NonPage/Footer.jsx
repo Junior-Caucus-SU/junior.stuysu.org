@@ -26,9 +26,8 @@ export default function Footer() {
                     <div className="positions">
                         Design Lead<br />
                         Development Lead<br />
-                        Development Team<br />
-                        Illustration & Animation<br />
-                        Photography<br />
+                        Website Team<br />
+                        Illustration<br />
                         Special Thanks
                     </div>
                     <div className="names">
@@ -36,15 +35,14 @@ export default function Footer() {
                         <a href="https://github.com/Elias2660" className="name-link elias-xu">Elias Xu</a><br />
                         <a href="https://github.com/yellowstonepark" className="name-link otzar-jaffe">Otzar Jaffe</a>, <a href="https://github.com/connor132435" className="name-link connor-yau">Connor Yau</a>, <a href="https://github.com/muff1n0" className="name-link tony-chen">Tony Chen</a><br />
                         Chloe Wong<br />
-                        Someone Here<br />
                         David Chen
                     </div>
                 </div>
                 < div className="leadership">
-                    The Junior Caucus is led by Josephine Yoo and Grace Rhee. </ div>
+                    The Junior Caucus is led by Josephine Yoo & Grace Rhee. </ div>
 
                 <div className="leadership">
-                    Chiefs of Staff are John Jay Wang and Ethan Sie
+                    With gratitudes to chiefs of staff John Jay Wang & Ethan Sie.
                 </div>
                 <a href="https://stuy.enschool.org/" className="school-logo-link">
                     <div className="school">

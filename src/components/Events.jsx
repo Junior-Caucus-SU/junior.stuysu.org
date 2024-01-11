@@ -6,11 +6,13 @@ import Footer from "./NonPage/Footer"
 import AnnouncementLine from "../Images/announcementsLine.svg"
 import "./Events.css";
 import Carousel from "./NonPage/Carousel";
+import CustomCursor from "./NonPage/Cursor";
 
 export default function Events() {
     let eventsPage = (
         <div className="events-page">
             <Navbar {...{ page: "Events" }} />
+            <CustomCursor />
             <Carousel/>
             <div className="events-body">
                 <div className="all-initiatives-header">
