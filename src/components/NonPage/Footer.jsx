@@ -1,6 +1,5 @@
 import React from 'react';
 import "./Footer.css";
-import FooterImage from "../../Images/footer-image.svg";
 import Facebook from "../../Images/facebook.svg";
 import Instagram from "../../Images/instagram.svg";
 import Stuyvesant from "../../Images/stuyvesant.png";
@@ -8,7 +7,6 @@ import Stuyvesant from "../../Images/stuyvesant.png";
 export default function Footer() {
     return (
         <div className="footer-banner">
-            <img className="footer-image" src={FooterImage} alt="FooterImage" />
             <div className="footer-content">
                 <div className="icons-container">
                     <div className="icons">
