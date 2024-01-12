@@ -86,7 +86,7 @@
   padding-left: 5vw;
   padding-right: 20vw;
   padding-top: 5vw;
-  height: 70vh;
+  height: 80vh;
   width: 100vw;
 }
 
@@ -109,6 +109,9 @@ MISSION statement breaks at around 613 px; there should be some dyanmic stuff ha
     padding-left: 2vw;
     padding-right:5vw;
   }
+  .mission-box {
+    height: 60vh;
+  }
 }
 
 @media (max-width: 895px) {
@@ -118,11 +121,23 @@ MISSION statement breaks at around 613 px; there should be some dyanmic stuff ha
     padding-left:1vw;
     padding-right: 0;
   }
+  .mission-box {
+    height: 50vh;
+  }
 }
 
-@media (max-width: 670px) {
+@media (max-width: 753px) {
   .mission-statement {
     font-size:2.25em;
+  }
+}
+
+@media(max-width: 432px) {
+  .mission-statement {
+    font-size: 2em;
+  }
+  .mission-box {
+    height:60vh;
   }
 }
 
