@@ -110,40 +110,6 @@ export default function Home() {
         return () => clearInterval(timer);
     }, [dayType]);
 
-    // effects for the hidden elements
-    useEffect(() => {
-        const hiddenElements = document.querySelectorAll(".hidden");
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((element) => {
-                if (element.isIntersecting) {
-                    element.target.classList.add("show");
-                } else {
-                    element.target.classList.remove("show");
-                }
-            })
-        })
-        hiddenElements.forEach((entry) => {
-            observer.observe(entry);
-        })
-    })
-
-    //effects for the slow hidden elements (such as the mission statement)
-    useEffect(() => {
-        const hiddenElements = document.querySelectorAll(".slow-hidden");
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((element) => {
-                if (element.isIntersecting) {
-                    element.target.classList.add("show");
-                } else {
-                    element.target.classList.remove("show");
-                }
-            })
-        })
-        hiddenElements.forEach((entry) => {
-            observer.observe(entry);
-        })
-    })
-
     const dayInfo = {
         dayType,
         minutes,
@@ -173,19 +139,19 @@ export default function Home() {
                     <NavBar {...{ page: "Home" }} />
                 </div>
                 <div className="homepage-schedule-container">
-                    <div className="schedule-banner-container hidden">
+                    <div className="schedule-banner-container">
                         <Schedule className="schedule-banner" {...dayInfo} />
                     </div>
-                    <div className="hidden bridge-pos">
+                    <div className= "bridge-pos">
                         <img src={TribecaBridge} alt="Tribeca bridge" className="tribeca-bridge" />
                     </div>
-                    <div className="date-crawler-pos hidden">
-                        <DateCrawler className="schedule-date-crawler hidden" />
+                    <div className="date-crawler-pos">
+                        <DateCrawler className="schedule-date-crawler" />
                     </div>
                 </div>
                 <img src={Border} alt="Border" className="border1" />
                 <div className="schedule-specifics" >
-                    <div className="schedule-specifics-box hidden">
+                    <div className="schedule-specifics-box">
                         {getPeriods(getDayInfo(dayType)).map((period, index) => {
                             return (
                                 <div className="period-crawler-container" key={index}>
@@ -198,12 +164,12 @@ export default function Home() {
                                 </div>)
                         })}
                     </div>
-                    <img src={Moon} alt="Fancical Abstract Drawing of a Moon" className="moon-img hidden" />
-                    <img src={Sun} alt="Fancical Abstract Drawing of a Sun" className="sun-img hidden" />
-                    <div className="hidden specifics-line">
+                    <img src={Moon} alt="Fancical Abstract Drawing of a Moon" className="moon-img" />
+                    <img src={Sun} alt="Fancical Abstract Drawing of a Sun" className="sun-img" />
+                    <div className= "specifics-line">
                         <img src={SpecificsLine} alt="Decorative Line Art" className="" />
                     </div>
-                    <div className="all-schedules hidden">
+                    <div className="all-schedules">
                         <a href="https://stuy.entest.org/2023-2024%20School%20Year%20Calendar%20v%209-4-2023%20v%2011_1__1_.pdf" className="all-schedules-link">View all schedules</a>
                     </div>
                 </div>
@@ -220,9 +186,7 @@ export default function Home() {
                 </div>
             </div>
         </div>
-        <div className="hidden">
             <Footer />
-        </div>
     </>
     );
 }

@@ -197,8 +197,3 @@ MISSION statement breaks at around 613 px; there should be some dyanmic stuff ha
   font-size: 1.5rem;
 }
 
-.show {
-  filter: blur(0);
-  transform:translateX(0);
-  opacity:1;
-}
