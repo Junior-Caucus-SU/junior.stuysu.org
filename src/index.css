@@ -16,3 +16,7 @@ body {
     font-family: "Mixta-Sharp";
     background: #FAE5E2;
 }
+
+a, .interactable {
+    cursor: none;
+}

@@ -4,6 +4,8 @@ import React from "react";
 import CustomCursor from "./NonPage/Cursor";
 import NavBar from "./NonPage/NavBar";
 import Schedule from "./NonPage/Schedule";
+import "./Chars.css"
+import useSmoothScroll from "./useSmoothScroll";
 import Border from "../Images/BorderImg.svg";
 import TribecaBridge from "../Images/StuyBridgeDrawing.png";
 import Texture from "./NonPage/Texture";
@@ -18,8 +20,40 @@ import Papa, { parse } from "papaparse";
 import Data from "../schedules.json";
 import { useState, useEffect } from "react";
 
+function cSpanning(text) {
+    return text.split('').map((char, index) => (
+        <span key={index} className="character">{char}</span>
+    ));
+}
 
 export default function Home() {
+    const smoothScrollRef = useSmoothScroll();
+    const updateCharacterOpacity = () => {
+        const chars = document.querySelectorAll('.mission-statement .character');
+        const viewportHeight = window.innerHeight;
+
+        chars.forEach(char => {
+            const charRect = char.getBoundingClientRect();
+            const charCenter = charRect.top + charRect.height / 2;
+            const distanceFromCenter = Math.abs(viewportHeight / 2 - charCenter);
+            const opacity = Math.max(0, 1 - 2 * distanceFromCenter / viewportHeight);
+            char.style.opacity = opacity;
+        });
+    };
+
+    useEffect(() => {
+        const handleScroll = () => {
+            window.requestAnimationFrame(updateCharacterOpacity);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        updateCharacterOpacity();
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     const [loading, setLoading] = useState(true); // this is ONLY to control animation
     const [minutes, setMinutes] = useState(5); //should be used for the schedule page
     const [currPeriod, setPeriod] = useState(0);
@@ -123,74 +157,76 @@ export default function Home() {
     return (
         <>
             {loading &&
-            <div className="coverAnim">
-                <LottieView
-                    source={require('../Images/unravel.json')}
-                    autoPlay
-                    speed={30}
-                    onAnimationFinish={() => setLoading(false)}
-                />
-            </div> 
+                <div className="coverAnim">
+                    <LottieView
+                        source={require('../Images/unravel.json')}
+                        autoPlay
+                        speed={30}
+                        onAnimationFinish={() => setLoading(false)}
+                    />
+                </div>
             }
             <Texture />
             <CustomCursor />
-        <div className="homepage-div">
-            <div>
-                <NavBar {...{ page: "Home" }} />
-            </div>
-            <div className="homepage-schedule-container">
-                <div className="schedule-banner-container hidden">
-                    <Schedule className="schedule-banner" {...dayInfo} />
+            <div ref={smoothScrollRef} className="smooth-scroll-container">
+                <div className="homepage-div">
+                    <div>
+                        <NavBar {...{ page: "Home" }} />
+                    </div>
+                    <div className="homepage-schedule-container">
+                        <div className="schedule-banner-container hidden">
+                            <Schedule className="schedule-banner" {...dayInfo} />
+                        </div>
+                        <div className="hidden bridge-pos">
+                            <img src={TribecaBridge} alt="Tribeca bridge" className="tribeca-bridge" />
+                        </div>
+                        <div className="date-crawler-pos hidden">
+                            <DateCrawler className="schedule-date-crawler hidden" />
+                        </div>
+                    </div>
+                    <img src={Border} alt="Border" className="border1" />
+                    <div className="schedule-specifics" >
+                        <div className="schedule-specifics-box hidden">
+                            {getPeriods(getDayInfo(dayType)).map((period, index) => {
+                                return (
+                                    <div className="period-crawler-container" key={index}>
+                                        <div className="period-name">
+                                            {period}
+                                        </div>
+                                        <div className="period-time">
+                                            {periodTimes[index]}
+                                        </div>
+                                    </div>)
+                            })}
+                        </div>
+                        <img src={Moon} alt="Fancical Abstract Drawing of a Moon" className="moon-img hidden" />
+                        <img src={Sun} alt="Fancical Abstract Drawing of a Sun" className="sun-img hidden" />
+                        <div className="hidden specifics-line">
+                            <img src={SpecificsLine} alt="Decorative Line Art" className="" />
+                        </div>
+                        <div className="all-schedules hidden">
+                            <a href="https://stuy.entest.org/2023-2024%20School%20Year%20Calendar%20v%209-4-2023%20v%2011_1__1_.pdf" className="all-schedules-link">View all schedules</a>
+                        </div>
+                    </div>
+                    <div className="mission-box">
+                        <h1 className="mission-statement">
+                            {cSpanning("Welcome to the Yoo-Rhee caucus. We are committed to delivering on our promises \
+                    through well organized initiatives, including cabinet restructuring, enhancing \
+                    college readiness, and meaningful themed events.")}
+                        </h1>
+                    </div>
+                    <div className="parallax">
+                        <HomeParallax />
+                    </div>
+                    <div className="end-scroll">
+                        <img src={PolaroidsSky} alt="Polaroids Sky" className="polaroids-sky" />
+                    </div>
                 </div>
-                <div className="hidden bridge-pos">
-                    <img src={TribecaBridge} alt="Tribeca bridge" className="tribeca-bridge" />
-                </div>
-                <div className="date-crawler-pos hidden">
-                    <DateCrawler className="schedule-date-crawler hidden" />
+                <div className="hidden">
+                    <Footer />
                 </div>
             </div>
-            <img src={Border} alt="Border" className="border1" />
-            <div className="schedule-specifics" >
-                <div className="schedule-specifics-box hidden">
-                    {getPeriods(getDayInfo(dayType)).map((period, index) => {
-                        return (
-                            <div className="period-crawler-container" key={index}>
-                                <div className="period-name">
-                                    {period}
-                                </div>
-                                <div className="period-time">
-                                    {periodTimes[index]}
-                                </div>
-                            </div>)
-                    })}
-                </div>
-                <img src={Moon} alt="Fancical Abstract Drawing of a Moon" className="moon-img hidden" />
-                <img src={Sun} alt="Fancical Abstract Drawing of a Sun" className="sun-img hidden" />
-                <div className="hidden specifics-line">
-                    <img src={SpecificsLine} alt="Decorative Line Art" className="" />
-                </div>
-                <div className="all-schedules hidden">
-                    <a href="https://www.google.com/search?q=copium&rlz=1C5CHFA_enUS996US996&oq=copium&gs_lcrp=EgZjaHJvbWUqBwgAEAAYjwIyBwgAEAAYjwIyDQgBEC4Y1AIYsQMYgAQyCggCEAAYsQMYgAQyCggDEAAYsQMYgAQyBwgEEAAYgAQyBwgFEAAYgAQyBwgGEAAYgAQyBwgHEAAYgAQyBwgIEAAYgAQyBwgJEAAYgATSAQgxMTcwajBqMagCALACAA&sourceid=chrome&ie=UTF-8#vhid=Ud5YHn3U1zaiIM:&vssid=l" className="all-schedules-link">View all schedules</a>
-                </div>
-            </div>
-            <div className="mission-box">
-                <h1 className="mission-statement">
-                    <span className="slow-hidden">Welcome to the Yoo-Rhee caucus.</span><span className="slow-hidden"> We are committed to delivering on our promises </span>
-                    <span className="slow-hidden">through well organized initiatives,</span><span className="slow-hidden"> including cabinet restructuring,</span> <span className="slow-hidden">enhancing
-                        college readiness,</span><span className="slow-hidden"> and meaningful themed events.</span>
-                </h1>
-            </div>
-            <div className="parallax">
-                <HomeParallax />
-            </div>
-            <div className="end-scroll">
-                <img src={PolaroidsSky} alt="Polaroids Sky" className="polaroids-sky" />
-            </div>
-        </div>
-        <div className="hidden">
-            <Footer />
-        </div>
-    </>
+        </>
     );
 }
 

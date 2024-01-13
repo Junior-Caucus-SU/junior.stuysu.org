@@ -40,6 +40,7 @@ export default function ScheduleBanner(props) {
               fill="transparent"
               strokeDasharray={circumference}
               strokeDashoffset={strokeDashoffset}
+              style={{ transition: 'stroke-dashoffset 0.5s linear' }}
             />
           </svg>
           <span className="timer">

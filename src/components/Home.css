@@ -6,6 +6,11 @@
   grid-template-rows: 1fr 1fr;
 }
 
+.smooth-scroll-container {
+  position: relative;
+  width: 100%;
+}
+
 @media (max-width: 632px) {
   .homepage-schedule-container{
     height: 60vh;
