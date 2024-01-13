@@ -16,7 +16,7 @@ import Moon from "../Images/moon.svg";
 import SpecificsLine from "../Images/SpecificsLineArt.svg";
 import DateCrawler from "./NonPage/DateCrawler";
 import HomeParallax from "./NonPage/HomeParallax";
-import Papa, { parse } from "papaparse";
+import Papa from "papaparse";
 import Data from "../schedules.json";
 import { useState, useEffect } from "react";
 
@@ -209,9 +209,7 @@ export default function Home() {
                 </div>
                 <div className="mission-box">
                     <h1 className="mission-statement">
-                        {cSpanning("Welcome to the Yoo-Rhee caucus. We are committed to delivering on our promises \
-                    through well organized initiatives, including cabinet restructuring, enhancing \
-                    college readiness, and meaningful themed events.")}
+                        {cSpanning("Welcome to the Yoo-Rhee caucus. We are committed to delivering on our promises \n through well organized initiatives, including cabinet restructuring, enhancing \n college readiness, and meaningful themed events.")}
                     </h1>
                 </div>
                 <div className="parallax">
