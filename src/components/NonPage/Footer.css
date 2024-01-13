@@ -7,29 +7,15 @@
   align-items: center;
 }
 
-.footer-image {
-  width: inherit;
-  top: 96px;
-  opacity: 0.1;
-}
-
-.footer-content {
-  width: inherit;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1em;
-  display: inline-flex;
-}
-
 .positions-title {
-    text-align: right;
+    text-align: left;
+    width:20vw;
 }
 
 .footer-people {
-    width: 40vw;
     display:flex;
     justify-content: space-between;
+    width: 50vw;
 }
 
 .icons-container {
@@ -37,32 +23,20 @@
   display: inline-flex;
 }
 
+.positions-people {
+  text-align:left;
+  width:40vw;
+  padding-left: 3vw;
+}
+
 .footer-logo-top:hover {
   transform: scale(1.05);
 }
 
-.credits {
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  display: inline-flex;
-}
 
 .name-link {
   text-decoration: none;
   color: #0c2b56;
-}
-
-.positions {
-  width: 250px;
-  text-align: right;
-  font-size: 0.9em;
-  color: #0c2b56;
-  font-family: "neue-haas-grotesk-text";
-}
-
-.logo-ref {
-  text-decoration: none;
 }
 
 .social-logo:hover {
@@ -72,9 +46,21 @@
 .names {
   color: #0c2b56;
   font-size: 0.9em;
+  display:inline-flex;
+  flex-direction: column;
   font-family: "neue-haas-grotesk-text";
   line-height: 1.25em;
+  width:100vw;
+  align-items: center;
+  padding-left:23vw
 }
+
+@media (max-width: 450px) {
+  .names {
+    display:none;
+  }
+}
+
 
 .leadership {
   color: #0c2b56;

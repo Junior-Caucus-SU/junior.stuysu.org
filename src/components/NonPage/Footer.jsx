@@ -23,27 +23,29 @@ export default function Footer() {
             </div>
             <div className="names">
                 <div className="footer-people">
-                    <span className="positions-title">Design Lead</span>  <a href="https://github.com/willpill" className="name-link will-zhang">Will Zhang</a>
+                    <span className="positions-title">Design Lead</span>  <div className="positions-people"><a href="https://github.com/willpill" className="name-link will-zhang">Will Zhang</a></div>
                 </div>
                 <div className="footer-people">
-                    <span className="positions-title">Development Lead</span>  <a href="https://github.com/Elias2660" className="name-link elias-xu">Elias Xu</a>
+                    <span className="positions-title">Dev Lead</span>  <div className="positions-people"><a href="https://github.com/Elias2660" className="name-link elias-xu">Elias Xu</a></div>
                 </div>
                 <div className="footer-people">
-                    <span className="positions-title">Website Team</span> <div><a href="https://github.com/yellowstonepark" className="name-link otzar-jaffe">Otzar Jaffe</a>, <a href="https://github.com/connor132435" className="name-link connor-yau">Connor Yau</a>, <a href="https://github.com/muff1n0" className="name-link tony-chen">Tony Chen</a><br />
+                    <span className="positions-title">Team</span> <div className="positions-people"><a href="https://github.com/yellowstonepark" className="name-link otzar-jaffe">Otzar Jaffe</a>, <a href="https://github.com/connor132435" className="name-link connor-yau">Connor Yau</a>, <a href="https://github.com/muff1n0" className="name-link tony-chen">Tony Chen</a><br />
                     </div></div>
                 <div className="footer-people">
-                    <span className="positions-title">Illustration</span> Chloe Wong
+                    <span className="positions-title">Illustration</span><div className="positions-people">Chloe Wong</div>
                 </div>
                 <div className="footer-people">
-                    <span className="positions-title">Special Thanks</span> David Chen
+                    <span className="positions-title">Special Thanks</span> <div className="positions-people">David Chen</div>
                 </div>
             </div>
+            <br />
             < div className="leadership">
                 The Junior Caucus is led by Josephine Yoo & Grace Rhee. </ div>
 
             <div className="leadership">
-                With gratitude to chiefs of staff John Jay Wang & Ethan Sie.
+                Chiefs of Staff John Jay Wang & Ethan Sie.
             </div>
+            <br />
             <a href="https://stuy.enschool.org/" className="school-logo-link">
                 <div className="school">
                     <img className="school-icon" src={Stuyvesant} alt="Stuyvesant" />
