@@ -1,3 +1,7 @@
+body {
+  overflow-x: hidden
+}
+
 .line .vector {
   height: 3px;
   left: 0;
