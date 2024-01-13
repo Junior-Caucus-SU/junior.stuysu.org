@@ -154,79 +154,78 @@ export default function Home() {
     }
 
     const periodTimes = getPeriodTimes(dayType);
-    return (
-        <>
-            {loading &&
-                <div className="coverAnim">
-                    <LottieView
-                        source={require('../Images/unravel.json')}
-                        autoPlay
-                        speed={30}
-                        onAnimationFinish={() => setLoading(false)}
-                    />
+    return (<>
+        {loading &&
+            <div className="coverAnim">
+                <LottieView
+                    source={require('../Images/unravel.json')}
+                    autoPlay
+                    speed={30}
+                    onAnimationFinish={() => setLoading(false)}
+                />
+            </div>
+        }
+        <Texture />
+        <CustomCursor />
+        <div ref={smoothScrollRef} className="smooth-scroll-container">
+            <div className="homepage-div">
+                <div>
+                    <NavBar {...{ page: "Home" }} />
                 </div>
-            }
-            <Texture />
-            <CustomCursor />
-            <div ref={smoothScrollRef} className="smooth-scroll-container">
-                <div className="homepage-div">
-                    <div>
-                        <NavBar {...{ page: "Home" }} />
+                <div className="homepage-schedule-container">
+                    <div className="schedule-banner-container hidden">
+                        <Schedule className="schedule-banner" {...dayInfo} />
                     </div>
-                    <div className="homepage-schedule-container">
-                        <div className="schedule-banner-container hidden">
-                            <Schedule className="schedule-banner" {...dayInfo} />
-                        </div>
-                        <div className="hidden bridge-pos">
-                            <img src={TribecaBridge} alt="Tribeca bridge" className="tribeca-bridge" />
-                        </div>
-                        <div className="date-crawler-pos hidden">
-                            <DateCrawler className="schedule-date-crawler hidden" />
-                        </div>
+                    <div className="hidden bridge-pos">
+                        <img src={TribecaBridge} alt="Tribeca bridge" className="tribeca-bridge" />
                     </div>
-                    <img src={Border} alt="Border" className="border1" />
-                    <div className="schedule-specifics" >
-                        <div className="schedule-specifics-box hidden">
-                            {getPeriods(getDayInfo(dayType)).map((period, index) => {
-                                return (
-                                    <div className="period-crawler-container" key={index}>
-                                        <div className="period-name">
-                                            {period}
-                                        </div>
-                                        <div className="period-time">
-                                            {periodTimes[index]}
-                                        </div>
-                                    </div>)
-                            })}
-                        </div>
-                        <img src={Moon} alt="Fancical Abstract Drawing of a Moon" className="moon-img hidden" />
-                        <img src={Sun} alt="Fancical Abstract Drawing of a Sun" className="sun-img hidden" />
-                        <div className="hidden specifics-line">
-                            <img src={SpecificsLine} alt="Decorative Line Art" className="" />
-                        </div>
-                        <div className="all-schedules hidden">
-                            <a href="https://stuy.entest.org/2023-2024%20School%20Year%20Calendar%20v%209-4-2023%20v%2011_1__1_.pdf" className="all-schedules-link">View all schedules</a>
-                        </div>
+                    <div className="date-crawler-pos hidden">
+                        <DateCrawler className="schedule-date-crawler hidden" />
                     </div>
-                    <div className="mission-box">
-                        <h1 className="mission-statement">
-                            {cSpanning("Welcome to the Yoo-Rhee caucus. We are committed to delivering on our promises \
+                </div>
+                <img src={Border} alt="Border" className="border1" />
+                <div className="schedule-specifics" >
+                    <div className="schedule-specifics-box hidden">
+                        {getPeriods(getDayInfo(dayType)).map((period, index) => {
+                            return (
+                                <div className="period-crawler-container" key={index}>
+                                    <div className="period-name">
+                                        {period}
+                                    </div>
+                                    <div className="period-time">
+                                        {periodTimes[index]}
+                                    </div>
+                                </div>)
+                        })}
+                    </div>
+                    <img src={Moon} alt="Fancical Abstract Drawing of a Moon" className="moon-img hidden" />
+                    <img src={Sun} alt="Fancical Abstract Drawing of a Sun" className="sun-img hidden" />
+                    <div className="hidden specifics-line">
+                        <img src={SpecificsLine} alt="Decorative Line Art" className="" />
+                    </div>
+                    <div className="all-schedules hidden">
+                        <a href="https://stuy.entest.org/2023-2024%20School%20Year%20Calendar%20v%209-4-2023%20v%2011_1__1_.pdf" className="all-schedules-link">View all schedules</a>
+                    </div>
+                </div>
+                <div className="mission-box">
+                    <h1 className="mission-statement">
+                        {cSpanning("Welcome to the Yoo-Rhee caucus. We are committed to delivering on our promises \
                     through well organized initiatives, including cabinet restructuring, enhancing \
                     college readiness, and meaningful themed events.")}
-                        </h1>
-                    </div>
-                    <div className="parallax">
-                        <HomeParallax />
-                    </div>
-                    <div className="end-scroll">
-                        <img src={PolaroidsSky} alt="Polaroids Sky" className="polaroids-sky" />
-                    </div>
+                    </h1>
                 </div>
-                <div className="hidden">
-                    <Footer />
+                <div className="parallax">
+                    <HomeParallax />
+                </div>
+                <div className="end-scroll">
+                    <img src={PolaroidsSky} alt="Polaroids Sky" className="polaroids-sky" />
                 </div>
             </div>
-        </>
+        </div>
+        <div className="hidden">
+            <Footer />
+        </div>
+    </>
     );
 }
 
