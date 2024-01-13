@@ -1,0 +1,9 @@
+.character {
+    opacity: 0.3;
+    transition: opacity 0.1s ease;
+  }
+  
+  .visible {
+    opacity: 1;
+  }
+  
