@@ -284,7 +284,9 @@ export default function People() {
                 <div className="director person-container to-fly-from-left">
                   <img src={Ayla_Irshad} alt="" className="director-img" />
                   <div className="name">Ayla Irshad</div>
-                  <div className="description">Lorem ipsum dolor sit amet consectetur. Velit convallis sit odio orci varius eu elementum. Est sit et hendrerit id eget diam. Maecenas amet sed ac turpis facilisis semper at. Tincidunt egestas vulputate sed lobortis hac augue. Est pharetra aliquet faucibus.</div>
+                  <div className="description">
+                    Hi, I'm Ayla! This is my third year as finance director, and this year I am excited to be working on fundraisers and budgeting for events! In particular, I look forward to helping make JProm as successful and accessible as possible. Aside from caucus I also work in the SU Finance Department. In my free time, I enjoy going on bike rides as well as traveling to experience new cultures!
+                  </div>
                 </div>
               </div>
             </div>
@@ -294,8 +296,10 @@ export default function People() {
                 <div className="director person-container to-fly-from-right">
                   <div className="d_type">Graphics</div>
                   <img src={Chloe_Wong} alt="" className="director-img" />
-                  <div className="name">Chloe Wang</div>
-                  <div className="description">Lorem ipsum dolor sit amet consectetur. Velit convallis sit odio orci varius eu elementum. Est sit et hendrerit id eget diam. Maecenas amet sed ac turpis facilisis semper at. Tincidunt egestas vulputate sed lobortis hac augue. Est pharetra aliquet faucibus.</div>
+                  <div className="name">Chloe Wong</div>
+                  <div className="description">
+                    Hey! I'm Chloe, and I've been in Caucus Graphics since my freshman year. I'm extremely passionate about graphic design, and I enjoy exploring its applications both within and outside digital media. I look forward to bringing my creative vision for the Junior Caucus to life this school year!
+                  </div>
                 </div>
               </div>
               <div className="d_type_box_c">

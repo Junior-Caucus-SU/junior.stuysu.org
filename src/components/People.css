@@ -268,19 +268,19 @@
   grid-template-columns: 40vw 40vw;
   margin-bottom: 50px;
 }
-
+/* ! remember to add this back again, not working for some reason */
 .to-fly-from-left {
-  opacity: 0;
+  /* opacity: 0;
   filter: blur(5px);
   transform: translateX(-100%);
-  transition: all 1s;
+  transition: all 1s; */
 }
 
 .to-fly-from-right {
-  opacity: 0;
+  /* opacity: 0;
   filter: blur(5px);
   transform: translateX(+100%);
-  transition: all 1s;
+  transition: all 1s; */
 }
 
 .to-fade-in {
