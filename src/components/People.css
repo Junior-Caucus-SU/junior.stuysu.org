@@ -284,9 +284,9 @@
 }
 
 .to-fade-in {
-  opacity: 0;
+  /* opacity: 0;
   filter: blur(5px);
-  transition: all 1s;
+  transition: all 1s; */
 }
 
 /* on mobile, configure d_type_box and subgroup-containerD to use 100% of the width and instead of rows, do columns */
