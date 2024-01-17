@@ -10,11 +10,10 @@ const images = [
   { url: Homecoming, scrollspeed: -10, alt: "homecoming image" },
   { url: GloriousLeaders, scrollspeed: 5, alt: "polaroid josephine, grace, ryan" },
   { url: Battle, scrollspeed: 10, alt: "battle" },
-  { url: PhotoCapture, scrollspeed: 15, alt: "photocapture" },
-  // Add more images with their respective strengths
+  { url: PhotoCapture, scrollspeed: 20, alt: "photocapture" },
 ];
 
-const offsets = [0, 60, 10];
+const offsets = [10, 64, 10, 30];
 
 const ParallaxImages = () => {
 
@@ -22,7 +21,7 @@ const ParallaxImages = () => {
     <div>
       <ParallaxProvider>
         <ParallaxBanner
-          className="your-banner-class" // obvious chatGPT
+          className="parallaxView"
           layers={[
             {
               image: ParallaxBackground,
@@ -31,40 +30,48 @@ const ParallaxImages = () => {
             },
           ]}
           style={{
-            height: '88vw',
+            height: '80vw',
           }}
         >
-
-          {/* ! ISSUE with Parallax formatting !!! */}
-            <ParallaxBannerLayer speed={-20}> 
-                <img
-                src={Homecoming}
-                alt="homecoming"
-                style={{
-                    width: "60vw",
-                    display: "block",
-                    "marginLeft": "auto",
-                    "marginRight": "auto"
-                }}
-                />
-            </ParallaxBannerLayer>
-          {images.map((image, index) => (
-            <Parallax
-              easing={[1, -0.2, 0.5, 1.34]}
-              translateY={[90, -90]}
-              translateX={[offsets[index], offsets[index]]}
-            >
-              <img
+          <ParallaxBannerLayer speed={-20}>
+            <img
+              src={Homecoming}
+              alt="homecoming"
+              style={{
+                width: "60vw",
+                display: "block",
+                marginLeft: "auto",
+                marginRight: "auto"
+              }}
+            />
+          </ParallaxBannerLayer>
+          {images.map((image, index) => {
+            let translateY;
+            if (image.url === Battle) {
+              translateY = [30, -40];
+            } else if (image.url === PhotoCapture) {
+              translateY = [-200, -300];
+            } else {
+              translateY = [10, -30];
+            }
+            return (
+              <Parallax
                 key={index}
-                src={image.url}
-                alt={image.alt}
-                style={{
-                  position: 'inherit',
-                  width: '25%',
-                }}
-              />
-            </Parallax>
-          ))}
+                easing={[1, -0.2, 0.5, 5]}
+                translateY={translateY}
+                translateX={[offsets[index], offsets[index]]}
+              >
+                <img
+                  src={image.url}
+                  alt={image.alt}
+                  style={{
+                    position: 'inherit',
+                    width: '25%',
+                  }}
+                />
+              </Parallax>
+            );
+          })}
         </ParallaxBanner>
       </ParallaxProvider>
     </div>

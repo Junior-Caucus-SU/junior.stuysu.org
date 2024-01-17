@@ -5,7 +5,6 @@ import CustomCursor from "./NonPage/Cursor";
 import NavBar from "./NonPage/NavBar";
 import Schedule from "./NonPage/Schedule";
 import "./Chars.css"
-import useSmoothScroll from "./useSmoothScroll";
 import Border from "../Images/BorderImg.svg";
 import TribecaBridge from "../Images/StuyBridgeDrawing.png";
 import Texture from "./NonPage/Texture";
@@ -27,7 +26,6 @@ function cSpanning(text) {
 }
 
 export default function Home() {
-    const smoothScrollRef = useSmoothScroll();
     const updateCharacterOpacity = () => {
         const chars = document.querySelectorAll('.mission-statement .character');
         const viewportHeight = window.innerHeight;
@@ -133,7 +131,6 @@ export default function Home() {
         }
         <Texture />
         <CustomCursor />
-        <div ref={smoothScrollRef} className="smooth-scroll-container">
             <div className="homepage-div">
                 <div>
                     <NavBar {...{ page: "Home" }} />
@@ -184,7 +181,6 @@ export default function Home() {
                 <div className="end-scroll">
                     <img src={PolaroidsSky} alt="Polaroids Sky" className="polaroids-sky" />
                 </div>
-            </div>
         </div>
             <Footer />
     </>
