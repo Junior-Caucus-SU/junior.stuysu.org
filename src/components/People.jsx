@@ -279,7 +279,9 @@ export default function People() {
                   <div className="d_type finance_name">Finance</div>
                   <img src={Stacie_Au} alt="" className="director-img" />
                   <div className="name">Stacie Au</div>
-                  <div className="description">Lorem ipsum dolor sit amet consectetur. Velit convallis sit odio orci varius eu elementum. Est sit et hendrerit id eget diam. Maecenas amet sed ac turpis facilisis semper at. Tincidunt egestas vulputate sed lobortis hac augue. Est pharetra aliquet faucibus.</div>
+                  <div className="description">
+                    Hi I’m Stacie, this year’s Junior Caucus finance director, and I look forward to making JProm cheaper (or at least a little more affordable)! I’ve worked in this department for 2 years now and have been in the finance space for 3/4 years. Other than being interested in finance and business, I often enjoy doing different sports such as diving or stunt.
+                  </div>
                 </div>
                 <div className="director person-container to-fly-from-left">
                   <img src={Ayla_Irshad} alt="" className="director-img" />
