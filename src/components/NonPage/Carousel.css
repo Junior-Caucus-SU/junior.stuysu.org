@@ -1,30 +1,52 @@
 .carousel {
-  overflow: hidden;
-  padding-left: 5vw;
+  position: relative;
+  margin-top: 4vw;
+  height: 110vh;
+  left: 5vw;
+  margin-bottom: 4vw
 }
 
 .current-item {
   white-space: nowrap;
   width: 91vw;
-  transition: transform 0.5s;
+  height: inherit;
+  transition: transform 0.8s;
+  position: relative;
 }
 
-.images {
+.image-one {
+  background: url("../../Images/CarouselImage1.png");
+  background-size: cover;
+  background-position: 50% 55%;
+  width: 90vw;
+  height: inherit;
+  margin-right: 1vw;
+  margin-bottom: 4vh;
+}
+
+.image-two {
+  position: relative;
+  background-image: url("../../Images/CarouselImage2.png");
+  background-size: cover;
+  background-position: 50% 50%;
   object-fit: cover;
   width: 90vw;
-  height: 80vh;
-  margin-right: 1vw;
-  /* filter: plus-darker; */
+  height: inherit;
+  left: 91vw;
+  bottom: 114vh;
 }
 
 .image-text {
   position: absolute;
+  float: left;
+  left: 4vw;
+  bottom: 5vw;
   color: var(--Pink, #fbe4df);
   font-family: "Mixta-Sharp";
-  font-size: 128px;
+  font-size: 12vw;
   font-style: normal;
   font-weight: 350;
   line-height: 85%;
-  top: 40vh;
-  left: 4vw;
+  user-select: none;
+  mix-blend-mode: hard-light;
 }
