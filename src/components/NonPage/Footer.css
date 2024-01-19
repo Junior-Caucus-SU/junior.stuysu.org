@@ -1,58 +1,41 @@
 .footer-banner {
   position: absolute;
   width: 100vw;
-  display:inline-flex;
+  display:flex;
   flex-direction: column;
-  text-align: center;
   align-items: center;
 }
 
-.positions-title {
-    text-align: left;
-    width:20vw;
-}
-
-.footer-people {
-    display:flex;
-    justify-content: space-between;
-    width: 50vw;
-}
-
-.icons-container {
+.footer-people{
   gap: 5px;
-  display: inline-flex;
+  display: flex;
+}
+
+.icons-container{
+  gap: 5px;
+  display: flex;
+  margin-bottom: 10px;
 }
 
 .positions-people {
-  text-align:left;
-  width:40vw;
-  padding-left: 3vw;
+  width:20vw;
 }
 
-.footer-logo-top:hover {
-  transform: scale(1.05);
+.positions-title {
+  width:20vw;
+  text-align: right;
 }
-
 
 .name-link {
   text-decoration: none;
   color: #0c2b56;
 }
 
-.social-logo:hover {
-  transform: scale(2);
-}
-
 .names {
   color: #0c2b56;
   font-size: 0.9em;
-  display:inline-flex;
   flex-direction: column;
   font-family: "neue-haas-grotesk-text";
-  line-height: 1.25em;
-  width:100vw;
-  align-items: center;
-  padding-left:23vw
 }
 
 @media (max-width: 450px) {
@@ -61,10 +44,8 @@
   }
 }
 
-
 .leadership {
   color: #0c2b56;
-  width: 100vw;
   text-align: center;
   font-size: 0.9em;
   font-family: "neue-haas-grotesk-text";
@@ -72,9 +53,6 @@
 
 .school-logo-link {
   text-decoration: none;
-}
-.school-logo-link:hover {
-  transform: scale(1.05);
 }
 
 .school {
