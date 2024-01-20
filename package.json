@@ -16,7 +16,7 @@
     "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.3",
     "lottie-react-native": "^6.5.1",
-    "mini-css-extract-plugin": "^2.7.6",
+    "mini-css-extract-plugin": "^2.7.7",
     "papaparse": "^5.4.1",
     "react": "^18.2.0",
     "react-bootstrap": "^2.9.1",
