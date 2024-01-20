@@ -70,37 +70,20 @@ export default function People() {
   };
 
   useEffect(() => {
-    const meetTeamContainer = document.querySelector('.meet-team-container');
-    const meetText = document.querySelector('.meet');
-    const teamText = document.querySelector('.the-team');
-  
     const handleScroll = () => {
-      const containerRect = meetTeamContainer.getBoundingClientRect();
-      const containerHeight = meetTeamContainer.offsetHeight;
-      const windowHeight = window.innerHeight;
-      let visibleHeight = Math.min(containerRect.bottom, windowHeight) - Math.max(containerRect.top, 0);
-      let p = Math.max(0, visibleHeight / containerHeight);
-      meetText.style.opacity = p;
-      meetText.style.transform = `translateX(${(1 - p) * -100}%)`;
-      teamText.style.opacity = p;
-      teamText.style.transform = `translateX(${(1 - p) * 100}%)`;
+      const meetText = document.querySelector('.meet');
+      const teamText = document.querySelector('.the-team');
+      const screenHeight = window.innerHeight;
+      const scrollY = window.scrollY;
+      let transformPercentage = Math.min(scrollY / (screenHeight * 0.5), 1);
+      meetText.style.transform = `translateX(${transformPercentage * 100}%)`;
+      teamText.style.transform = `translateX(-${transformPercentage * 100}%)`;
     };
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);  
-
-  useEffect(() => {
-    window.addEventListener('load', adjustDescriptionWidth);
-    window.addEventListener('resize', adjustDescriptionWidth);
-
-    // Clean up the event listeners
-    return () => {
-      window.removeEventListener('load', adjustDescriptionWidth);
-      window.removeEventListener('resize', adjustDescriptionWidth);
-    };
-  }, []);
 
   //flying in from right
   useEffect(() => {
