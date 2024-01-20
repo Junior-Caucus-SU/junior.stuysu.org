@@ -6,7 +6,7 @@
     "@babel/core": "^7.23.6",
     "@babel/plugin-proposal-private-property-in-object": "7.21.11",
     "@babel/preset-env": "^7.23.5",
-    "@dotlottie/react-player": "^1.6.12",
+    "@dotlottie/react-player": "^1.6.15",
     "@lottiefiles/react-lottie-player": "^3.5.3",
     "axios": "^1.6.3",
     "babel-loader": "^9.1.3",
