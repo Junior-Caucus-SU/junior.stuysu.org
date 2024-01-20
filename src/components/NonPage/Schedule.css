@@ -122,9 +122,9 @@
 
 /* ! why are all the period unscalable now??? */
 .period {
-  font-size: 9.3rem;
+  font-size: 9.1rem;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);

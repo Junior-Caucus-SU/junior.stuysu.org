@@ -193,18 +193,21 @@ MISSION statement breaks at around 613 px; there should be some dyanmic stuff ha
 }
 
 .polaroids-text {
-  /* text-align: center; */
   z-index: 6;
   font-family: "ivymode";
+  mix-blend-mode: color-burn;
   color: var(--Main-Blue, #051e4f);
   display: flex;
+  font-weight: 200;
   text-align: center;
-  font-size: 8rem;
+  font-size: 10rem;
+  line-height: 95%;
   font-style: normal;
   justify-content: center;
   align-items: center;
   height: 10vh;
-  margin-bottom: 60vw;
+  padding: 10vw;
+  margin-bottom: 55vw;
 }
 
 .end-scroll {
