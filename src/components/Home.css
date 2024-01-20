@@ -195,7 +195,7 @@ MISSION statement breaks at around 613 px; there should be some dyanmic stuff ha
 .polaroids-text {
   /* text-align: center; */
   z-index: 6;
-  font-family: "Mixta-Sharp";
+  font-family: "ivymode";
   color: var(--Main-Blue, #051e4f);
   display: flex;
   text-align: center;

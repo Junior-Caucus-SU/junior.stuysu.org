@@ -12,11 +12,14 @@
 .the-team {
   display: inline-block;
   color: #051e4f;
-  font-family: "Mixta-Sharp";
+  font-family: "ivymode";
   font-weight: 300;
-  line-height: 1em;
+  line-height: 0.8em;
   word-wrap: break-word;
-  font-size: 300px;
+  font-size: 20vw;
+  transform: translateX(-100%);
+  transition: transform 0.5s;
+  will-change: transform;
 }
 
 @keyframes slideInFromLeft {
@@ -37,15 +40,15 @@
   }
 }
 
-
-.meet {
-  animation: 1s ease-out 0s 1 slideInFromLeft;
-  margin-left: -20vw;
+.meet,
+.the-team {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: transform 0.5s, opacity 0.5s;
 }
 
 .the-team {
-  animation: 1s ease-out 0s 1 slideInFromRight;
-  margin-right: -15vw;
+  transform: translateX(100%);
 }
 
 @media (max-width: 975px) {
@@ -206,7 +209,7 @@
 .chiefs-box-text i {
   color: #fbe4df;
   font-size: 128px;
-  font-family: Mixta Pro;
+  font-family: ivymode;
   font-weight: 350;
   line-height: 108.8px;
   word-wrap: break-word;
