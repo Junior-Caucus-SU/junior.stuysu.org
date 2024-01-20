@@ -9,7 +9,6 @@ import Border from "../Images/BorderImg.svg";
 import TribecaBridge from "../Images/StuyBridgeDrawing.png";
 import Texture from "./NonPage/Texture";
 import Footer from "./NonPage/Footer";
-import PolaroidsSky from "../Images/PolaroidsSky.png";
 import Sun from "../Images/sun.svg";
 import Moon from "../Images/moon.svg";
 import SpecificsLine from "../Images/SpecificsLineArt.svg";
@@ -131,58 +130,62 @@ export default function Home() {
         }
         <Texture />
         <CustomCursor />
-            <div className="homepage-div">
-                <div>
-                    <NavBar {...{ page: "Home" }} />
+        <div className="homepage-div">
+            <div>
+                <NavBar {...{ page: "Home" }} />
+            </div>
+            <div className="homepage-schedule-container">
+                <div className="schedule-banner-container">
+                    <Schedule className="schedule-banner" {...dayInfo} />
                 </div>
-                <div className="homepage-schedule-container">
-                    <div className="schedule-banner-container">
-                        <Schedule className="schedule-banner" {...dayInfo} />
-                    </div>
-                    <div className= "bridge-pos">
-                        <img src={TribecaBridge} alt="Tribeca bridge" className="tribeca-bridge" />
-                    </div>
-                    <div className="date-crawler-pos">
-                        <DateCrawler className="schedule-date-crawler" />
-                    </div>
+                <div className="bridge-pos">
+                    <img src={TribecaBridge} alt="Tribeca bridge" className="tribeca-bridge" />
                 </div>
-                <img src={Border} alt="Border" className="border1" />
-                <div className="schedule-specifics" >
-                    <div className="schedule-specifics-box">
-                        {getPeriods(getDayInfo(dayType)).map((period, index) => {
-                            return (
-                                <div className="period-crawler-container" key={index}>
-                                    <div className="period-name">
-                                        {period}
-                                    </div>
-                                    <div className="period-time">
-                                        {periodTimes[index]}
-                                    </div>
-                                </div>)
-                        })}
-                    </div>
-                    <img src={Moon} alt="Fancical Abstract Drawing of a Moon" className="moon-img" />
-                    <img src={Sun} alt="Fancical Abstract Drawing of a Sun" className="sun-img" />
-                    <div className= "specifics-line">
-                        <img src={SpecificsLine} alt="Decorative Line Art" className="" />
-                    </div>
-                    <div className="all-schedules">
-                        <a href="https://stuy.entest.org/2023-2024%20School%20Year%20Calendar%20v%209-4-2023%20v%2011_1__1_.pdf" className="all-schedules-link">View all schedules</a>
-                    </div>
+                <div className="date-crawler-pos">
+                    <DateCrawler className="schedule-date-crawler" />
                 </div>
-                <div className="mission-box">
-                    <h1 className="mission-statement">
-                        {cSpanning("Welcome to the Yoo-Rhee caucus. We are committed to delivering on our promises \n through well organized initiatives, including cabinet restructuring, enhancing \n college readiness, and meaningful themed events.")}
-                    </h1>
+            </div>
+            <img src={Border} alt="Border" className="border1" />
+            <div className="schedule-specifics" >
+                <div className="schedule-specifics-box">
+                    {getPeriods(getDayInfo(dayType)).map((period, index) => {
+                        return (
+                            <div className="period-crawler-container" key={index}>
+                                <div className="period-name">
+                                    {period}
+                                </div>
+                                <div className="period-time">
+                                    {periodTimes[index]}
+                                </div>
+                            </div>)
+                    })}
                 </div>
-                <div className="parallax">
-                    <HomeParallax />
+                <img src={Moon} alt="Fancical Abstract Drawing of a Moon" className="moon-img" />
+                <img src={Sun} alt="Fancical Abstract Drawing of a Sun" className="sun-img" />
+                <div className="specifics-line">
+                    <img src={SpecificsLine} alt="Decorative Line Art" className="" />
                 </div>
-                <div className="end-scroll">
-                    <img src={PolaroidsSky} alt="Polaroids Sky" className="polaroids-sky" />
+                <div className="all-schedules">
+                    <a href="https://stuy.entest.org/2023-2024%20School%20Year%20Calendar%20v%209-4-2023%20v%2011_1__1_.pdf" className="all-schedules-link">View all schedules</a>
                 </div>
+            </div>
+            <div className="mission-box">
+                <h1 className="mission-statement">
+                    {cSpanning("Welcome to the Yoo-Rhee caucus. We are committed to delivering on our promises \n through well organized initiatives, including cabinet restructuring, enhancing \n college readiness, and meaningful themed events.")}
+                </h1>
+            </div>
+            <div className="parallax">
+                <HomeParallax />
+            </div>
+            <div className="end-scroll">
+                <div className="polaroids-sky polaroids polaroid-img"></div>
+                {/* < src={PolaroidsSky} alt="Polaroids Sky" className="polaroids-sky polaroids" /> */}
+                <div className="polaroids-text polaroids polaroid-img">We'll Stay With You This Year</div>
+                <div className="polaroids-bottom polaroids"></div>
+                {/* <img src= {polaroidsGround} alt="Polaroids Bottom" className="polaroids-ground polaroids" /> */}
+            </div>
         </div>
-            <Footer />
+        <Footer />
     </>
     );
 }

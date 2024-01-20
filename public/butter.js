@@ -19,16 +19,16 @@
             }
         }
         // ???? What is this for ????
-        this.wrapperDamper;
-        this.wrapperId;
-        this.cancelOnTouch;
-        this.wrapper;
+        // this.wrapperDamper;
+        // this.wrapperId;
+        // this.cancelOnTouch;
+        // this.wrapper;
         this.wrapperOffset = 0;
-        this.animateId;
+        // this.animateId;
         this.resizing = false;
         this.active = false;
-        this.wrapperHeight;
-        this.bodyHeight;
+        // this.wrapperHeight;
+        // this.bodyHeight;
     };
 
     Butter.prototype = {
@@ -62,13 +62,13 @@
         },
 
         wrapperUpdate: function() {
-            var scrollY = (document.scrollingElement != undefined) ? document.scrollingElement.scrollTop : (document.documentElement.scrollTop || 0.0);
+            var scrollY = (document.scrollingElement !== undefined) ? document.scrollingElement.scrollTop : (document.documentElement.scrollTop || 0.0);
             this.wrapperOffset += (scrollY - this.wrapperOffset) * this.wrapperDamper;
             this.wrapper.style.transform = 'translate3d(0,' + (-this.wrapperOffset.toFixed(2)) + 'px, 0)';
         },
 
         checkResize: function() {
-            if (this.wrapperHeight != this.wrapper.clientHeight) {
+            if (this.wrapperHeight !== this.wrapper.clientHeight) {
                 this.resize();
             }
         },
@@ -80,7 +80,7 @@
                 window.cancelAnimationFrame(self.animateId);
                 window.setTimeout(function() {
                     self.wrapperHeight = self.wrapper.clientHeight;
-                    if (parseInt(document.body.style.height) != parseInt(self.wrapperHeight)) {
+                    if (parseInt(document.body.style.height) !== parseInt(self.wrapperHeight)) {
                         document.body.style.height = self.wrapperHeight + 'px';
                     }
                     self.animateId = window.requestAnimationFrame(self.animate.bind(self));

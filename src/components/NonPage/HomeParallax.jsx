@@ -7,7 +7,6 @@ import React from 'react';
 import { ParallaxProvider, ParallaxBanner, ParallaxBannerLayer, Parallax } from 'react-scroll-parallax';
 
 const images = [
-  { url: Homecoming, scrollspeed: -10, alt: "homecoming image" },
   { url: GloriousLeaders, scrollspeed: 5, alt: "polaroid josephine, grace, ryan" },
   { url: Battle, scrollspeed: 10, alt: "battle" },
   { url: PhotoCapture, scrollspeed: 20, alt: "photocapture" },
@@ -47,10 +46,8 @@ const ParallaxImages = () => {
           </ParallaxBannerLayer>
           {images.map((image, index) => {
             let translateY;
-            if (image.url === Battle) {
+            if (image.url === PhotoCapture) {
               translateY = [30, -40];
-            } else if (image.url === PhotoCapture) {
-              translateY = [-200, -300];
             } else {
               translateY = [10, -30];
             }
