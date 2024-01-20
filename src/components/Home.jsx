@@ -16,7 +16,7 @@ import DateCrawler from "./NonPage/DateCrawler";
 import HomeParallax from "./NonPage/HomeParallax";
 import Papa from "papaparse";
 import Data from "../schedules.json";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 function cSpanning(text) {
     return text.split('').map((char, index) => (
@@ -50,7 +50,6 @@ export default function Home() {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
-
     const [loading, setLoading] = useState(true); // this is ONLY to control animation
     const [minutes, setMinutes] = useState(5); //should be used for the schedule page
     const [currPeriod, setPeriod] = useState(0);
@@ -107,6 +106,26 @@ export default function Home() {
         return () => clearInterval(timer);
     }, [dayType]);
 
+    const scRef = useRef(null);
+    useEffect(() => {
+        const onScroll = () => {
+          if (scRef.current) {
+            const { top, bottom } = scRef.current.getBoundingClientRect();
+            const viewportHeight = window.innerHeight;
+            const isInView = bottom > -200 && bottom < viewportHeight;
+            const isOutOfView = bottom <= -200 || top >= viewportHeight;
+            document.querySelector('.mission-box').style.backgroundColor = isInView || !isOutOfView ? '#051e4f' : '#fbe4df';
+            document.querySelector('.schedule-specifics').style.backgroundColor = isInView || !isOutOfView ? '#051e4f' : '#fbe4df';
+          }
+        };
+        if (document.querySelector('.mission-box') && document.querySelector('.schedule-specifics')) {
+          document.querySelector('.mission-box').style.backgroundColor = '#051e4f';
+          document.querySelector('.schedule-specifics').style.backgroundColor = '#051e4f';
+        }
+        window.addEventListener('scroll', onScroll);
+        return () => window.removeEventListener('scroll', onScroll);
+    }, []);
+    
     const dayInfo = {
         dayType,
         minutes,
@@ -145,8 +164,8 @@ export default function Home() {
                     <DateCrawler className="schedule-date-crawler" />
                 </div>
             </div>
-            <img src={Border} alt="Border" className="border1" />
-            <div className="schedule-specifics" >
+            <img src={Border} alt="Border" className="border1" ref={scRef}/>
+            <div className="schedule-specifics">
                 <div className="schedule-specifics-box">
                     {getPeriods(getDayInfo(dayType)).map((period, index) => {
                         return (

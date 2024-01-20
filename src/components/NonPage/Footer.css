@@ -1,4 +1,5 @@
 .footer-banner {
+  padding: 5vh;
   position: absolute;
   width: 100vw;
   display:flex;
@@ -7,14 +8,14 @@
 }
 
 .footer-people{
-  gap: 5px;
+  gap: 10px;
   display: flex;
 }
 
 .icons-container{
-  gap: 5px;
+  gap: 10px;
   display: flex;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .positions-people {
@@ -23,6 +24,7 @@
 
 .positions-title {
   width:20vw;
+  opacity: 0.85;
   text-align: right;
 }
 
