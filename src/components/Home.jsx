@@ -142,7 +142,7 @@ export default function Home() {
                 <LottieView
                     source={require('../Images/unravel.json')}
                     autoPlay
-                    speed={30}
+                    speed={60}
                     onAnimationFinish={() => setLoading(false)}
                 />
             </div>
