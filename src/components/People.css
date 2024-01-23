@@ -97,6 +97,7 @@
 
 .description {
   font-size: 0.9rem;
+  max-width:25vw;
   color: #051e4f;
   justify-self: start;
   text-align: left;
