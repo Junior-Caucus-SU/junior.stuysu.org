@@ -97,7 +97,7 @@
 
 .description {
   font-size: 0.9rem;
-  max-width:25vw;
+  max-width: 25vw;
   color: #051e4f;
   justify-self: start;
   text-align: left;
@@ -270,23 +270,29 @@
 }
 /* ! remember to add this back again, not working for some reason */
 .to-fly-from-left {
-  /* opacity: 0;
+  opacity: 0;
   filter: blur(5px);
   transform: translateX(-100%);
-  transition: all 1s; */
+  transition: all 1s;
 }
 
 .to-fly-from-right {
-  /* opacity: 0;
+  opacity: 0;
   filter: blur(5px);
   transform: translateX(+100%);
-  transition: all 1s; */
+  transition: all 1s;
 }
 
 .to-fade-in {
-  /* opacity: 0;
+  opacity: 0;
   filter: blur(5px);
-  transition: all 1s; */
+  transition: all 1s;
+}
+
+.show {
+  filter: blur(0);
+  transform: translateX(0);
+  opacity: 1;
 }
 
 /* on mobile, configure d_type_box and subgroup-containerD to use 100% of the width and instead of rows, do columns */
@@ -332,7 +338,5 @@
 
     align-self: start;
     padding-left: 0px;
-    
   }
-  
 }
