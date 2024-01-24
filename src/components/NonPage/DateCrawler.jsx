@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import "./DateCrawler.css";
-import CrawlerEllipse from "./crawlerEllipse";
+import Crawl from "../../Images/EllipseCrawl.svg";
+import lightCrawl from "../../Images/lightEllipseCrawl.svg";
 
 export default function DateCrawler() {
     //fetch sheet data
     const [dayType, setDayTypes] = useState(["A1", "B1", "A2", "B2", "A3"]);
+    const [date, setDate] = useState(new Date());
     useEffect(() => {
         const fetchSheetsData = async () => {
             try {
@@ -24,11 +26,25 @@ export default function DateCrawler() {
         };
         fetchSheetsData();
     }, []);
-    
+
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setDate(new Date());
+        }, 1000);
+        return () => clearInterval(interval);
+    }, [])
+
     return (<div>
-        {dayType.map((day, i) => ( 
-           (i !== 0 && i !== 6) && (<div className={day[0].toLowerCase() + " day-box"} key={i}>
-                <CrawlerEllipse itemText={day} id={i} />
+        {dayType.map((day, i) => (
+            (i !== 0 && i !== 6) && (<div className={day[0].toLowerCase() + " day-box"} key={i}>
+                <div className="ellipse-crawler">
+                    <img
+                        src={date.getDay() < i ? lightCrawl : Crawl}
+                        alt={date.getDay() < i ? "light ellipse" : "normal ellipse"}
+                        className="ellipse-item" />
+                    <p className="dateText">{day[0]}</p>
+                </div>
                 <p className="day-text">
                     <span className="type-text">{day[1].trim()}</span>
                     <span className="day-type-text">{" " + day[2]}</span>

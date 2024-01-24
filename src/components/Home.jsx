@@ -25,31 +25,6 @@ function cSpanning(text) {
 }
 
 export default function Home() {
-    const updateCharacterOpacity = () => {
-        const chars = document.querySelectorAll('.mission-statement .character');
-        const viewportHeight = window.innerHeight;
-
-        chars.forEach(char => {
-            const charRect = char.getBoundingClientRect();
-            const charCenter = charRect.top + charRect.height / 2;
-            const distanceFromCenter = Math.abs(viewportHeight / 2 - charCenter);
-            const opacity = Math.max(0, 1 - 2 * distanceFromCenter / viewportHeight);
-            char.style.opacity = opacity;
-        });
-    };
-
-    useEffect(() => {
-        const handleScroll = () => {
-            window.requestAnimationFrame(updateCharacterOpacity);
-        };
-
-        window.addEventListener('scroll', handleScroll);
-        updateCharacterOpacity();
-
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
     const [loading, setLoading] = useState(true); // this is ONLY to control animation
     const [minutes, setMinutes] = useState(5); //should be used for the schedule page
     const [currPeriod, setPeriod] = useState(0);
@@ -58,21 +33,63 @@ export default function Home() {
     const [minutesLeft, setMinutesLeft] = useState(0);
     const [AorBDay, setAorBDay] = useState("A");
     //fetch the sheets data
-    useEffect(() => {
-        const fetchSheetsData = async () => {
-            try {
-                const ID = "1yB7zzw0I3hUjLwgKZXMpBioQ9FNkTg2bp3skTwtatHk";
-                const sheet_name = "Schedule";
-                const response = await fetch(`https://docs.google.com/spreadsheets/d/${ID}/gviz/tq?tqx=out:csv&sheet=${sheet_name}`);
-                const text = await response.text();
-                const today = new Date();
-                const parsedData = Papa.parse(text, { header: true }).data;
-                setDayType(parsedData[today.getDay()].DayType);
-                setAorBDay(parsedData[today.getDay()].AorBDay);
-            } catch (err) {
-                console.log(err);
+
+
+    const getCurrentPeriod = () => {
+        const now = new Date();
+        now.setHours(now.getHours())
+        now.setMinutes(now.getMinutes());
+        const schedule = getDayInfo(dayType);
+        const periods = getTimes(schedule);
+        for (let i = 0; i < periods.length; i++) {
+            const start = new Date()
+            start.setHours(parseInt(schedule[i].startTime.split(":")[0]));
+            start.setMinutes(parseInt(schedule[i].startTime.split(":")[1]));
+            const diff = now.getTime() - start.getTime();
+            if (diff > 0) {
+                setMinutes(diff / 60000);
+                setMinutesLeft(schedule[i].duration - diff / 60000);
+                setPeriod(periods[i]);
+                setPeriodDuration(schedule[i].duration);
+            } else {
+                break;
             }
+        }
+    }
+
+    const onScroll = () => {
+        if (scRef.current) {
+            const { top, bottom } = scRef.current.getBoundingClientRect();
+            const viewportHeight = window.innerHeight;
+            const isInView = bottom > -200 && bottom < viewportHeight;
+            const isOutOfView = bottom <= -200 || top >= viewportHeight;
+            document.querySelector('.mission-box').style.backgroundColor = isInView || !isOutOfView ? '#051e4f' : '#fbe4df';
+            document.querySelector('.schedule-specifics').style.backgroundColor = isInView || !isOutOfView ? '#051e4f' : '#fbe4df';
+        }
+    };
+
+    const fetchSheetsData = async () => {
+        try {
+            const ID = "1yB7zzw0I3hUjLwgKZXMpBioQ9FNkTg2bp3skTwtatHk";
+            const sheet_name = "Schedule";
+            const response = await fetch(`https://docs.google.com/spreadsheets/d/${ID}/gviz/tq?tqx=out:csv&sheet=${sheet_name}`);
+            const text = await response.text();
+            const today = new Date();
+            const parsedData = Papa.parse(text, { header: true }).data;
+            setDayType(parsedData[today.getDay()].DayType);
+            setAorBDay(parsedData[today.getDay()].AorBDay);
+        } catch (err) {
+            console.log(err);
+        }
+    };
+
+    useEffect(() => {
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
         };
+    }, []);
+
+    useEffect(() => {
         fetchSheetsData();
     }, []);
 
@@ -80,52 +97,22 @@ export default function Home() {
     useEffect(() => {
         //set an interval
         const timer = setInterval(() => {
-            const getCurrentPeriod = () => {
-                const now = new Date();
-                now.setHours(now.getHours())
-                now.setMinutes(now.getMinutes());
-                const schedule = getDayInfo(dayType);
-                const periods = getTimes(schedule);
-                for (let i = 0; i < periods.length; i++) {
-                    const start = new Date()
-                    start.setHours(parseInt(schedule[i].startTime.split(":")[0]));
-                    start.setMinutes(parseInt(schedule[i].startTime.split(":")[1]));
-                    const diff = now.getTime() - start.getTime();
-                    if (diff > 0) {
-                        setMinutes(diff / 60000);
-                        setMinutesLeft(schedule[i].duration - diff / 60000);
-                        setPeriod(periods[i]);
-                        setPeriodDuration(schedule[i].duration);
-                    } else {
-                        break;
-                    }
-                }
-            }
             getCurrentPeriod();
         }, 1000);
         return () => clearInterval(timer);
-    }, [dayType]);
+    }, []);
 
     const scRef = useRef(null);
     useEffect(() => {
-        const onScroll = () => {
-          if (scRef.current) {
-            const { top, bottom } = scRef.current.getBoundingClientRect();
-            const viewportHeight = window.innerHeight;
-            const isInView = bottom > -200 && bottom < viewportHeight;
-            const isOutOfView = bottom <= -200 || top >= viewportHeight;
-            document.querySelector('.mission-box').style.backgroundColor = isInView || !isOutOfView ? '#051e4f' : '#fbe4df';
-            document.querySelector('.schedule-specifics').style.backgroundColor = isInView || !isOutOfView ? '#051e4f' : '#fbe4df';
-          }
-        };
-        if (document.querySelector('.mission-box') && document.querySelector('.schedule-specifics')) {
-          document.querySelector('.mission-box').style.backgroundColor = '#051e4f';
-          document.querySelector('.schedule-specifics').style.backgroundColor = '#051e4f';
-        }
         window.addEventListener('scroll', onScroll);
+        if (document.querySelector('.mission-box') && document.querySelector('.schedule-specifics')) {
+            document.querySelector('.mission-box').style.backgroundColor = '#051e4f';
+            document.querySelector('.schedule-specifics').style.backgroundColor = '#051e4f';
+        }
         return () => window.removeEventListener('scroll', onScroll);
     }, []);
-    
+
+
     const dayInfo = {
         dayType,
         minutes,
@@ -137,7 +124,7 @@ export default function Home() {
 
     const periodTimes = getPeriodTimes(dayType);
     return (<>
-        {loading &&
+        {loading && //! UP FOR DEBATE
             <div className="coverAnim">
                 <LottieView
                     source={require('../Images/unravel.json')}
@@ -164,14 +151,23 @@ export default function Home() {
                     <DateCrawler className="schedule-date-crawler" />
                 </div>
             </div>
-            <img src={Border} alt="Border" className="border1" ref={scRef}/>
+            <img src={Border} alt="Border" className="border1" ref={scRef} />
             <div className="schedule-specifics">
                 <div className="schedule-specifics-box">
                     {getPeriods(getDayInfo(dayType)).map((period, index) => {
                         return (
                             <div className="period-crawler-container" key={index}>
                                 <div className="period-name">
-                                    {period}
+
+                                    {period === currPeriod ?
+                                        <div className="period-name-crawler">
+                                            <span className="decorative">
+                                                b</span>
+                                            {period}
+                                            <span className="decorative">
+                                                a</span>
+                                        </div>
+                                        : <div>{period}</div>}
                                 </div>
                                 <div className="period-time">
                                     {periodTimes[index]}
@@ -266,3 +262,22 @@ const getPeriodTimes = (DayType) => {
     }
     return final;
 }
+
+const updateCharacterOpacity = () => {
+    const chars = document.querySelectorAll('.mission-statement .character');
+    const viewportHeight = window.innerHeight;
+
+    chars.forEach(char => {
+        const charRect = char.getBoundingClientRect();
+        const charCenter = charRect.top + charRect.height / 2;
+        const distanceFromCenter = Math.abs(viewportHeight / 2 - charCenter);
+        const opacity = Math.max(0, 1 - 2 * distanceFromCenter / viewportHeight);
+        char.style.opacity = opacity;
+    });
+};
+const handleScroll = () => {
+    window.requestAnimationFrame(updateCharacterOpacity);
+};
+
+window.addEventListener('scroll', handleScroll);
+updateCharacterOpacity();

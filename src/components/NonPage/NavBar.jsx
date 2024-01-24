@@ -19,11 +19,12 @@ function NavBar(props) {
                     <img src={JuniorLogo} alt="Logo" className='junior-logo nav-menu-item' />
                 </a>
             </div>
-            <div className={`menu ${menuOpen? "show-menu": "hide-menu"}`}>
+            <div className={`menu ${menuOpen ? "show-menu" : "hide-menu"}`}>
                 <a href="/" className={currPageGet(props.page, "Home")}>{getText(props.page, "Home")}</a>
                 <a href="/people" className={currPageGet(props.page, "People")}>{getText(props.page, "People")}</a>
                 <a href="/events" className={currPageGet(props.page, "Events")}  >{getText(props.page, "Events")}</a>
                 <a href="/resources" className={currPageGet(props.page, "Resources")} >{getText(props.page, "Resources")}</a>
+                <a href="/Socials" className={currPageGet(props.page, "Socials")} >{getText(props.page, "Socials")}</a>
             </div>
 
             <div class="nav-menu-item hamburger" onClick={toggleMenu}>

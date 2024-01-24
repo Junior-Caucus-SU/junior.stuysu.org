@@ -240,3 +240,11 @@ MISSION statement breaks at around 613 px; there should be some dyanmic stuff ha
   font-family: "neue-haas-grotesk-display", sans-serif;
   font-size: 1.5rem;
 }
+
+.decorative {
+  font-family: "scotch-display-comp-dingbats";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
