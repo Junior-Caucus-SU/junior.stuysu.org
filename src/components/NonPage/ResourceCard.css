@@ -19,12 +19,8 @@
   border-radius: 5px;
   font-size: 16px;
   transition-duration: 0.4s;
-}
-
-.resource-botton:hover {
-  background-color: white;
-  color: black;
-  border: 2px solid #4caf50;
+  height: 80px;
+  width: 150px;
 }
 
 .resource-card-head {

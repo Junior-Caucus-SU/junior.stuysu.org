@@ -198,7 +198,9 @@ export default function Home() {
                 <div className="polaroids-bottom polaroids"></div>
             </div>
         </div>
+        <div className="footer-positioning">
         <Footer />
+        </div>
     </>
     );
 }
