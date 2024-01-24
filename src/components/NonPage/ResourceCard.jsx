@@ -1,8 +1,6 @@
 import * as React from 'react';
-import Button from '@mui/joy/Button';
 import Card from '@mui/joy/Card';
 import CardContent from '@mui/joy/CardContent';
-import Typography from '@mui/joy/Typography';
 import "./ResourceCard.css";
 
 export default function ResourceCard(props) {
@@ -22,14 +20,13 @@ export default function ResourceCard(props) {
                         12/13/23
                     </p>
                 </div>
-                <Button
-                    variant="solid"
-                    size="md"
-                    aria-label="Check out more"
-                    sx={{ ml: 'auto', alignSelf: 'center', fontWeight: 600 }}
-                >
-                    Check out Resource
-                </Button>
+                <a href = {props.link}>
+                <div className="resource-button">
+                    <span className="resource-text">
+                        Check out Resource
+                    </span>
+                </div> 
+                </a>
             </CardContent>
         </Card>
     );
