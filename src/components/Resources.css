@@ -1,6 +1,9 @@
-.placeholder{
+.resources-container{
     width: 100vw;
     height: 100vh;
+    padding: 3vh;
+    display:flex;
+    flex-direction: row;
 }
 
 .resource-cards {
