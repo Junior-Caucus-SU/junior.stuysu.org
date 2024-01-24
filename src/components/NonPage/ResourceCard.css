@@ -1,13 +1,12 @@
 .resource-card-super {
   font-family: "ivymode";
-  width: 20vh;
+  width: 320px;
   transition: 0.3s;
-  width: 40%; /* Adjust as needed */
   border-radius: 5px; /* Optional */
   background-color: #f1f1f1; /* Light grey */
   padding: 1vw;
   margin: 10px;
-  height: 12vw;
+  height: 175px;
 }
 
 .resource-button {

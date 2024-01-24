@@ -1,11 +1,16 @@
 .resources-container{
-    width: 100vw;
-    height: 100vh;
+
     padding: 3vh;
     display:flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .resource-cards {
     padding: 10px;
+}
+
+.resources-super{
+    min-height: 100vh;
+    min-width: 100vw;
 }

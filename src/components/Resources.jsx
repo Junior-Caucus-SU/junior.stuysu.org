@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import NavBar from "./NonPage/NavBar";
 import Texture from "./NonPage/Texture";
 import Footer from "./NonPage/Footer";
@@ -21,7 +21,7 @@ export default function Resources() {
                     return x.replaceAll("\"", "").split(",");
                 });
                 data.shift();
-                setResources(data);                
+                setResources(data);
             } catch (err) {
                 console.log(err);
             }
@@ -31,10 +31,12 @@ export default function Resources() {
     let resourcesPage = (
         <div>
             <NavBar {...{ page: "Resources" }} />
-            <div className="resources-container">
+            <div className="resources-super">
+                <div className="resources-container">
                     {Resources.map((resource, i) => (
                         <ResourceCard key={i} title={resource[0]} description={resource[1]} link={resource[2]} release={resource[3]} />
                     ))}
+                </div>
             </div>
             <Footer />
             <CustomCursor />
