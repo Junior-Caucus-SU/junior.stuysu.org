@@ -194,10 +194,8 @@ export default function Home() {
             </div>
             <div className="end-scroll">
                 <div className="polaroids-sky polaroids polaroid-img"></div>
-                {/* < src={PolaroidsSky} alt="Polaroids Sky" className="polaroids-sky polaroids" /> */}
                 <div className="polaroids-text polaroids polaroid-img">We'll stay with you this year</div>
                 <div className="polaroids-bottom polaroids"></div>
-                {/* <img src= {polaroidsGround} alt="Polaroids Bottom" className="polaroids-ground polaroids" /> */}
             </div>
         </div>
         <Footer />

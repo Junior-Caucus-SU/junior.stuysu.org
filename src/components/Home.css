@@ -106,7 +106,8 @@ MISSION statement breaks at around 613 px; there should be some dyanmic stuff ha
   container-name: mission-statement;
 }
 
-.mission-box, .schedule-specifics {
+.mission-box,
+.schedule-specifics {
   transition: background-color 0.3s ease-out;
 }
 
@@ -174,7 +175,7 @@ MISSION statement breaks at around 613 px; there should be some dyanmic stuff ha
 
 .polaroids {
   width: 100vw;
-  height: 160vh;
+  height: 300vh;
   grid-column: 1;
   grid-row: 1;
 }
@@ -182,8 +183,8 @@ MISSION statement breaks at around 613 px; there should be some dyanmic stuff ha
 .polaroids-sky {
   background: url("../Images/PolaroidsSky.png") no-repeat;
   background-size: 100%;
-  backdrop-filter: blur(5px);
-  z-index: 5;
+  background-attachment: fixed;
+  z-index: 3;
 }
 
 .polaroid-img {
@@ -194,6 +195,7 @@ MISSION statement breaks at around 613 px; there should be some dyanmic stuff ha
 .polaroids-bottom {
   background: url("../Images/polaroidsGround.png") no-repeat;
   background-size: 100%;
+  background-attachment: fixed;
   z-index: 7;
 }
 
