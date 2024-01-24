@@ -68,10 +68,10 @@ function Carousel() {
   return (
     <div className="carousel" onMouseDown={onMouseDown} onMouseMove={onMouseMove} onMouseUp={onMouseUp}>
       <div className="current-item"  style={{ transform: "translateX("+ translate + ")" + (zoom ? " scale(0.7)":"")}} >
-        <div className="image-one" > 
+        <div className="image-one carousel-image" > 
           <div className="image-text">Homecoming<br />Fundraiser</div>
         </div>
-        <div className="image-two"/>
+        <div className="image-two carousel-image"/>
       </div>
     </div>
   );

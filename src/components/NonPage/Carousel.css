@@ -18,10 +18,16 @@
   background: url("../../Images/CarouselImage1.png");
   background-size: cover;
   background-position: 50% 55%;
-  width: 90vw;
   height: inherit;
   margin-right: 1vw;
   margin-bottom: 4vh;
+}
+
+.carousel-image {
+  border-radius: 75px;
+  width: 90vw;
+  height: inherit;
+  margin-top: -1vw;
 }
 
 .image-two {
@@ -31,7 +37,6 @@
   background-position: 50% 50%;
   object-fit: cover;
   width: 90vw;
-  height: inherit;
   left: 91vw;
   bottom: 114vh;
 }
