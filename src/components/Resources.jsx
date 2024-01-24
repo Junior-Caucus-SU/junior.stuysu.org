@@ -5,7 +5,6 @@ import Footer from "./NonPage/Footer";
 import CustomCursor from "./NonPage/Cursor";
 import "./Resources.css";
 import ResourceCard from "./NonPage/ResourceCard";
-import Papa from "papaparse";
 
 export default function Resources() {
     const [Resources, setResources] = useState([])

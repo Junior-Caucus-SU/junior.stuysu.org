@@ -5,7 +5,6 @@
   "dependencies": {
     "@babel/core": "^7.23.7",
     "@babel/plugin-proposal-private-property-in-object": "7.21.11",
-<<<<<<< HEAD
     "@babel/preset-env": "^7.23.5",
     "@dotlottie/react-player": "^1.6.12",
     "@emotion/react": "^11.11.3",
@@ -14,12 +13,6 @@
     "@mui/icons-material": "^5.15.6",
     "@mui/joy": "^5.0.0-beta.24",
     "axios": "^1.6.3",
-=======
-    "@babel/preset-env": "^7.23.8",
-    "@dotlottie/react-player": "^1.6.15",
-    "@lottiefiles/react-lottie-player": "^3.5.3",
-    "axios": "^1.6.5",
->>>>>>> 9d87270eb22b68193091ab9193071a2b14b74ac7
     "babel-loader": "^9.1.3",
     "bootstrap": "^5.3.2",
     "css-loader": "^6.9.1",
