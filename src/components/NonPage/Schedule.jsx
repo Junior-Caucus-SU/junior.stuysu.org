@@ -22,6 +22,7 @@ export default function ScheduleBanner(props) {
   const circumference = 2 * Math.PI * 50;
   const progress = isWeekend ? 0 : props.minutes / (props.periodDuration || 1);
   const strokeDashoffset = circumference * (1 - progress);
+  const text = isWeekend ? 'Weekend' : `${props.dayType} ${props.AorBDay}`;
 
   return (
     <div className="schedule-banner">
@@ -57,7 +58,7 @@ export default function ScheduleBanner(props) {
           <span className="time">{timeString}</span>
           <div className="period-container">
             <span className="period interactable">{isWeekend ? "No School" : props.currPeriod}</span>
-            <span className="period dupe interactable">{isWeekend ? 'Weekend' : `${props.dayType} ${props.AorBDay}`}</span>
+            <span className={`period dupe interactable ${text.length > 10? "large-schedule-text":""}`}>{text}</span>
           </div>
         </div>
       </div>

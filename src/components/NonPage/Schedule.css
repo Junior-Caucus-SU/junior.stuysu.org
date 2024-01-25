@@ -66,6 +66,10 @@
   justify-content: center;
 }
 
+.large-schedule-text {
+  /* ! this is just a stopgap */
+}
+
 .time-circle {
   position: relative;
   border-radius: 50%;
@@ -150,10 +154,18 @@
   .period {
     font-size: 6rem;
   }
+
+  .period.dupe {
+    font-size:6rem;
+  }
 }
 
 @media (max-width: 560px) {
   .period {
+    font-size: 4rem;
+  }
+
+  .period.dupe {
     font-size: 4rem;
   }
 }
