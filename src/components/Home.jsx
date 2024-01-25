@@ -1,5 +1,4 @@
 import "./Home.css";
-import LottieView from 'lottie-react-native';
 import React from "react";
 import CustomCursor from "./NonPage/Cursor";
 import NavBar from "./NonPage/NavBar";
@@ -25,7 +24,6 @@ function cSpanning(text) {
 }
 
 export default function Home() {
-    const [loading, setLoading] = useState(true); // this is ONLY to control animation
     const [minutes, setMinutes] = useState(5); //should be used for the schedule page
     const [currPeriod, setPeriod] = useState(0);
     const [dayType, setDayType] = useState("Regular");
@@ -100,7 +98,7 @@ export default function Home() {
             getCurrentPeriod();
         }, 1000);
         return () => clearInterval(timer);
-    }, []);
+    });
 
     const scRef = useRef(null);
     useEffect(() => {
