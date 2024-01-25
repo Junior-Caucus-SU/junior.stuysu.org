@@ -1,5 +1,5 @@
 .head-nav {
-  z-index:1000000;
+  z-index: 1000000;
 }
 
 .nav-container {
@@ -44,13 +44,12 @@
   font-weight: 500;
   line-height: normal;
   list-style: none;
-  width:auto;
+  width: auto;
 }
 
 .nav-menu-item:hover {
   transform: scale(1.05);
 }
-
 
 .juni-logo-container {
   display: flex;
@@ -62,28 +61,57 @@
   display: flex;
 }
 
-.item-menu-text {
-  text-align:center;
-}
-
-.hamburger {
+.mobile-dropdown {
   display: none;
 }
 
-@media (max-width: 768px) {
-  .hamburger {
-    display:block;
-  }
+
+@media (max-width: 795px) {
   .menu {
-    flex-direction:column;
+    display: none;
   }
-  .show-menu {
-    display:flex;
-    position:relative;
-    margin-right: 0;
-    padding-right:0;
+  .mobile-dropdown {
+    display: inline-block;
+    z-index: 1000;
   }
-  .hide-menu {
+
+  .dropdown-content {
     display:none;
+    position: fixed;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
   }
+
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    z-index: 1000;
+  }
+  .dropdown-content a:active {
+    background-color: #ddd;
+  }
+
+  .mobile-dropdown:active .dropdown-content {
+    display: inline-block;
+  }
+
+
+  .toggle-menu {
+    display:inline-block;
+  }
+
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  /* .movile-dropdown:active .dropbtn {
+    background-color: #3e8e41;
+  }  */
+
+  .show {
+    display:inline-block;
+  }
+
+
 }
