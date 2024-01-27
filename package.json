@@ -5,7 +5,7 @@
   "dependencies": {
     "@babel/core": "^7.23.7",
     "@babel/plugin-proposal-private-property-in-object": "7.21.11",
-    "@babel/preset-env": "^7.23.8",
+    "@babel/preset-env": "^7.23.9",
     "@dotlottie/react-player": "^1.6.15",
     "@lottiefiles/react-lottie-player": "^3.5.3",
     "axios": "^1.6.6",
