@@ -19,55 +19,6 @@ import Will from '../Images/people/Will.jpeg';
 import John from '../Images/people/John.png';
 
 export default function People() {
-  const adjustDescriptionWidth = () => {
-    const images = document.querySelectorAll('.person-container img');
-    images.forEach(img => {
-      try {
-        const name = img.parentElement.querySelector('.name');
-        const description = img.parentElement.querySelector('.description');
-        console.log(name);
-
-        // Get the previous element if there is one
-        const previous = img.previousElementSibling;
-
-        if (previous && previous.classList.contains('d_type')) {
-          previous.style.width = `${img.offsetWidth}px`;
-        }
-        if (name && name.classList.contains('name')) {
-          name.style.width = `${img.offsetWidth}px`;
-        }
-        if (description && description.classList.contains('description')) {
-          description.style.width = `${img.offsetWidth}px`;
-        }
-      } catch (e) {
-        console.log(e);
-      }
-    });
-
-    const president_images = document.querySelectorAll('.person-container .image_box img');
-    president_images.forEach(img => {
-      try {
-        const name = img.parentElement.parentElement.querySelector('.name');
-        const description = img.parentElement.parentElement.querySelector('.description');
-        console.log(name);
-
-        // Get the previous element if there is one
-        const previous = img.previousElementSibling;
-
-        if (previous && previous.classList.contains('d_type')) {
-          previous.style.width = `${img.offsetWidth}px`;
-        }
-        if (name && name.classList.contains('name')) {
-          name.style.width = `${img.offsetWidth}px`;
-        }
-        if (description && description.classList.contains('description')) {
-          description.style.width = `${img.offsetWidth}px`;
-        }
-      } catch (e) {
-        console.log(e);
-      }
-    });
-  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -83,7 +34,7 @@ export default function People() {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);  
+  }, []);
 
   //flying in from right
   useEffect(() => {
@@ -187,15 +138,20 @@ export default function People() {
           </div>
           <div className="president person-container pres1 to-fly-from-right"  >
             <div className="image_box">
-              <img src={Josephine_Yoo} alt="Josephine Yoo" ref={pres1Ref} /></div>
+              <img src={Josephine_Yoo} alt="Josephine Yoo" ref={pres1Ref} className="president-image" />
+            </div>
             <div className="name">Josephine</div>
-            <div className="description to-fade-in">Lorem ipsum dolor sit amet consectetur. Velit convallis sit odio orci varius eu elementum. Est sit et hendrerit id eget diam. Maecenas amet sed ac turpis facilisis semper at. Tincidunt egestas vulputate sed lobortis hac augue. Est pharetra aliquet faucibus.</div>
+            <div className="description to-fade-in">
+              Hi everyone! I'm Josephine, one of your Co-Presidents this year, and I'm so excited to be working with you all to make the most of our junior year! One of my biggest goals for the year are to make sure there's constant and clear communication between the Junior Caucus and the student body. We want to make sure that your voices are heard and taken into consideration! Whether your worries are about college or general high school lifestyle, I hope to alleviate your stress and foster a positive and supportive junior student body. A fun fact about me is that I once dropped my phone in pasta sauce trying to take a picture of my food! 🍽
+            </div>
           </div>
           <div className="president person-container pres2 to-fly-from-right"  >
             <div className="image_box">
-              <img src={Grace_Rhee} alt="Grace Rhee" ref={pres2Ref} /></div>
+              <img src={Grace_Rhee} alt="Grace Rhee" ref={pres2Ref} className="president-image" /></div>
             <div className="name">Grace</div>
-            <div className="description">Lorem ipsum dolor sit amet consectetur. Velit convallis sit odio orci varius eu elementum. Est sit et hendrerit id eget diam. Maecenas amet sed ac turpis facilisis semper at. Tincidunt egestas vulputate sed lobortis hac augue. Est pharetra aliquet faucibus.</div>
+            <div className="description">
+              Hi! I'm Grace, and it is my pleasure to be your Junior Caucus co-president this year. I am super excited to work with everybody to bring you the best Junior year possible! My biggest goal this year is to make this year less stressful and more enjoyable. This includes planning an affordable and exciting JProm and providing the most relatable and accessible resources for both general academics and college! One fun fact about me is that I love to go try different restaurants’ nachos around the city! 🌮
+            </div>
           </div>
         </div>
 
@@ -208,7 +164,9 @@ export default function People() {
           <div className="chief chief2 person-container to-fly-from-left">
             <img src={Ethan_Sie} alt="" />
             <div className="name">Ethan Sie</div>
-            <div className="description">Lorem ipsum dolor sit amet consectetur. Velit convallis sit odio orci varius eu elementum. Est sit et hendrerit id eget diam. Maecenas amet sed ac turpis facilisis semper at. Tincidunt egestas vulputate sed lobortis hac augue. Est pharetra aliquet faucibus.</div>
+            <div className="description">
+              Hey! I’m Ethan, and I work as one of the Chiefs of Staff alongside John Jay. I can’t wait to get started on all of the projects we have planned for this year, and I hope you guys are excited for everything to come (especially Jprom!). In my free time, I like to play my Saxophone, and I'm still working on 3D modeling and building a lightsaber (if I ever get around to it). Stay tuned for more fun events, internals resources/guides, and college events!
+            </div>
           </div>
           <div className="chiefs-box box">
             <div className="to-fade-in">
@@ -225,7 +183,7 @@ export default function People() {
           </div>
           <div className="directors-container subgroup-container">
 
-            <div className="president person-container emily to-fly-from-right">
+            <div className="director person-container emily to-fly-from-right">
               <div className="d_type_image">
                 <div className="d_type">Events</div>
                 <img src={Emily_Li} alt="" />
@@ -254,7 +212,9 @@ export default function People() {
                   <div className="director person-container to-fly-from-right">
                     <img src={Josephine_Gunawan} alt="" className="director-img" />
                     <div className="name">Josephine Gunawan</div>
-                    <div className="description">Lorem ipsum dolor sit amet consectetur. Velit convallis sit odio orci varius eu elementum. Est sit et hendrerit id eget diam. Maecenas amet sed ac turpis facilisis semper at. Tincidunt egestas vulputate sed lobortis hac augue. Est pharetra aliquet faucibus.</div>
+                    <div className="description">
+                      Hi, I'm Josephine, and I am so excited to be one of your Internals Directors this year! I love literature and history, but when I have free time, my favorite thing to do is bake pecan pie tarts.
+                    </div>
                   </div>
                 </div>
               </div>
@@ -326,10 +286,7 @@ export default function People() {
 
 
       </div>
-      <div className="to-fade-in">
-        <Footer />
-
-      </div>
+      <Footer />
     </div>
   );
   return peoplePage;

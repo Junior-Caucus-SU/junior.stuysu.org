@@ -116,6 +116,7 @@
 }
 
 .people-page-body img {
+  border-radius: 5px;
   max-width: 25vw;
 }
 
@@ -160,6 +161,8 @@
 }
 
 /* Set the animations to be smoother for the img inside .image_box */
+
+/* ! Removes Rounding */
 .image_box img {
   transition: transform cubic-bezier(0.5, 0.22, 0.22, 1);
 }
@@ -327,8 +330,12 @@
     max-width: 80vw;
   }
 
+  .description {
+    max-width: 50vh;
+  }
+
   .people-page-body .directors img {
-    max-width: 80vw;
+    border-radius: 15px;
   }
 
   .emily {
