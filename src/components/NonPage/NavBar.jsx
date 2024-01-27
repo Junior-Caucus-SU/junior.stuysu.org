@@ -6,13 +6,9 @@ import Banner from './Banner';
 
 function NavBar(props) {
     const [menuOpen, setMenuOpen] = useState(false);
-    
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
     }
-
-
-
     useEffect(() => {
         const hideMenu = () => {
             if (window.innerWidth > 768 && menuOpen) {
