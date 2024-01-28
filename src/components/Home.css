@@ -169,6 +169,7 @@ MISSION statement breaks at around 613 px; there should be some dyanmic stuff ha
 }
 
 .date-crawler-pos {
+  padding-top: 5vh;
   grid-row: 2;
   grid-column: 1;
 }
