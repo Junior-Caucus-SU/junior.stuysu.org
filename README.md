@@ -9,6 +9,7 @@ To get on our main branch, do this:
 ```shell
 git clone git@github.com:Junior-Caucus-SU/junior.stuysu.org.git
 cd junior_website
+git checkout develop
 npm i
 npm start
 ```
