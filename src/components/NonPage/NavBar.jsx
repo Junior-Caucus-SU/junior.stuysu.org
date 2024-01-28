@@ -1,14 +1,14 @@
 import React from 'react';
 import './Nav.css';
 import JuniorLogo from "../../Images/JuniorCaucusLogo.svg";
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import Banner from './Banner';
 
 function NavBar(props) {
     const [menuOpen, setMenuOpen] = useState(false);
-    const toggleMenu = () => {
-        setMenuOpen(!menuOpen);
-    }
+    const toggleMenu = useCallback(() => {
+        setMenuOpen(prevMenuOpen => !prevMenuOpen);
+    }, []);
     useEffect(() => {
         const hideMenu = () => {
             if (window.innerWidth > 768 && menuOpen) {
@@ -20,7 +20,7 @@ function NavBar(props) {
         return () => {
             window.removeEventListener('resize', hideMenu);
         }
-    }, [])
+    }, [menuOpen, toggleMenu])
 
     return (<div className='head-nav'>
         <Banner />
