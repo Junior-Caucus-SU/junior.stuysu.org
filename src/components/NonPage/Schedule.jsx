@@ -15,6 +15,7 @@ export default function ScheduleBanner(props) {
   }, [])
 
   const isWeekend = useMemo(() => currentDateTime.getDay() === 0 || currentDateTime.getDay() === 6, [currentDateTime]);
+  const timeCircleClassName = isWeekend ? "time-circle hide" : "time-circle";
   const timeString = currentDateTime.toLocaleTimeString('en-US', dateFormat.timeHMS);
   const dateString = currentDateTime.toLocaleDateString('en-US', dateFormat.longWK);
 
@@ -30,7 +31,7 @@ export default function ScheduleBanner(props) {
         <span>{`${dateString}`}</span>
       </div>
       <div className="bottom-row">
-        <div className="time-circle">
+        <div className={timeCircleClassName}>
           <svg className="progress-ring" width="140" height="140">
             <circle
               cx="70"
