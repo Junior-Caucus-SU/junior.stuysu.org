@@ -1,7 +1,7 @@
 .carousel {
   position: relative;
   margin-top: 4vw;
-  height: 110vh;
+  height: 75vh;
   left: 5vw;
   margin-bottom: 4vw
 }
@@ -24,7 +24,6 @@
 }
 
 .carousel-image {
-  border-radius: 75px;
   width: 90vw;
   height: inherit;
   margin-top: -1vw;
@@ -36,6 +35,7 @@
   background-size: cover;
   background-position: 50% 50%;
   object-fit: cover;
+  top: -77.3vh;
   width: 90vw;
   left: 91vw;
   bottom: 114vh;

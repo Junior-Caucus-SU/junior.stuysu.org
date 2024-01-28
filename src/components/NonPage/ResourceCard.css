@@ -4,7 +4,7 @@
   width: 100%;
   height: 8vw;
   color: var(--Main-Blue, #0c2b56);
-  border-bottom: 1px solid var(--Main-Blue, #0c2b56);
+  border-bottom: .5px solid var(--Main-Blue, #0c2b56);
   position: relative;
   overflow: hidden;
   transition: color 0.3s;
