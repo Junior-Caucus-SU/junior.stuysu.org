@@ -17,6 +17,7 @@ import Stacie_Au from '../Images/people/Stacie_Au.jpeg';
 import Josephine_Yoo from '../Images/people/Josephine_Yoo.png';
 import Will from '../Images/people/Will.jpeg';
 import John from '../Images/people/John.jpeg';
+import Vicki_Chen from "../Images/people/Vicki_Chen.png";
 
 export default function People() {
 
@@ -272,8 +273,8 @@ export default function People() {
                 </div>
               </div>
               <div className="director person-container to-fly-from-right">
-                <img src={Chloe_Wong} alt="" className="director-img" />
-                <div className="name">Vikki Cheng</div>
+                <img src={Vicki_Chen} alt="" className="director-img" />
+                <div className="name">Vicki Chen</div>
                 <div className="description">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </div>

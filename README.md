@@ -8,7 +8,7 @@ To get on our main branch, do this:
 
 ```shell
 git clone git@github.com:Junior-Caucus-SU/junior.stuysu.org.git
-cd junior_website
+cd junior.stuysu.org
 git checkout develop
 npm i
 npm start
@@ -18,7 +18,7 @@ To get to our develop branch, do this:
 
 ```shell
 git clone git@github.com:Junior-Caucus-SU/junior.stuysu.org.git
-cd junior_website
+cd junior.stuysu.org
 npm i
 npm start
 ```
