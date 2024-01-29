@@ -4,7 +4,7 @@ Welcome to the Junior Caucus Website! This website is bootstrapped off of the [C
 
 ## Quick Start
 
-To get on our main branch, do this:
+To get on our development branch, do this:
 
 ```shell
 git clone git@github.com:Junior-Caucus-SU/junior.stuysu.org.git
@@ -14,7 +14,7 @@ npm i
 npm start
 ```
 
-To get to our develop branch, do this:
+To get to our main branch, do this:
 
 ```shell
 git clone git@github.com:Junior-Caucus-SU/junior.stuysu.org.git
