@@ -9,10 +9,10 @@ import { ParallaxProvider, ParallaxBanner, ParallaxBannerLayer, Parallax } from 
 const images = [
   { url: GloriousLeaders, scrollspeed: 5, alt: "polaroid josephine, grace, ryan" },
   { url: Battle, scrollspeed: 10, alt: "battle" },
-  { url: PhotoCapture, scrollspeed: 20, alt: "photocapture" },
+  { url: PhotoCapture, scrollspeed: 40, alt: "photocapture" },
 ];
 
-const offsets = [10, 64, 10, 30];
+const offsets = [10, 64, 10];
 
 const ParallaxImages = () => {
 
@@ -47,9 +47,9 @@ const ParallaxImages = () => {
           {images.map((image, index) => {
             let translateY;
             if (image.url === PhotoCapture) {
-              translateY = [30, -40];
+              translateY = [-75, -300];
             } else {
-              translateY = [10, -30];
+              translateY = [50, -50];
             }
             return (
               <Parallax
@@ -63,7 +63,7 @@ const ParallaxImages = () => {
                   alt={image.alt}
                   style={{
                     position: 'inherit',
-                    width: '25%',
+                    width: '40%',
                   }}
                 />
               </Parallax>
