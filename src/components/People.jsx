@@ -16,7 +16,7 @@ import Maegan_Diep from '../Images/people/Maegan_Diep.jpeg';
 import Stacie_Au from '../Images/people/Stacie_Au.jpeg';
 import Josephine_Yoo from '../Images/people/Josephine_Yoo.png';
 import Will from '../Images/people/Will.jpeg';
-import John from '../Images/people/John.png';
+import John from '../Images/people/John.jpeg';
 
 export default function People() {
 
@@ -159,7 +159,9 @@ export default function People() {
           <div className="chief chief1 person-container to-fly-from-left">
             <img src={John} alt="" />
             <div className="name">John J. Wang</div>
-            <div className="description">Lorem ipsum dolor sit amet consectetur. Velit convallis sit odio orci varius eu elementum. Est sit et hendrerit id eget diam. Maecenas amet sed ac turpis facilisis semper at. Tincidunt egestas vulputate sed lobortis hac augue. Est pharetra aliquet faucibus.</div>
+            <div className="description">
+              Hi! I’m John Jay, and I’m so excited to be working as the Chief of Staff! My goals this year are to help plan the best Junior Prom possible, help guide the junior grade through courses and tests, and provide accessible college resources, amidst all the junior year stress. We want your voices to be heard, and with your help, we hope to make this year the best year for all of our juniors! We can’t wait to work with you all! One fun fact about me is that I can play three instruments.
+            </div>
           </div>
           <div className="chief chief2 person-container to-fly-from-left">
             <img src={Ethan_Sie} alt="" />
@@ -269,8 +271,15 @@ export default function People() {
                   </div>
                 </div>
               </div>
+              <div className="director person-container to-fly-from-right">
+                <img src={Chloe_Wong} alt="" className="director-img" />
+                <div className="name">Vikki Cheng</div>
+                <div className="description">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </div>
+              </div>
               <div className="d_type_box_c">
-                <div className="director person-container to-fly-from-right">
+                <div className="director person-container to-fly-from-left">
                   <div className="d_type">Social Media</div>
                   <img src={Maegan_Diep} alt="" className="director-img " />
                   <div className="name">Maegan Diep</div>
