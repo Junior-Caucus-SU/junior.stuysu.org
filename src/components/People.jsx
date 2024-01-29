@@ -276,7 +276,7 @@ export default function People() {
                 <img src={Vicki_Chen} alt="" className="director-img" />
                 <div className="name">Vicki Chen</div>
                 <div className="description">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  Hi! I’m Vicki, this year’s Junior Caucus Graphics Department Co-director. Besides the Junior Caucus, I’m also the Co-director for the Student Union’s Social Media Department and a member of Stuy’s Varsity Girls Fencing Team. On my free time, my favorite thing to do is baking and gifting what I bake to my friends. My specialty is matcha brownies! I’m so excited to be working with all our departments this year to bring you guys the best events, opportunities, and energy for our junior year at Stuy!
                 </div>
               </div>
               <div className="d_type_box_c">
