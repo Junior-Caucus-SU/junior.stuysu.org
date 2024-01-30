@@ -32,7 +32,7 @@ export default function Footer() {
                         <span className="positions-title">Website Team</span> <div className="positions-people"><a href="https://github.com/yellowstonepark" className="name-link otzar-jaffe">Otzar Jaffe</a>, <a href="https://github.com/connor132435" className="name-link connor-yau">Connor Yau</a>, <a href="https://github.com/muff1n0" className="name-link tony-chen">Tony Chen</a><br />
                         </div></div>
                     <div className="footer-people">
-                        <span className="positions-title">Illustration</span><div className="positions-people"><a href ="https://www.instagram.com/chloepwong/" className="name-link">Chloe Wong</a></div>
+                        <span className="positions-title">Illustration</span><div className="positions-people"><a href ="https://www.instagram.com/chloepwong/" className="name-link">Chloe Wong</a>, <a className="name-link" href="https://www.instagram.com/vicki.cn/">Vicki Chen</a></div>
                     </div>
                     <div className="footer-people">
                         <span className="positions-title">Special Thanks</span> <div className="positions-people"><a href="https://github.com/TheEgghead27" className="name-link">David Chen</a></div>
