@@ -13,7 +13,7 @@ export default function AllInitiatives(props) {
                 const sheet_name = "Announcements";
                 const response = await fetch(`https://docs.google.com/spreadsheets/d/${ID}/gviz/tq?tqx=out:csv&sheet=${sheet_name}`);
                 const text = await response.text();
-                const parsedData = Papa.parse(text, { header: true }).data;
+                const parsedData = Papa.parse(text, { header: true }).data.reverse();
                 setEventsInfo(parsedData);
                 setShowMore(Array(parsedData.length).fill(false));
             } catch (err) {
