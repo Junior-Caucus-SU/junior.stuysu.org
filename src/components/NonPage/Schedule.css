@@ -143,7 +143,7 @@
 .period.dupe {
   font-family: 'neue-haas-grotesk-display', sans-serif;
   transform: translateY(100%);
-  font-size: 9rem;
+  font-size: 9.5rem;
 }
 
 .period-container:hover .period {

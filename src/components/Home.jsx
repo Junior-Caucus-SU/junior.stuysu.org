@@ -105,17 +105,19 @@ export default function Home() {
     return () => clearInterval(timer);
   });
 
-    const scRef = useRef(null);
-    useEffect(() => {
-        window.addEventListener('scroll', onScroll);
-        if (document.querySelector('.mission-box') && document.querySelector('.schedule-specifics')) {
-            document.querySelector('.mission-box').style.backgroundColor = '#051e4f';
-            document.querySelector('.schedule-specifics').style.backgroundColor = '#051e4f';
-        }
-        return () => window.removeEventListener('scroll', onScroll);
-    }, []);
-
-//this whole page on is laggy asf
+  const scRef = useRef(null);
+  useEffect(() => {
+    window.addEventListener("scroll", onScroll);
+    if (
+      document.querySelector(".mission-box") &&
+      document.querySelector(".schedule-specifics")
+    ) {
+      document.querySelector(".mission-box").style.backgroundColor = "#051e4f";
+      document.querySelector(".schedule-specifics").style.backgroundColor =
+        "#051e4f";
+    }
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   const dayInfo = {
     dayType,
@@ -169,30 +171,50 @@ export default function Home() {
                   </div>
                   <div className="period-time">{periodTimes[index]}</div>
                 </div>
-                <img src={Moon} alt="Fancical Abstract Drawing of a Moon" className="moon-img" />
-                <img src={Sun} alt="Fancical Abstract Drawing of a Sun" className="sun-img" />
-                <div className="specifics-line">
-                    <img src={SpecificsLine} alt="Decorative Line Art" className="" />
-                </div>
-                <div className="all-schedules">
-                    <a href="https://stuy.entest.org/2023-2024%20School%20Year%20Calendar%20v%209-4-2023%20v%2011_1__1_.pdf" className="all-schedules-link">View all schedules</a>
-                </div>
-            </div>
-            <div className="mission-box">
-                <h1 className="mission-statement">
-                    {cSpanning("We are dedicated to supporting the Junior class by easing the challenges of junior year. Our primary objective is to alleviate stress through the provision of valuable resources and fun events! We are committed to ensuring accessibility in all our offerings, striving to make every resource easily available to students. Moreover, our focus extends beyond just assistance; we prioritize open communication and transparency.")}
-                </h1>
-            </div>
-            <div className="parallax">
-                <HomeParallax />
-            </div>
-            <div className="end-scroll">
-                <div className="polaroids-sky polaroids polaroid-img"></div>
-                <div className="polaroids-text polaroids polaroid-img">We'll stay with you this year</div>
-                <div className="polaroids-bottom polaroids"></div>
-            </div>
+              );
+            })}
+          </div>
+          <img
+            src={Moon}
+            alt="Fancical Abstract Drawing of a Moon"
+            className="moon-img"
+          />
+          <img
+            src={Sun}
+            alt="Fancical Abstract Drawing of a Sun"
+            className="sun-img"
+          />
+          <div className="specifics-line">
+            <img src={SpecificsLine} alt="Decorative Line Art" className="" />
+          </div>
+          <div className="all-schedules">
+            <a
+              href="https://stuy.entest.org/2023-2024%20School%20Year%20Calendar%20v%209-4-2023%20v%2011_1__1_.pdf"
+              className="all-schedules-link"
+            >
+              View all schedules
+            </a>
+          </div>
         </div>
-        <div className="footer-positioning">
+        <div className="mission-box">
+          <h1 className="mission-statement">
+            {cSpanning(
+              "Welcome to the Yoo-Rhee caucus. We are committed to delivering on our promises \n through well organized initiatives, including cabinet restructuring, enhancing \n college readiness, and meaningful themed events.",
+            )}
+          </h1>
+        </div>
+        <div className="parallax">
+          <HomeParallax />
+        </div>
+        <div className="end-scroll">
+          <div className="polaroids-sky polaroids polaroid-img"></div>
+          <div className="polaroids-text polaroids polaroid-img">
+            We'll stay with you this year
+          </div>
+          <div className="polaroids-bottom polaroids"></div>
+        </div>
+      </div>
+      <div className="footer-positioning">
         <Footer />
       </div>
     </>
