@@ -8,7 +8,7 @@
 .events-header {
   color: var(--Main-Blue, #051E4F);
   /* Title */
-  font-family: Mixta Sharp;
+  font-family: ivymode;
   font-size: 3rem;
   font-style: normal;
   font-weight: 350;
@@ -28,7 +28,7 @@
 .title {
   color: var(--Main-Blue, #051E4F);
 /* Title */
-font-family: Mixta Sharp;
+font-family: ivymode;
 font-size: 3rem;
 font-style: normal;
 font-weight: 350;

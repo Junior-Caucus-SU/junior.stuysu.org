@@ -1,118 +1,80 @@
 .footer-banner {
-    aspect-ratio: 3.5/1;
-    position:absolute;
-    width: 100vw;
+  padding-top: 5vh;
+  position: absolute;
+  width: 100vw;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* @media */
-
-
-.footer-image {
-    height: 132px;
-    width: inherit;
-    left: 0px;
-    top: 96px;
-    position: absolute;
-    opacity: 0.10;
+.footer-people{
+  gap: 10px;
+  display: flex;
 }
 
-.footer-content {
-    top: 0.75em;
-    width: inherit;
-    position: absolute;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1em;
-    display: inline-flex;
-
+.icons-container{
+  gap: 10px;
+  display: flex;
+  margin-bottom: 20px;
 }
 
-.icons-container {
-    justify-content: center; 
-    align-items: center; 
-    gap: 5px;
-    display: inline-flex;
+.positions-people {
+  width:20vw;
 }
 
-.footer-logo-top:hover {
-    transform: scale(1.05);
+.positions-title {
+  width:20vw;
+  opacity: 0.85;
+  text-align: right;
 }
 
-
-.credits {
-    justify-content: center; 
-    align-items: center; 
-    gap: 15px; 
-    display: inline-flex;
-}
-
-.name-link{
-    text-decoration: none;
-    color: #0C2B56;
-}
-
-.positions {
-    width: 250px; 
-    text-align: right; 
-    color: #0C2B56; 
-    font-size: 0.9em; 
-    font-family: 'neue-haas-grotesk-text'; 
-    line-height: 18px; 
-}
-
-.logo-ref {
-    text-decoration: none;
-    color: (5,30,79);
-}
-
-.social-logo:hover {
-    transform: scale(2);
+.name-link {
+  text-decoration: none;
+  color: #0c2b56;
 }
 
 .names {
-    width: 250px; 
-    color: #0C2B56; 
-    font-size: 0.9em; 
-    font-family: 'neue-haas-grotesk-text'; 
-    line-height: 1.25em; 
+  color: #0c2b56;
+  font-size: 0.9em;
+  flex-direction: column;
+  font-family: "neue-haas-grotesk-text";
+}
+
+@media (max-width: 450px) {
+  .names {
+    display:none;
+  }
 }
 
 .leadership {
-    color: #0C2B56; 
-    font-size: 0.9em; 
-    font-family: 'neue-haas-grotesk-text'; 
-    line-height: 0.85em; 
+  color: #0c2b56;
+  text-align: center;
+  font-size: 0.9em;
+  font-family: "neue-haas-grotesk-text";
 }
 
 .school-logo-link {
-    text-decoration: none;
-}
-.school-logo-link:hover {
-    transform: scale(1.05);
+  text-decoration: none;
 }
 
 .school {
-    width: 180px;
-    height: 20px;
-    position: relative;
+  padding-bottom: 40px;
+  display: inline-flex;
+  justify-content: space-between;
+  position: relative;
 }
 
 .school-text {
-    top: 1px; 
-    color: #0C2B56; 
-    font-size: 14px; 
-    font-family: 'neue-haas-grotesk-text'; 
-    font-weight: 400; 
-    text-decoration: none; 
-    line-height: 18px; 
-    position: relative;
-    left: 24px;
+  top: 1px;
+  color: #0c2b56;
+  font-size: 14px;
+  font-family: "neue-haas-grotesk-text";
+  font-weight: 400;
+  line-height: 18px;
+  position: relative;
 }
 
 .school-icon {
-    width: 20px; 
-    height: 20px; 
-    top: 0px; 
-    position: absolute;
+  width: 20px;
+  height: 20px;
 }

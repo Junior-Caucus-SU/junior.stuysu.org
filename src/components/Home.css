@@ -6,8 +6,13 @@
   grid-template-rows: 1fr 1fr;
 }
 
+.smooth-scroll-container {
+  position: relative;
+  width: 100%;
+}
+
 @media (max-width: 632px) {
-  .homepage-schedule-container{
+  .homepage-schedule-container {
     height: 60vh;
   }
 }
@@ -19,7 +24,7 @@
 .coverAnim {
   position: fixed;
   width: 100vw;
-  height: 100%;
+  height: 100vh;
   z-index: 1000;
 }
 
@@ -39,7 +44,6 @@
   right: 10vw;
   top: 125vh;
 }
-
 
 .schedule-specifics-box {
   grid-column: 1 / span 5;
@@ -74,7 +78,6 @@
   font-size: 1rem;
   font-style: normal;
   font-weight: 400;
-  text-decoration-line: underline;
 }
 
 .lf-player-container {
@@ -86,10 +89,14 @@
 .mission-box {
   padding-left: 5vw;
   padding-right: 20vw;
-  padding-top: 100px;
-  height: 90vh;
+  padding-top: 5vw;
+  height: 80vh;
   width: 100vw;
 }
+
+/* ! IMPORTANT
+MISSION statement breaks at around 613 px; there should be some dyanmic stuff happening if
+*/
 
 .mission-statement {
   color: var(--Main-Blue, #051e4f);
@@ -99,18 +106,47 @@
   container-name: mission-statement;
 }
 
+.mission-box,
+.schedule-specifics {
+  transition: background-color 0.3s ease-out;
+}
+
 @media (max-width: 1005px) {
   .mission-statement {
-    font-size: 3.5em;
-    padding-top: 4vw;
+    font-size: 3.25em;
+    padding-top: 1vw;
     padding-left: 2vw;
-    padding-right: 10vw;
+    padding-right: 5vw;
+  }
+  .mission-box {
+    height: 80vh;
   }
 }
 
-@media (max-width: 614px) {
+@media (max-width: 895px) {
   .mission-statement {
-    font-size:3em;
+    font-size: 3em;
+    padding-top: 0;
+    padding-left: 1vw;
+    padding-right: 0;
+  }
+  .mission-box {
+    height: 50vh;
+  }
+}
+
+@media (max-width: 753px) {
+  .mission-statement {
+    font-size: 2.25em;
+  }
+}
+
+@media (max-width: 432px) {
+  .mission-statement {
+    font-size: 2em;
+  }
+  .mission-box {
+    height: 60vh;
   }
 }
 
@@ -130,20 +166,64 @@
 
 .bridge-pos {
   z-index: -1;
-
 }
 
 .date-crawler-pos {
+  padding-top: 5vh;
   grid-row: 2;
   grid-column: 1;
 }
 
-.polaroids-sky {
+.polaroids {
   width: 100vw;
+  height: 300vh;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.polaroids-sky {
+  background: url("../Images/PolaroidsSky.png") no-repeat;
+  background-size: 100%;
+  background-attachment: fixed;
+  z-index: 3;
+}
+
+.polaroid-img {
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.polaroids-bottom {
+  background: url("../Images/polaroidsGround.png") no-repeat;
+  background-size: 100%;
+  background-attachment: fixed;
+  z-index: 7;
+}
+
+.polaroids-text {
+  z-index: 6;
+  font-family: "ivymode";
+  mix-blend-mode: color-burn;
+  color: var(--Main-Blue, #051e4f);
+  display: flex;
+  font-weight: 200;
+  text-align: center;
+  font-size: 10rem;
+  line-height: 95%;
+  font-style: normal;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  padding: 15vw;
+  margin-bottom: 55vw;
 }
 
 .end-scroll {
   width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  grid-template-rows: 1fr;
 }
 
 .period-crawler-container {
@@ -164,8 +244,10 @@
   font-size: 1.5rem;
 }
 
-.show {
-  filter: blur(0);
-  transform:translateX(0);
-  opacity:1;
+.decorative {
+  font-family: "scotch-display-comp-dingbats";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
