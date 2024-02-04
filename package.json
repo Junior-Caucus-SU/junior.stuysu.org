@@ -1,0 +1,51 @@
+{
+    "name": "junior_website",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+      "@babel/core": "^7.23.7",
+      "@babel/plugin-proposal-private-property-in-object": "7.21.11",
+      "@babel/preset-env": "^7.23.5",
+      "babel-loader": "^9.1.3",
+      "css-loader": "^6.9.1",
+      "file-loader": "^6.2.0",
+      "html-loader": "^5.0.0",
+      "papaparse": "^5.4.1",
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0",
+      "react-native": "^0.73.2",
+      "react-native-web": "^0.19.10",
+      "react-router-dom": "^6.21.3",
+      "react-scripts": "^5.0.1",
+      "react-scroll-parallax": "^3.4.5"
+    },
+    "scripts": {
+      "start": "react-scripts start",
+      "build": "react-scripts build",
+      "test": "react-scripts test",
+      "eject": "react-scripts eject"
+    },
+    "eslintConfig": {
+      "extends": [
+        "react-app",
+        "react-app/jest"
+      ]
+    },
+    "browserslist": {
+      "production": [
+        ">0.2%",
+        "not dead",
+        "not op_mini all"
+      ],
+      "development": [
+        "last 1 chrome version",
+        "last 1 firefox version",
+        "last 1 safari version"
+      ]
+    },
+    "devDependencies": {
+      "@testing-library/jest-dom": "^6.2.1",
+      "@testing-library/react": "^14.1.2",
+      "@testing-library/user-event": "^14.5.2"
+    }
+  }
