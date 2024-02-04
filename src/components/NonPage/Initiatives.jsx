@@ -13,7 +13,7 @@ export default function AllInitiatives(props) {
                 const sheet_name = "Announcements";
                 const response = await fetch(`https://docs.google.com/spreadsheets/d/${ID}/gviz/tq?tqx=out:csv&sheet=${sheet_name}`);
                 const text = await response.text();
-                const parsedData = Papa.parse(text, { header: true }).data;
+                const parsedData = Papa.parse(text, { header: true }).data.reverse();
                 setEventsInfo(parsedData);
                 setShowMore(Array(parsedData.length).fill(false));
             } catch (err) {
@@ -34,16 +34,18 @@ export default function AllInitiatives(props) {
     return (
         <div className="all-initiatives">
             <div className="frame">
-                {initiativesData.reverse().map((initiative, index) => (
+                {initiativesData.map((initiative, index) => (
                     <div className="event" key={index}>
                         <p className="event-date">{initiative.Date}</p>
                         <h4 className="event-title">{initiative.Title}</h4>
                         <p className="event-text">
                             {showMore[index] ? initiative.Text : initiative.Text.substring(0, 100)}
                         </p>
-                        <button className="show-more" onClick={() => handleShowMoreToggle(index)}>
-                            {showMore[index] ? "Show Less" : "Show More..."}
-                        </button>
+                        {showMore[index] ?
+                            <button className="show-more" onClick={() => handleShowMoreToggle(index)}>
+                                {showMore[index] ? "Show Less" : "Show More..."}
+                            </button> : null
+                        }
                     </div>
                 ))}
             </div>

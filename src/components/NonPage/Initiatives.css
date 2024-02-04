@@ -18,6 +18,7 @@ body {
   flex-wrap: wrap;
   row-gap: 100px;
   column-gap: 20px;
+  min-height: 50vh;
 }
 
 .frame .event {
