@@ -119,6 +119,35 @@ export default function Home() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    // parallax effect
+    const handleParallax = (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // speed of the parallax effect
+          const backgroundSpeedFactor = 0.5;
+  
+          window.addEventListener('scroll', () => {
+            // get window height
+            let windowHeight = window.innerHeight;
+
+            const scrolled = window.scrollY - entry.target.offsetTop - windowHeight / 2;
+  
+            // background position
+            document.querySelector('.polaroids-sky').style.backgroundPositionY = `-${scrolled * backgroundSpeedFactor}px`;
+            document.querySelector('.polaroids-bottom').style.backgroundPositionY = `-${scrolled * backgroundSpeedFactor}px`;
+          });
+        }
+      });
+    };
+  
+    const observer = new IntersectionObserver(handleParallax, { threshold: 0.1 });
+  
+    //element to observe
+    const target = document.querySelector('.end-scroll');
+    observer.observe(target);
+  }, []);
+
   const dayInfo = {
     dayType,
     minutes,

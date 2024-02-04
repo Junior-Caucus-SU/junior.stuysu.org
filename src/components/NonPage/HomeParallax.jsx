@@ -4,6 +4,7 @@ import ParallaxBackground from "../../Images/parallaxBackgound.png";
 import Battle from "../../Images/battle.png";
 import PhotoCapture from "../../Images/photoCapture.png";
 import React from "react";
+
 import {
   ParallaxProvider,
   ParallaxBanner,
