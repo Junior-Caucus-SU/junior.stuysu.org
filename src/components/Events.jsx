@@ -2,31 +2,31 @@ import React from "react";
 import Navbar from "./NonPage/NavBar";
 import Texture from "./NonPage/Texture";
 import Initiatives from "./NonPage/Initiatives";
-import Footer from "./NonPage/Footer"
-import AnnouncementLine from "../Images/announcementsLine.svg"
+import Footer from "./NonPage/Footer";
+import AnnouncementLine from "../Images/announcementsLine.svg";
 import "./Events.css";
 import Carousel from "./NonPage/Carousel";
 import CustomCursor from "./NonPage/Cursor";
 
 export default function Events() {
-    let eventsPage = (
-        <div className="events-page">
-            <Navbar {...{ page: "Events" }} />
-            <CustomCursor />
-            <Carousel/>
-            <div className="events-body">
-                <div className="all-initiatives-header">
-                        <h1 className="title">All Initiatives</h1>
-                        <img className="vector" alt="line" src={AnnouncementLine} />
-                </div>
-                <div className="all-initiatives-flexbox">
-                    <Initiatives />
-                </div>
-            </div>
-
-            <Footer />
-            <Texture />
+  let eventsPage = (
+    <div className="events-page">
+      <Navbar {...{ page: "Events" }} />
+      <CustomCursor />
+      <Carousel />
+      <div className="events-body">
+        <div className="all-initiatives-header">
+          <h1 className="title">All Initiatives</h1>
+          <img className="vector" alt="line" src={AnnouncementLine} />
         </div>
-    );
-    return eventsPage;
+        <div className="all-initiatives-flexbox">
+          <Initiatives />
+        </div>
+      </div>
+
+      <Footer />
+      <Texture />
+    </div>
+  );
+  return eventsPage;
 }

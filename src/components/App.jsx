@@ -7,17 +7,17 @@ import Home from "./Home";
 import Socials from "./Socials";
 
 export default function App() {
-    return (
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/people" element={<People />} />
-                <Route path="/resources" element={<Resources />} />
-                <Route path="/events" element={<Events />} />
-                <Route path="/socials" element={<Socials />} />
-                <Route path="/jprom" element={<JProm />} />
-                <Route path="*" element={<Home />} />
-            </Routes>
-        </BrowserRouter>
-    )
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/people" element={<People />} />
+        <Route path="/resources" element={<Resources />} />
+        <Route path="/events" element={<Events />} />
+        <Route path="/socials" element={<Socials />} />
+        <Route path="/jprom" element={<JProm />} />
+        <Route path="*" element={<Home />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }

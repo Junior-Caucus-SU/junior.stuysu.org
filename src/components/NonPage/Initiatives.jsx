@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import Papa from 'papaparse';
-import './Initiatives.css';
+import React, { useState, useEffect } from "react";
+import Papa from "papaparse";
+import "./Initiatives.css";
 
 export default function AllInitiatives(props) {
     const [initiativesData, setEventsInfo] = useState([]);
@@ -23,32 +23,33 @@ export default function AllInitiatives(props) {
         fetchSheetsData();
     }, []);
 
+
     const handleShowMoreToggle = (index) => {
         setShowMore((prevShowMore) => {
             const newShowMore = [...prevShowMore];
             newShowMore[index] = !newShowMore[index];
             return newShowMore;
         });
-    };
+    }
 
-    return (
-        <div className="all-initiatives">
-            <div className="frame">
-                {initiativesData.map((initiative, index) => (
-                    <div className="event" key={index}>
-                        <p className="event-date">{initiative.Date}</p>
-                        <h4 className="event-title">{initiative.Title}</h4>
-                        <p className="event-text">
-                            {showMore[index] ? initiative.Text : initiative.Text.substring(0, 100)}
-                        </p>
-                        {showMore[index] ?
-                            <button className="show-more" onClick={() => handleShowMoreToggle(index)}>
-                                {showMore[index] ? "Show Less" : "Show More..."}
-                            </button> : null
-                        }
-                    </div>
-                ))}
+        return (
+            <div className="all-initiatives">
+                <div className="frame">
+                    {initiativesData.map((initiative, index) => (
+                        <div className="event" key={index}>
+                            <p className="event-date">{initiative.Date}</p>
+                            <h4 className="event-title">{initiative.Title}</h4>
+                            <p className="event-text">
+                                {showMore[index] ? initiative.Text : initiative.Text.substring(0, 100)}
+                            </p>
+                            {showMore[index] ?
+                                <button className="show-more" onClick={() => handleShowMoreToggle(index)}>
+                                    {showMore[index] ? "Show Less" : "Show More..."}
+                                </button> : null
+                            }
+                        </div>
+                    ))}
+                </div>
             </div>
-        </div>
-    );
-}
+        );
+    }
