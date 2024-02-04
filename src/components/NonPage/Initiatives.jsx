@@ -33,6 +33,7 @@ export default function AllInitiatives(props) {
     });
   };
 
+  
   return (
     <div className="all-initiatives">
       <div className="frame">
