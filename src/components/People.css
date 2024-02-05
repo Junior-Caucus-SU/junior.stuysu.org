@@ -13,7 +13,6 @@
   display: inline-block;
   color: #051e4f;
   font-family: "ivymode";
-  font-weight: 300;
   line-height: 0.8em;
   word-wrap: break-word;
   font-size: 20vw;
@@ -22,10 +21,12 @@
 }
 
 .meet {
+  font-weight: 300;
   text-align: left;
 }
 
 .the-team {
+  font-weight: 400;
   text-align: right;
 }
 

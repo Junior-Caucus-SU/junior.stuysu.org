@@ -15,7 +15,7 @@ import Josephine_Gunawan from "../Images/people/Josephine_Gunawan.jpeg";
 import Maegan_Diep from "../Images/people/Maegan_Diep.jpeg";
 import Stacie_Au from "../Images/people/Stacie_Au.jpeg";
 import Josephine_Yoo from "../Images/people/Josephine_Yoo.png";
-import Will from "../Images/people/Will.jpeg";
+import Will from "../Images/people/Will.png";
 import John from "../Images/people/John.jpeg";
 import Vicki_Chen from "../Images/people/Vicki_Chen.png";
 

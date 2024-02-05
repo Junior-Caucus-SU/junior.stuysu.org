@@ -88,9 +88,9 @@
 
 .mission-box {
   padding-left: 5vw;
-  padding-right: 20vw;
+  padding-right: 15vw;
   padding-top: 5vw;
-  height: 80vh;
+  height: 120vh;
   width: 100vw;
 }
 
@@ -102,7 +102,7 @@ MISSION statement breaks at around 613 px; there should be some dyanmic stuff ha
   color: var(--Main-Blue, #051e4f);
   font-size: 4.25em;
   font-weight: 250;
-  line-height: 100%;
+  line-height: 105%;
   container-name: mission-statement;
 }
 
