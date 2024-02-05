@@ -35,9 +35,7 @@ export default function Socials() {
           {" "}
           <section>
             {" "}
-            <a
-              href="https://www.tiktok.com/@juniorcaucus?refer=creator_embed"
-            >
+            <a href="https://www.tiktok.com/@juniorcaucus?refer=creator_embed">
               @juniorcaucus
             </a>{" "}
           </section>{" "}
