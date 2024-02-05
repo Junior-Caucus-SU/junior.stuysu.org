@@ -36,7 +36,6 @@ export default function Socials() {
           <section>
             {" "}
             <a
-              target="_blank"
               href="https://www.tiktok.com/@juniorcaucus?refer=creator_embed"
             >
               @juniorcaucus
@@ -70,7 +69,6 @@ export default function Socials() {
                 textDecoration: "none",
                 width: "100%",
               }}
-              target="_blank"
             >
               {" "}
               <div
@@ -321,7 +319,6 @@ export default function Socials() {
                   fontWeight: "normal",
                   lineHeight: "17px",
                 }}
-                target="_blank"
               >
                 Stuyvesant Junior Caucus
               </a>{" "}
@@ -336,7 +333,6 @@ export default function Socials() {
                   fontWeight: "normal",
                   lineHeight: "17px",
                 }}
-                target="_blank"
               >
                 stuyjuniorcaucus
               </a>
