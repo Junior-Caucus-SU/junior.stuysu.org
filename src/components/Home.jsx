@@ -198,9 +198,7 @@ export default function Home() {
         </div>
         <div className="mission-box">
           <h1 className="mission-statement">
-            {cSpanning(
-              "Welcome to the Yoo-Rhee caucus. We are committed to delivering on our promises \n through well organized initiatives, including cabinet restructuring, enhancing \n college readiness, and meaningful themed events.",
-            )}
+            {cSpanning("We represent the Junior class body and are dedicated to easing the challenges of junior year by alleviating stress through valuable resources and fun events! ")}
           </h1>
         </div>
         <div className="parallax">
