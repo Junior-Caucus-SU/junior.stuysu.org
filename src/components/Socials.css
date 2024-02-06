@@ -1,0 +1,19 @@
+.socials {
+    width: 100vw;
+    height: 100vh;
+    display: inline-flex;
+}
+
+.tiktok-embed {
+    margin: 0px 0px 0px 0px;
+    position: relative;
+    top: 5vh;
+    left: 5vw;
+    height: 561px;
+}
+
+.instagram-media {
+    position: relative;
+    top: 5vh;
+    left: 10vw;
+}

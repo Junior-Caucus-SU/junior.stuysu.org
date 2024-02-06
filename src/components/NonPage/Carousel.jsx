@@ -1,67 +1,100 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from "react";
 import "./Carousel.css";
-import CarouselImageOne from "../../Images/CarouselImage1.png";
-import CarouselImageTwo from "../../Images/CarouselImage2.png";
 
+function Carousel() {
+  const [slide, setSlide] = useState(0);
+  const [translate, setTranslate] = useState("0%");
+  const [initialX, setInitialX] = useState(null);
+  const [finalX, setFinalX] = useState(null);
+  const [drag, setDrag] = useState(false);
+  const [zoom, setZoom] = useState(false);
 
-const getBackgroundStyle = (image) => {
-  return {
-    background: `linear-gradient(0deg,rgba(0, 0, 0, 0.2) 0%,rgba(0, 0, 0, 0.2) 100%, url(${image}), lightgray 50% / cover no-repeat)`,
-    objectFit: "cover",
-    width: "90vw",
-    height: "80vh",
-    margin: "1vw",
-  }
-}
+  const onMouseDown = (e) => {
+    setInitialX(e.screenX);
+    setDrag(true);
+  };
 
-function CurrentItem({ direction }) {
-  if (direction === 0) {
-    return (
-      <div className="current-item" style={{ transform: `translateX(0%)` }}>
-        <img className="images" src={CarouselImageOne} alt="" />
-        <div className="image-text">Homecoming<br />Fundraiser</div>
-        <img className="images" src={CarouselImageTwo} alt="" />
-      </div>
-    );
-  }
+  const onMouseUp = (e) => {
+    setDrag(false);
+    setFinalX(e.screenX);
+    if (initialX === finalX) {
+      setZoom(true);
+      if (slide === 0) {
+        setTranslate("-100%");
+        setSlide(1);
+      } else {
+        setTranslate("0%");
+        setSlide(0);
+      }
+      setTimeout(() => {
+        setZoom(false);
+      }, 80);
+      return;
+    }
+    if (slide === 0 && translate.substring(0, translate.length - 2) < 0) {
+      setTranslate("-100%");
+      setSlide(1);
+    } else if (
+      slide === 0 &&
+      translate.substring(0, translate.length - 2) > 0
+    ) {
+      setTranslate("0%");
+    }
+    if (slide === 1 && translate.substring(0, translate.length - 2) > 0) {
+      setTranslate("0%");
+      setSlide(0);
+    } else if (
+      slide === 1 &&
+      translate.substring(0, translate.length - 2) < 0
+    ) {
+      setTranslate("-100%");
+    }
+    setZoom(false);
+  };
+
+  const onMouseMove = (e) => {
+    const bodyWidth = document.getElementById("root").clientWidth;
+    if (drag) {
+      setFinalX(e.screenX);
+      if (Math.abs(finalX - initialX) > 0.6 * bodyWidth) {
+        return;
+      }
+      if (
+        ((slide === 0 && finalX - initialX < 0) ||
+          (slide === 1 && finalX - initialX > 0)) &&
+        finalX != null
+      ) {
+        setZoom(true);
+        setTranslate(finalX - initialX + "px");
+      }
+    }
+  };
+
   return (
-    <div className="current-item" style={{ transform: `translateX(-100%)` }}>
-      <div className="images" style={getBackgroundStyle("../../Images/CarouselImage1.png")} />
-      <div className="image-text">Homecoming<br />Fundraiser</div>
-      <div className="images" style={getBackgroundStyle("../../Images/CarouselImage2.png")} />        </div>
+    <div
+      className="carousel"
+      onMouseDown={onMouseDown}
+      onMouseMove={onMouseMove}
+      onMouseUp={onMouseUp}
+    >
+      <div
+        className="current-item"
+        style={{
+          transform:
+            "translateX(" + translate + ")" + (zoom ? " scale(0.7)" : ""),
+        }}
+      >
+        <div className="image-one carousel-image">
+          <div className="image-text">
+            Homecoming
+            <br />
+            Fundraiser
+          </div>
+        </div>
+        <div className="image-two carousel-image" />
+      </div>
+    </div>
   );
 }
 
-const Carousel = () => {
-  const [scrollDirection, setScrollDirection] = useState(0);
-  const [prevScrollY, setPrevScrollY] = useState(1);
-
-  const handleScroll = () => {
-    const currentScrollY = window.scrollY;
-
-    if (currentScrollY > prevScrollY) {
-      setScrollDirection(1);
-
-    } else if (currentScrollY < prevScrollY) {
-      setScrollDirection(0);
-    }
-
-    setPrevScrollY(currentScrollY);
-  };
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [prevScrollY]);
-
-  return (
-    <div className="carousel">
-      <CurrentItem direction={scrollDirection} />
-    </div>)
-};
-
 export default Carousel;
-

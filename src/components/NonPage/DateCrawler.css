@@ -39,3 +39,50 @@
   line-height: 150%; /* 1.125rem */
   text-decoration-line: underline;
 }
+.ellipse-crawler {
+  position: relative;
+  display: inline-block;
+}
+
+.ellipse {
+  display: block;
+  height: 3em;
+  color: var(--Main-Blue, #051e4f);
+  width: 4.5em;
+  max-width: 100%; /* Ensure the image doesn't exceed the width of the container */
+  height: auto;
+  align-items: middle;
+  position: relative;
+}
+
+.ellipse-item {
+  width: 125%;
+  height: 101%;
+}
+
+.dateText {
+  z-index: 10;
+  position: absolute;
+  top: 52.1%;
+  left: 62.5%;
+  transform: translate(-50%, -55%);
+  color: var(--Main-Blue, #051e4f);
+  text-align: center;
+
+  /* Caption */
+  font-family: "neue-haas-grotesk-text", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 0.75rem */
+}
+
+@media (max-width: 768px) {
+  .ellipse {
+    width: 3em;
+    height: 2.5em;
+  }
+  .dateText {
+    font-size: 0.75rem;
+  }
+}

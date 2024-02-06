@@ -13,6 +13,10 @@
 
 body {
     cursor: none;
-    font-family: "Mixta-Sharp";
+    font-family: "ivymode";
     background: #FAE5E2;
+}
+
+a, .interactable {
+    cursor: none;
 }

@@ -1,6 +1,6 @@
 .meet-team-container {
   text-align: center;
-  margin-top: 20px;
+  padding: 5vw;
   height: 70vh;
   width: 100vw;
   display: flex;
@@ -12,11 +12,22 @@
 .the-team {
   display: inline-block;
   color: #051e4f;
-  font-family: "Mixta-Sharp";
-  font-weight: 300;
-  line-height: 1em;
+  font-family: "ivymode";
+  line-height: 0.8em;
   word-wrap: break-word;
-  font-size: 300px;
+  font-size: 20vw;
+  transition: transform 0.5s;
+  will-change: transform;
+}
+
+.meet {
+  font-weight: 300;
+  text-align: left;
+}
+
+.the-team {
+  font-weight: 400;
+  text-align: right;
 }
 
 @keyframes slideInFromLeft {
@@ -35,17 +46,6 @@
   to {
     transform: translateX(0);
   }
-}
-
-
-.meet {
-  animation: 1s ease-out 0s 1 slideInFromLeft;
-  margin-left: -20vw;
-}
-
-.the-team {
-  animation: 1s ease-out 0s 1 slideInFromRight;
-  margin-right: -15vw;
 }
 
 @media (max-width: 975px) {
@@ -98,6 +98,7 @@
 
 .description {
   font-size: 0.9rem;
+  max-width: 25vw;
   color: #051e4f;
   justify-self: start;
   text-align: left;
@@ -116,6 +117,7 @@
 }
 
 .people-page-body img {
+  border-radius: 5px;
   max-width: 25vw;
 }
 
@@ -160,6 +162,8 @@
 }
 
 /* Set the animations to be smoother for the img inside .image_box */
+
+/* ! Removes Rounding */
 .image_box img {
   transition: transform cubic-bezier(0.5, 0.22, 0.22, 1);
 }
@@ -206,7 +210,7 @@
 .chiefs-box-text i {
   color: #fbe4df;
   font-size: 128px;
-  font-family: Mixta Pro;
+  font-family: ivymode;
   font-weight: 350;
   line-height: 108.8px;
   word-wrap: break-word;
@@ -268,7 +272,7 @@
   grid-template-columns: 40vw 40vw;
   margin-bottom: 50px;
 }
-
+/* ! remember to add this back again, not working for some reason */
 .to-fly-from-left {
   opacity: 0;
   filter: blur(5px);
@@ -287,6 +291,12 @@
   opacity: 0;
   filter: blur(5px);
   transition: all 1s;
+}
+
+.show {
+  filter: blur(0);
+  transform: translateX(0);
+  opacity: 1;
 }
 
 /* on mobile, configure d_type_box and subgroup-containerD to use 100% of the width and instead of rows, do columns */
@@ -321,8 +331,12 @@
     max-width: 80vw;
   }
 
+  .description {
+    max-width: 50vh;
+  }
+
   .people-page-body .directors img {
-    max-width: 80vw;
+    border-radius: 15px;
   }
 
   .emily {
@@ -332,7 +346,5 @@
 
     align-self: start;
     padding-left: 0px;
-    
   }
-  
 }
