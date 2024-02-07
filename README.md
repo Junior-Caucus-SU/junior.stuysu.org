@@ -2,7 +2,7 @@
 
 Welcome to the Junior Caucus Website! This website is bootstrapped off of the [Create React App](https://create-react-app.dev/).
 
-Visit our timeline [here](https://github.com/Junior-Caucus-SU/Caucus_Guidelines/blob/324ab1e87727b833ef3c698aba5ebee91b405d83/TIMELINE.md).
+Visit our timeline [here](https://github.com/Junior-Caucus-SU/Caucus_Guidelines/blob/main/TIMELINE.md).
 
 ## Quick Start
 
