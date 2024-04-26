@@ -12,7 +12,7 @@ To get on our development branch, do this:
 git clone git@github.com:Junior-Caucus-SU/junior.stuysu.org.git
 cd junior.stuysu.org
 git checkout develop
-npm i
+npm i --force
 npm start
 ```
 
@@ -21,7 +21,7 @@ To get to our main branch, do this:
 ```shell
 git clone git@github.com:Junior-Caucus-SU/junior.stuysu.org.git
 cd junior.stuysu.org
-npm i
+npm i --force
 npm start
 ```
 
