@@ -95,6 +95,7 @@
   font-size: 3rem;
 }
 
+
 .description {
   font-size: 0.9rem;
   max-width: 25vw;
@@ -103,16 +104,17 @@
   text-align: left;
 }
 
+/* description on mobile max width should be 50wv */
+
+@media screen and (max-width: 768px) {
+  .description {
+    max-width: 50vw;
+  } 
+}
+
 .d_type_box {
   display: flex;
   flex-direction: row;
-}
-
-/* add mobile styling to flex column for .d_type_box */
-@media (max-width: 768px) {
-  .d_type_box {
-    flex-direction: column;
-  }
 }
 
 .people-page-body img {
@@ -158,6 +160,18 @@
 
 .image_box {
   overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  /* make it look readable on mobile for the presidents section */
+  .presidents-box-text {
+    padding-left: 0;
+  }
+
+  .presidents-box {
+    padding-right: 0;
+  }
+  
 }
 
 /* Set the animations to be smoother for the img inside .image_box */
